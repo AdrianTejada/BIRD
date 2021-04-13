@@ -22,10 +22,8 @@ font-size:${(props)=>props.fontSize}px;
 font-family: 'Archivo', sans-serif;
 font-weight:700;
 align-items:center;
-margin:${(props)=>props.marginTop}px  0 0 0;
+margin:15px  0 0 0;
 display:${(props)=>props.Fontdisplay};
-position: relative;
-right: ${(props)=>props.right}px;
 `;
 
 
@@ -35,9 +33,8 @@ const BirdLogo = ({
   fontSize=80,
   width=180,
   display="block",
-  Fontdisplay="block",
-  marginTop=15,
-  right=0
+  Fontdisplay="block"
+  
 }) => {
 const router = useRouter();
 // ()=>router.push( routeTo)
@@ -45,7 +42,7 @@ const router = useRouter();
       
     <LogoImg  src ="/bird-logo.svg" width={width}  display={ display}  />
    
-    <LogoImput  fontSize={fontSize} Fontdisplay={Fontdisplay} marginTop={marginTop} right={right}>
+    <LogoImput  fontSize={fontSize} Fontdisplay={Fontdisplay}>
       {text}
     </LogoImput>
 

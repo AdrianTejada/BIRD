@@ -20,8 +20,6 @@ const LinkContainer = styled.div `
     font-weight: bold;
     display:flex;
     flex-direction:column;
-    align-self:center;
-    justify-content:center;
 `
 const Divider = styled.div `
     background-color: #545454;
@@ -29,33 +27,33 @@ const Divider = styled.div `
     height: 9px;
 `
 
+
 const HamburgerMenu = ({
     // props
-    z=-1
 }) => {
-    return <HamburgerContainer z={z}>
+    return <HamburgerContainer>
         <Divider />
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             Home
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             General Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             Vaccine Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
-            Govern. Policies
+        <LinkContainer>
+            Government 
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             Take Action
         </LinkContainer>
         <Divider />

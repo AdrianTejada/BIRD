@@ -25,7 +25,7 @@ align-items:center;
 margin:${(props)=>props.marginTop}px  0 0 0;
 display:${(props)=>props.Fontdisplay};
 position: relative;
-right: ${(props)=>props.right}px;
+top: ${(props)=>props.top}px;
 `;
 
 
@@ -36,8 +36,7 @@ const BirdLogo = ({
   width=180,
   display="block",
   Fontdisplay="block",
-  marginTop=15,
-  right=0
+  marginTop=15
 }) => {
 const router = useRouter();
 // ()=>router.push( routeTo)
@@ -45,7 +44,7 @@ const router = useRouter();
       
     <LogoImg  src ="/bird-logo.svg" width={width}  display={ display}  />
    
-    <LogoImput  fontSize={fontSize} Fontdisplay={Fontdisplay} marginTop={marginTop} right={right}>
+    <LogoImput  fontSize={fontSize} Fontdisplay={Fontdisplay} marginTop={marginTop}>
       {text}
     </LogoImput>
 

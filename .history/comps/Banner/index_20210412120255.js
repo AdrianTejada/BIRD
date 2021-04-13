@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import {useRouter} from 'next/router';
-import BirdLogo from '../BirdLogo';
 
 const BannerContainer = styled.div `
     display: flex;
@@ -25,6 +23,13 @@ const BackContainer = styled.img `
     left:20px;
 `
 
+const BirdContainer = styled.span`
+    font-size: 30px;
+    font-family: 'Archivo';
+    font-weight: bold;
+    color: #CC6666;
+`
+
 const HamburgerContainer = styled.img `
     position:relative;
     width: 25px;
@@ -37,31 +42,25 @@ const PurpleBanner = styled.div`
     justify-content:center;
     align-items:center;
     width:100%
-    min-height:50px;
+    height:35px;
     background-color: #E09EFF;
     color: #545454;
     font-family:'Roboto';
     font-weight: bold;
-    font-size: 20px;
-    padding:5px;
 `
+
+
+
+
 
 const Banner = ({
     //props
-    text="BIRD",
-    onClick=()=>{},
-    routeTo="/" 
+    text="BIRD"
 }) => {
-    const router = useRouter();
     return <BannerContainer>
         <NavContainer>
-            <BackContainer src="/arrow-grey-left.svg" onClick={()=>router.push(routeTo)}/>
-            <BirdLogo
-                display="none"
-                fontSize="30"
-                marginTop="0"
-                right="3"
-            />
+            <BackContainer src="/arrow-grey-left.svg" />
+            <BirdContainer>BIRD</BirdContainer>
             <HamburgerContainer src="/hamburger-menu.svg"/>
         </NavContainer>
         <PurpleBanner>

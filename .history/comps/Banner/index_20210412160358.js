@@ -60,7 +60,7 @@ const Banner = ({
                 display="none"
                 fontSize="30"
                 marginTop="0"
-                right="3"
+                right="10"
             />
             <HamburgerContainer src="/hamburger-menu.svg"/>
         </NavContainer>

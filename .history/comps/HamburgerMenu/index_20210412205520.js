@@ -31,9 +31,8 @@ const Divider = styled.div `
 
 const HamburgerMenu = ({
     // props
-    z=-1
 }) => {
-    return <HamburgerContainer z={z}>
+    return <HamburgerContainer >
         <Divider />
         <LinkContainer onClick={()=>router.push()}>
             Home

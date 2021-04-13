@@ -6,22 +6,16 @@ import {useRouter} from 'next/router';
 const HamburgerContainer = styled.div `
     display:flex;
     flex-direction:column;
-    justify-content: space-between;
+    justify-content: space-around;
     width:178px;
     height: 896px;
     background-color: #C4C4C4;
-    align-items:center;
 `
 
 const LinkContainer = styled.div `
     color: #545454;
     font-size: 20px;
     font-family: 'Roboto';
-    font-weight: bold;
-    display:flex;
-    flex-direction:column;
-    align-self:center;
-    justify-content:center;
 `
 const Divider = styled.div `
     background-color: #545454;
@@ -29,37 +23,36 @@ const Divider = styled.div `
     height: 9px;
 `
 
+
 const HamburgerMenu = ({
     // props
-    z=-1
 }) => {
-    return <HamburgerContainer z={z}>
-        <Divider />
-        <LinkContainer onClick={()=>router.push()}>
+    return <HamburgerContainer>
+        <LinkContainer>
             Home
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             General Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             Vaccine Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
-            Govern. Policies
+        <LinkContainer>
+            Government Policies
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             Take Action
         </LinkContainer>
         <Divider />
+
+
     </HamburgerContainer>
 }
-
-export default HamburgerMenu;

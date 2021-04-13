@@ -31,31 +31,30 @@ const Divider = styled.div `
 
 const HamburgerMenu = ({
     // props
-    z=-1
 }) => {
-    return <HamburgerContainer z={z}>
+    return <HamburgerContainer>
         <Divider />
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             Home
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             General Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             Vaccine Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
-            Govern. Policies
+        <LinkContainer>
+            Government Policies
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push()}>
+        <LinkContainer>
             Take Action
         </LinkContainer>
         <Divider />

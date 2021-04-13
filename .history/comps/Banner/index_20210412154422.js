@@ -25,6 +25,13 @@ const BackContainer = styled.img `
     left:20px;
 `
 
+const BirdContainer = styled.span`
+    font-size: 25px;
+    font-family: 'Archivo';
+    font-weight: bold;
+    color: #CC6666;
+`
+
 const HamburgerContainer = styled.img `
     position:relative;
     width: 25px;
@@ -37,14 +44,16 @@ const PurpleBanner = styled.div`
     justify-content:center;
     align-items:center;
     width:100%
-    min-height:50px;
+    height:35px;
     background-color: #E09EFF;
     color: #545454;
     font-family:'Roboto';
     font-weight: bold;
-    font-size: 20px;
-    padding:5px;
 `
+
+
+
+
 
 const Banner = ({
     //props
@@ -55,12 +64,10 @@ const Banner = ({
     const router = useRouter();
     return <BannerContainer>
         <NavContainer>
-            <BackContainer src="/arrow-grey-left.svg" onClick={()=>router.push(routeTo)}/>
+            <BackContainer src="/arrow-grey-left.svg" onClick={onClick}/>
             <BirdLogo
                 display="none"
                 fontSize="30"
-                marginTop="0"
-                right="3"
             />
             <HamburgerContainer src="/hamburger-menu.svg"/>
         </NavContainer>

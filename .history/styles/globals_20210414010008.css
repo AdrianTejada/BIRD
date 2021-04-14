@@ -15,7 +15,6 @@ body {
 .layer {
     width: 414px;
     height: 896px;
-    overflow: hidden;
 }
 
 .upper {
@@ -43,6 +42,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: #F2E4D4;
+    overflow: hidden;
     position: relative;
-    right: 0px;
+    right;: 200px
 }

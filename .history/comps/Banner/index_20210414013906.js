@@ -51,6 +51,7 @@ const Banner = ({
     text="BIRD",
     onClick=()=>{},
     routeTo="/" ,
+    onClick=()=>{}
 }) => {
     const router = useRouter();
     return <BannerContainer>

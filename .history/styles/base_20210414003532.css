@@ -15,7 +15,6 @@ body {
 .layer {
     width: 414px;
     height: 896px;
-    overflow: hidden;
 }
 
 .upper {
@@ -27,22 +26,11 @@ body {
 .lower {
     z-index: -1;
     position: relative;
-    right: 202px;
+    right: 212px;
 }
 
 .sidebar {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-}
-
-.page {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #F2E4D4;
-    position: relative;
-    right: 0px;
 }

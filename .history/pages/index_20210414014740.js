@@ -21,7 +21,7 @@ const OpenMenu = () => {
   setMenuState(!menustate);
 }
 
-  console.log(menustate, right)
+  console.log(menustate)
   return (<div className="main">
     <div className="upper layer">
         <div className="page">

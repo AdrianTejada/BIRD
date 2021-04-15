@@ -1,65 +1,62 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import BirdLogo from '../comps/BirdLogo'
+import Bird from '../comps/bird'
+import Button from '../comps/Button'
+import AboutUs from '../comps/aboutUs'
+import React, { useState } from "react"
+import {useSpring, animated} from 'react-spring'
+import {config} from 'react-spring'
+
+
+
 
 export default function Home() {
+
+
+  
+  const mainLogo = useSpring( { config: { duration: 1000 },opacity: 1, from: {opacity: 0}, delay: 1000,})
+  // const mainLogo_text = useSpring( { config: { duration: 900 },opacity: 1, from: {opacity: 0}, delay: 100,})
+  const logotext = useSpring({ config:config.wobbly,
+   transform: 'translate3d(0,350px,0)',from: { transform: 'translate3d(0,0px,0)'}
+  })
+  const text = useSpring( { config: { duration: 300 },opacity: 1, from: {opacity: 0}, delay: 2000,})
+  const [display,setdisplay] = useState(false);
+  const [bgc,setbgc] = useState(false);
+
+  const HandleClick = () => {
+    setdisplay(!display);
+    setbgc(!bgc);
+
+  }
   return (
-    <div className={styles.container}>
+    <div className="wrapper">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <title>Home Page</title>:
+      </Head>{" "}
+      <div className="page">
+      <animated.div className="logo"  style={mainLogo} ><BirdLogo Fontdisplay="none"/></animated.div>
+      <animated.div className="logotext" style={logotext}><BirdLogo display="none"/></animated.div>
+      <animated.div className="Subtext" style={text}><p>Big Issues Ready for Discovery  </p></animated.div>
+      
+      <div className="aboutUs" > <AboutUs contdisplay ={display ? "block" :"none"} /></div>
+      <div className="button">
+        
+      <Button/>
+      <Button  text="About us" width="140px" bgcolor={bgc ? "#949494": "#C4C4C4"} onClick={HandleClick}/>
+      </div>
+      <div className="rooter">
+      ©2021 Group-7 Design1-Demo MDDD2C BCIT </div>
+      <div className="bgc"> </div>
+      
+      
+      
+      </div>
+      
+      
+    
+   
+   
     </div>
   )
 }

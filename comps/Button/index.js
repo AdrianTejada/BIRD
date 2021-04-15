@@ -3,6 +3,7 @@
 import React from "react";
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
+import {useState} from 'react';
 
 const ButtonCont=styled.span`
 margin: 5px;
@@ -34,21 +35,23 @@ const Button = ({
   routeTo="/home",
   opacity="1",
   onClick=()=>{},
+  onaboutUsClick=()=>{},
   onMouseOver=()=>{},
   onMouseOut=()=>{},
   
  
   
 }) => {
-const router = useRouter();
-// ()=>router.push( routeTo)
+
+
+
   return <ButtonCont   >
     {/* <button style ={{
       backgroundColor:"black"
     }}> Test Button</button> */}
     
 
-    <ButtonImput bgc={bgcolor} width={width} height={height}radius={radius} hover={opacity} onClick={onClick } onMouseOver={ onMouseOver}  onMouseOut={ onMouseOut} >
+    <ButtonImput bgc={bgcolor} width={width} height={height}radius={radius} hover={opacity} onClick={onClick} onMouseOver={ onMouseOver}  onMouseOut={ onMouseOut} >
       {text}
     </ButtonImput>
 

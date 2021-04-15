@@ -44,6 +44,12 @@ a {
  position: absolute;
  
 }
+.logotext{
+  margin-top:0px;
+  z-index: 1;
+  position: absolute;
+  
+ }
 .button{
   margin-top:700px;
   z-index: 1;
@@ -66,4 +72,11 @@ a {
   font-weight: 900;
   /* font-style: bold; */
   text-shadow: 5px 5px 5px grey;
+ }
+ .aboutUs{
+   position: absolute;
+  margin-top:250px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
  }

@@ -69,9 +69,6 @@ display:${props=>props.index6};
 `;
 
 
-
-
-
 //props
 const NavButton = ({
   display1="block",
@@ -94,7 +91,8 @@ const NavButton = ({
   onClick=()=>{},
   onMouseOver=()=>{},
   onMouseOut=()=>{},
-  
+  onGoalClick=()=>{},
+onDesignersClick=()=>{}
  
   
 }) => {
@@ -107,7 +105,7 @@ const router = useRouter();
     
     
     <ButtonImput >
-    <ButtonImg  src ="/arrow-grey-left.svg"   />
+    <ButtonImg  src ="/arrow-grey-left.svg"  onClick={onGoalClick} />
     </ButtonImput>
     <ButtonIndex1 index1={display1}  bgc={bgcolor1}></ButtonIndex1>
     <ButtonIndex2 index2={display2}  bgc={bgcolor2}></ButtonIndex2>
@@ -116,7 +114,7 @@ const router = useRouter();
     <ButtonIndex5 index5={display5} bgc={bgcolor5}></ButtonIndex5>
     <ButtonIndex6 index6={display6} bgc={bgcolor6}></ButtonIndex6>
     <ButtonImput >
-    <ButtonImg  src ="/arrow-grey-right.svg"   />
+    <ButtonImg  src ="/arrow-grey-right.svg"    onClick={onDesignersClick}/>
     </ButtonImput>  
     </ButtonCont>
 }

@@ -3,6 +3,7 @@ import React from "react";
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
 
+
 const BirdLogoCont=styled.div`
 margin: 5px;
 display:flex;
@@ -40,7 +41,7 @@ const router = useRouter();
 // ()=>router.push( routeTo)
   return <BirdLogoCont>
       
-    <LogoImg  src ="/bird-logo.svg" width={width}  display={ display}  />
+    <LogoImg  src ="/bird-logo.svg" width={width}  display={ display}   />
    
     <LogoImput  fontSize={fontSize} Fontdisplay={Fontdisplay}>
       {text}

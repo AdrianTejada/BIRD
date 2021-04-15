@@ -1,7 +1,11 @@
 import Banner from '../comps/Banner';
 import HamburgerMenu from '../comps/HamburgerMenu';
+import styled from 'styled-components';
 import React, {useState} from 'react';
 
+const main = styled.div `
+
+`
 
 
 

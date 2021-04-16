@@ -17,10 +17,10 @@ const PageComponent = styled.div`
 
 const Page = ({
     right=0,
-    children
+    
 }) => {
     return <PageComponent right={right} >
-        {children}
+        <Banner></Banner>
     </PageComponent>
 }
 

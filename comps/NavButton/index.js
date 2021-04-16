@@ -114,7 +114,7 @@ const router = useRouter();
     <ButtonIndex5 index5={display5} bgc={bgcolor5}></ButtonIndex5>
     <ButtonIndex6 index6={display6} bgc={bgcolor6}></ButtonIndex6>
     <ButtonImput >
-    <ButtonImg  src ="/arrow-grey-right.svg"    onClick={onDesignersClick}/>
+    <ButtonImg  src ="/arrow-grey-right.svg" onClick={onDesignersClick}/>
     </ButtonImput>  
     </ButtonCont>
 }

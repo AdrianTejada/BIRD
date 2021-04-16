@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {useRouter} from 'next/router';
 import NavButton from '../NavButton/index.js'
 
-const AboutUsCont=styled.div`
+const AboutusCont=styled.div`
 width:${props=>props.width};
 height:${props=>props.height};
 border-radius:${props=>props.radius};
@@ -59,7 +59,7 @@ const AboutUs = ({
   routeTo="/home",
   display="block",
   p2width="200px",
-  contdisplay="none",
+  contdisplay="block",
   onClick=()=>{},
   onMouseOver=()=>{},
   onMouseOut=()=>{},
@@ -67,7 +67,7 @@ const AboutUs = ({
 }) => {
 const router = useRouter();
 // ()=>router.push( routeTo)
-  return <AboutUsCont   width={width} height={height} bgc={bgcolor} radius={ radius} contdisplay={contdisplay}>
+  return <AboutusCont   width={width} height={height} bgc={bgcolor} radius={ radius} contdisplay={contdisplay}>
   < ContentBox     show={display} p2width={p2width}>
     
     <TitleImput  >
@@ -80,7 +80,7 @@ const router = useRouter();
     <NavButton bgcolor5="#FF7A00" display1="none" display2="none" display3="none" display4="none" />
     </ButtonCont>
     </ ContentBox>
-    </AboutUsCont>
+    </AboutusCont>
 
 }
 

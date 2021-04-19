@@ -26,7 +26,7 @@ const Buttonimage = styled.img`
 const Button = ({
     text = "Canada's Help"
 }) =>{
-    return <Buttoncont onclick='window.location.href="{donationlink}"'>
+    return <Buttoncont >
         <Buttoninput>{text}</Buttoninput>
         <Buttonimage src = "/arrow-white-right.svg"></Buttonimage>
     </Buttoncont>

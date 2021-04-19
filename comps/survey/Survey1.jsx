@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-
-
 import * as Survey from "survey-react";
 import {useRouter} from 'next/router';
 
@@ -13,13 +11,9 @@ import {useRouter} from 'next/router';
 class SurveyComponent1 extends Component {
     constructor() {
         super();
-        
+
     }
     render() {
-        
-
-        
-
         const json = {
           
             title: "General Questions",
@@ -31,7 +25,7 @@ class SurveyComponent1 extends Component {
                {
                 type: "html",
                 name: "question1",
-                html: "You are about to start quiz by history. <br/>You have 10 seconds for every page and 25 seconds for the whole survey of 3 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
+                html: "You are about to start the quiz with the given information. <br/>You have <b>15</b> seconds for every page and <b>40</b> seconds for the whole survey of 3 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
                }
               ]
              },
@@ -41,7 +35,7 @@ class SurveyComponent1 extends Component {
                {
                 type: "radiogroup",
                 name:"symptom",
-                title: "What is not a symptom of COVID-19?",
+                title: "What is the symptom of COVID-19?",
                 correctAnswer: "Fever and Dry cough",
                 isRequired: true,
                 choices: [
@@ -166,8 +160,8 @@ class SurveyComponent1 extends Component {
             showProgressBar: "bottom",
             startSurveyText: "Start Quiz",
             firstPageIsStarted: true,
-            maxTimeToFinish: 25,
-            maxTimeToFinishPage: 10,
+            maxTimeToFinish: 40,
+            maxTimeToFinishPage: 15,
             showTimerPanel: "top"
            
 };

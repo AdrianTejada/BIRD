@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&display=swap');
+
 
 html,
 body {
@@ -62,7 +63,7 @@ body {
   margin-top:450px;
   position: absolute;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 400;
   /* font-style: bold; */
   text-shadow: 5px 5px 5px grey;
  }

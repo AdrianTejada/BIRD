@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import BirdLogo from '../comps/BirdLogo'
-import Bird from '../comps/bird'
 import Button from '../comps/Button'
 import AboutUs from '../comps/aboutUs'
 import React, { useState } from "react"

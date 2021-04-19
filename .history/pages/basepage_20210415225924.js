@@ -3,6 +3,7 @@ import HamburgerMenu from '../comps/HamburgerMenu';
 import styled from 'styled-components';
 import React, {useState} from 'react';
 import Page from '../comps/Page'
+import ChatBubble from '../comps/ChatBubble'
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -55,6 +56,8 @@ const OpenMenu = () => {
     <UpperLayer>
       <Page right={right}>
         <Banner text="hello" onClick={OpenMenu} />
+        <ChatBubble />
+        
       </Page>
 
     </UpperLayer>

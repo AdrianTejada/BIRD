@@ -1,1 +1,0 @@
-//navigation UI with six options Adrian

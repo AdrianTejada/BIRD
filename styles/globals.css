@@ -73,3 +73,51 @@ body {
   justify-content: center;
   z-index: 2;
  }
+
+ /* =======Survey start======= */
+ .sv_container{
+   width:320px;
+ }
+ .sv_header{
+  text-align: center;
+  font-weight: 200;
+  font-size: 18px;
+  display:none;
+}
+.sv_body{
+  line-height: 24px;
+  font-size: 18px;
+  margin-top:50px;
+
+}
+.sv_q_title{
+  font-size: 18px;
+  font-weight: 700;
+}
+ .sv_start_btn{
+   margin-top:50px;
+   margin-left: 200px;
+   background-color:#c4c4c4;
+   color:rgb(78, 78, 78);
+   border-radius: 10px;
+   border:none;
+   width:120px;
+   height:40px;
+   font-size: 20px;
+   font-weight: 400;
+
+ }
+ .sv_next_btn,.sv_complete_btn{
+  margin-top:40px;
+  margin-left: 200px;
+  background-color:#c4c4c4;
+   color:rgb(78, 78, 78);
+   border-radius: 10px;
+   border:none;
+   width:120px;
+   height:40px;
+   font-size: 20px;
+   font-weight: 400;
+   
+ }
+ /* =======Survey end======= */

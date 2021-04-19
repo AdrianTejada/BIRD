@@ -89,23 +89,17 @@ const NavButton = ({
   routeTo="/home",
   opacity="1",
   onClick=()=>{},
-  onMouseOver=()=>{},
-  onMouseOut=()=>{},
-  onGoalClick=()=>{},
-onDesignersClick=()=>{}
+  onaboutusClick=()=>{},
+  onteamClick=()=>{}
  
   
 }) => {
 const router = useRouter();
 // ()=>router.push( routeTo)
   return <ButtonCont   >
-    {/* <button style ={{
-      backgroundColor:"black"
-    }}> Test Button</button> */}
-    
-    
+      
     <ButtonImput >
-    <ButtonImg  src ="/arrow-grey-left.svg"  onClick={onGoalClick} />
+    <ButtonImg  src ="/arrow-grey-left.svg"  onClick={onaboutusClick} />
     </ButtonImput>
     <ButtonIndex1 index1={display1}  bgc={bgcolor1}></ButtonIndex1>
     <ButtonIndex2 index2={display2}  bgc={bgcolor2}></ButtonIndex2>
@@ -114,7 +108,7 @@ const router = useRouter();
     <ButtonIndex5 index5={display5} bgc={bgcolor5}></ButtonIndex5>
     <ButtonIndex6 index6={display6} bgc={bgcolor6}></ButtonIndex6>
     <ButtonImput >
-    <ButtonImg  src ="/arrow-grey-right.svg" onClick={onDesignersClick}/>
+    <ButtonImg  src ="/arrow-grey-right.svg" onClick={onteamClick}/>
     </ButtonImput>  
     </ButtonCont>
 }

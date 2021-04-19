@@ -1,6 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components';
 import Banner from '../Banner'
+import QuizOption from '../QuizOptions'
+
 
 const ChatContainer = styled.div `
     display:flex;
@@ -16,6 +18,8 @@ const Bubble = styled.div `
     align-items:center;
     overflow:hidden;
     background-color:white;
+    margin-top:20px;
+    
 `
 
 const Triangle = styled.div`
@@ -33,17 +37,37 @@ const Content = styled.div`
     display:flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top:-100px;
 `
+const Question = styled.div`
+    display:inline-flex;
+    align-items:center;
+   
+    
+`
+const QuestionText = styled.div`
+   margin-left:20px; 
+   font-size:20px;
+`
+
 
 const ChatBubble = ({
     head="Heading",
-    text="contents",
+    text1="Answer1",
+    text2="Answer2",
+    text3="Answer3",
+    RadioCheck=()=>{}
+   
+    
 }) => {
     return <ChatContainer>
         <Bubble>
             <Content>
-                <h1>hello</h1>
-                <p>hello</p>
+               {/* <h2> {head}</h2>
+               <Question> <QuizOption onClick={RadioCheck}  /> <QuestionText>{text1}</QuestionText></Question> 
+               <Question> <QuizOption onClick={RadioCheck}  />  <QuestionText>{text2}</QuestionText> </Question> 
+               <Question> <QuizOption onClick={RadioCheck}  />  <QuestionText>{text3}</QuestionText> </Question>  */}
+               
             </Content>
         </Bubble>
 

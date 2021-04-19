@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
-import NavButton from '../NavButton/index.js'
+import NavButton from '../comps/NavButton/index.js'
 
 
 const AboutusCont=styled.div`
@@ -41,18 +41,19 @@ width:250px;
 // padding-left:27.5px ;
 width:${props=>props.p2width};
 `;
-
-
 const ButtonCont=styled.div`
-position:absolute;
-margin-top:400px;
-
+// position:absolute;
+margin-top:50px;
+// margin-left:45px;
 `;
-    
+
 //props
 const AboutUs = ({
-  subtitle="Our Goal",
-  text="BIRD is an app designed to educated its users about the COVID-19 Virus. For those who want to take action or test their knowlage, there are also Donation links and quizes.",
+  subtitle="tittle",
+  text="text",
+  content1="Levi Chen",
+  content2="Adrian Tejada",
+  content3="Ali, Aly",
   bgcolor="#C4C4C4",
   width="300px",
   height="425px",
@@ -62,12 +63,10 @@ const AboutUs = ({
   p2width="200px",
   contdisplay="block",
   onClick=()=>{},
-  onaboutusClick=()=>{},
-  onteamClick=()=>{}
+  
   
 }) => {
-  
-// const router = useRouter();
+
 // ()=>router.push( routeTo)
   return <AboutusCont   width={width} height={height} bgc={bgcolor} radius={ radius} contdisplay={contdisplay}>
   < ContentBox     show={display} p2width={p2width}>
@@ -80,14 +79,11 @@ const AboutUs = ({
     </ContentImput >
     <ButtonCont>
     <NavButton bgcolor5="#FF7A00" display1="none" display2="none" display3="none" display4="none" 
-    onaboutusClick={onaboutusClick}
-    onteamClick={ onteamClick}/>
+    onaboutusClick={()=>router.push("/items/aboutus")}
+    onteamClick={()=>router.push("/items/team")}/>
     </ButtonCont>
     </ ContentBox>
     </AboutusCont>
 
 }
 
-
-
-export default AboutUs;

@@ -10,11 +10,8 @@ import {config} from 'react-spring'
 
 
 
-
 export default function Home() {
 
-
-  
   const mainLogo = useSpring( { config: { duration: 1000 },opacity: 1, from: {opacity: 0}, delay: 1000,})
   // const mainLogo_text = useSpring( { config: { duration: 900 },opacity: 1, from: {opacity: 0}, delay: 100,})
   const logotext = useSpring({ config:config.wobbly,
@@ -29,6 +26,7 @@ export default function Home() {
     setbgc(!bgc);
 
   }
+  
   return (
     <div className="wrapper">
       <Head>
@@ -42,7 +40,7 @@ export default function Home() {
       <div className="aboutUs" > <AboutUs contdisplay ={display ? "block" :"none"} /></div>
       <div className="button">
         
-      <Button/>
+      <Button routeTo =  "/GQ1"/>
       <Button  text="About us" width="140px" bgcolor={bgc ? "#949494": "#C4C4C4"} onClick={HandleClick}/>
       </div>
       <div className="rooter">

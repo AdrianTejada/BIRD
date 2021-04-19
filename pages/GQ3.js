@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import Page from '../comps/Page'
 import ChatBubble from '../comps/ChatBubble'
 import QuizOption from '../comps/QuizOptions'
-import Avatar from '../comps/Avatar'
+import Avatar from '../comps/Speaker'
 import Button from '../comps/Button'
 import SurveyComponent3 from '../comps/survey/Survey3.jsx'
 

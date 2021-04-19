@@ -20,7 +20,7 @@ border-radius:${props=>props.radius};
 border:none;
 font-size:22px;
 font-family: 'Archivo', sans-serif;
-font-weight:700;
+font-weight:400;
 opacity:${(props) => props.hover};
 
 outline: none;

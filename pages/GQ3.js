@@ -80,7 +80,7 @@ const OpenMenu = () => {
         <PageCont>
         <Banner text="Government Policies - Quiz" onClick={OpenMenu} routeTo="/infoQuizOptionsBase" />
         
-        <ChatBubble/>
+        <ChatBubble display="none"/>
         <SurveyCont>
         <SurveyComponent3/>
         </SurveyCont>

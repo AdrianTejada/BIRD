@@ -107,7 +107,7 @@ const OpenMenu = () => {
         <Banner text="General Information - Quiz" onClick={OpenMenu} />
         
         
-        <ChatBubble/>
+        <ChatBubble display="none"/>
         <SurveyCont>
           <Annousement>
             Your resoult:

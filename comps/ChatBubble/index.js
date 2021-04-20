@@ -61,17 +61,19 @@ const Image = styled.div`
     height: 240px;
     overflow: hidden;
     align-self:center;
+    display:${props=>props.display}
 `
 
 
 const ChatBubble = ({
-    head="Heading",
-    text="text",
+    head="",
+    text="",
     text1="Answer1",
     text2="Answer2",
     text3="Answer3",
     RadioCheck=()=>{},
-    src="/"
+    src="/",
+   display="block",
     
 }) => {
     return <ChatContainer>
@@ -80,7 +82,7 @@ const ChatBubble = ({
                 <Question>{head}</Question>
                 <Answer>{text}</Answer>
                 
-                <Image>
+                <Image display={display}>
                     <img src={src} />
                 </Image>
 

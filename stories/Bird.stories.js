@@ -1,8 +1,8 @@
 import React from 'react';
-import Bird from '../comps/Bird/index.js'
+import FlyBird from '../comps/FlyBird'
 export default {
-  title:"Example/Bird",
-  component: <Bird/>
+  title:"Example/FlyBird",
+  component: <FlyBird/>
  }
- export const MyflyBird = () => <Bird/>
+ export const MyflyBird = () => <FlyBird/>
  

@@ -13,7 +13,7 @@ const BirdImg = styled.img`
 `;
 
 //props
-const Bird= ({
+const FlyBird= ({
  width=300
   
 }) => {
@@ -27,4 +27,4 @@ const router = useRouter();
 }
 
 
-export default Bird;
+export default FlyBird;

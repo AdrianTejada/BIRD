@@ -1,6 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components';
 import Banner from '../Banner'
+import QuizOption from '../QuizOptions'
+
 
 const ChatContainer = styled.div `
     display:flex;
@@ -16,6 +18,8 @@ const Bubble = styled.div `
     align-items:center;
     overflow:hidden;
     background-color:white;
+    margin-top:20px;
+    
 `
 
 const Triangle = styled.div`
@@ -46,6 +50,11 @@ const Question = styled.div`
 const Answer = styled.div`
     font-size:16px;
 `
+const QuestionText = styled.div`
+   margin-left:20px; 
+   font-size:20px;
+`
+
 
 const Image = styled.div`
     width: 260px;
@@ -57,8 +66,12 @@ const Image = styled.div`
 
 const ChatBubble = ({
     head="Heading",
-    text="contents",
-    src="/wuhan.svg"
+    text1="Answer1",
+    text2="Answer2",
+    text3="Answer3",
+    RadioCheck=()=>{}
+   
+    
 }) => {
     return <ChatContainer>
         <Bubble>

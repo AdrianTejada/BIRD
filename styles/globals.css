@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&display=swap');
+
 
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: 'Archivo', sans-serif;
+  font-weight:400;
 }
 
 .page{
@@ -61,7 +63,7 @@ body {
   margin-top:450px;
   position: absolute;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 400;
   /* font-style: bold; */
   text-shadow: 5px 5px 5px grey;
  }
@@ -72,3 +74,51 @@ body {
   justify-content: center;
   z-index: 2;
  }
+
+ /* =======Survey start======= */
+ .sv_container{
+   width:320px;
+ }
+ .sv_header{
+  text-align: center;
+  font-weight: 200;
+  font-size: 18px;
+  display:none;
+}
+.sv_body{
+  line-height: 24px;
+  font-size: 18px;
+  margin-top:50px;
+
+}
+.sv_q_title{
+  font-size: 18px;
+  font-weight: 700;
+}
+ .sv_start_btn{
+   margin-top:50px;
+   margin-left: 200px;
+   background-color:#c4c4c4;
+   color:rgb(78, 78, 78);
+   border-radius: 10px;
+   border:none;
+   width:120px;
+   height:40px;
+   font-size: 20px;
+   font-weight: 400;
+
+ }
+ .sv_next_btn,.sv_complete_btn{
+  margin-top:40px;
+  margin-left: 200px;
+  background-color:#c4c4c4;
+   color:rgb(78, 78, 78);
+   border-radius: 10px;
+   border:none;
+   width:120px;
+   height:40px;
+   font-size: 20px;
+   font-weight: 400;
+   
+ }
+ /* =======Survey end======= */

@@ -39,7 +39,7 @@ export default function Home() {
       <div className="aboutUs" > <AboutUs contdisplay ={display ? "block" :"none"} /></div>
       <div className="button">
         
-      <Button routeTo ="/infoCovidBase"/>
+      <Button routeTo =  "/infoCovidBase"/>
       <Button  text="About us" width="140px" bgcolor={bgc ? "#949494": "#C4C4C4"} onClick={HandleClick}/>
       </div>
       <div className="rooter">

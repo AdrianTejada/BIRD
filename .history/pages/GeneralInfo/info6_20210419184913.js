@@ -82,12 +82,13 @@ const OpenMenu = () => {
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="General Info" onClick={OpenMenu} routeTo="/infoCovidBase"/>
+        <Banner text="General Info" onClick={OpenMenu} />
 
         <ChatBubble 
-          head="1. What is COVID-19?"
-          text="COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China."
-          src="/wuhan.svg"
+          head="6.How can we protect others and ourselves if we don't know who is infected?
+          "
+          text="Stay safe by taking some simple precautions, such as physical distancing, wearing a mask, especially when distancing cannot be maintained, keeping rooms well ventilated, avoiding crowds and close contact, regularly cleaning your hands, and coughing into a bent elbow or tissue."
+          src="/patient-covermouth.svg"
         />
 
         <SpeakerContainer>
@@ -96,9 +97,9 @@ const OpenMenu = () => {
 
         <NavContainer>
           <NavButton 
-            bgcolor1="#FF7A00"
-            back=""
-            next="info2"
+            bgcolor6="#FF7A00"
+            back="info5"
+            next="/infoCovidBase"
           />
         </NavContainer>
       </Page>

@@ -55,12 +55,12 @@ export default function Home() {
   margin-top:150px;
 `
 const Resoult= styled.div`
-  font-size:65px;
-  font-weight:400;
-  color:orange;
-  justify-content:center;
-  text-align:center;
-  margin:50px;
+font-size:65px;
+font-weight:400;
+color:orange;
+justify-content:center;
+text-align:center;
+margin:50px;
   
 `
 const Annousement= styled.div`
@@ -76,6 +76,8 @@ const Comment= styled.div`
   font-weight:400;
   color:orange;
   justify-content:center;
+  text-align:center;
+  
 `
 const Subtitle = styled.div`
 font-size:30px;
@@ -111,19 +113,19 @@ const OpenMenu = () => {
             Your resoult:
           </Annousement>
           <Resoult>
-          3/3
+           2/3
           </Resoult>
           <Comment>
-           <Subtitle> Awesome!</Subtitle> You do the good job!
+            <Subtitle>Good job!</Subtitle> Keep studying!
           </Comment>
           <ButtonBigCont>
-          <Button  text="Read again" routeTo="/GeneralInfo/info1" />
+          <Button  text="Read again" />
           <Button text="Retake the Quiz" routeTo =  "/GQ1"/>
           </ButtonBigCont>
          
         
         </SurveyCont>
-        <Avatar   src="/R3.svg" width="350"/>
+        <Avatar   src="/R2.svg" width="450"/>
 
         
         

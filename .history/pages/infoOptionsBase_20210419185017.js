@@ -1,10 +1,11 @@
-import Banner from '../../comps/Banner';
-import HamburgerMenu from '../../comps/HamburgerMenu';
+import Banner from '../comps/Banner';
+import HamburgerMenu from '../comps/HamburgerMenu';
 import styled from 'styled-components';
 import React, {useState} from 'react';
-import Page from '../../comps/Page'
-import ChatBubble from '../../comps/ChatBubble'
-import NavButton from '../../comps/NavButton'
+import Page from '../comps/Page';
+import ChatBubble from '../comps/ChatBubble';
+import NavButton from '../comps/NavButton';
+import Option from '../comps/Option';
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -17,7 +18,7 @@ const MainCont = styled.div `
 
 const UpperLayer = styled.div `
   width: 414px;
-  height: 896px;
+  height: 1170px;
   overflow: hidden;
   z-index: 0;
   position: relative;
@@ -54,7 +55,17 @@ const Speaker = styled.img`
 
 const NavContainer = styled.div`
   position:absolute;
-  bottom:260px;
+  bottom:255px;
+`
+const Optioncont = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin-top: 130px;
+
+    
 `
 
 
@@ -62,45 +73,33 @@ const NavContainer = styled.div`
 
 
 export default function Home() {
-  //for menu
+
   const [menustate, setMenuState] = useState(false);
   var right=0;
   if (menustate === true)
   {
     right=178;
   }
-  // for content
-
-
 
 
 const OpenMenu = () => {
   setMenuState(!menustate);
 }
 
+  console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="General Info" onClick={OpenMenu} routeTo="/infoCovidBase"/>
-
-        <ChatBubble 
-          head="1. What is COVID-19?"
-          text="COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China."
-          src="/wuhan.svg"
-        />
-
-        <SpeakerContainer>
-          <Speaker src="/doctor-hand.svg" />
-        </SpeakerContainer>
-
-        <NavContainer>
-          <NavButton 
-            bgcolor1="#FF7A00"
-            back=""
-            next="info2"
-          />
-        </NavContainer>
+        <Banner text="Take Action" onClick={OpenMenu} />
+        
+       <Optioncont>
+           <div><Option src = "/5.svg" text = "Quiz"/></div> 
+           <div><Option src = "/6.svg" text = "Purchase Protection"/></div> 
+           <div><Option src = "/7.svg" text = "Donation"/></div> 
+           <div><Option src = "/8.svg" text = "Make An Appointment"/></div> 
+           <div><Option src = "/9.svg" text = "Help"/></div> 
+        </Optioncont> 
       </Page>
 
     </UpperLayer>

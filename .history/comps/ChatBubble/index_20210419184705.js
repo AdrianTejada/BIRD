@@ -70,8 +70,8 @@ const ChatBubble = ({
     text1="Answer1",
     text2="Answer2",
     text3="Answer3",
-    RadioCheck=()=>{},
-    src="/"
+    RadioCheck=()=>{}
+   
     
 }) => {
     return <ChatContainer>

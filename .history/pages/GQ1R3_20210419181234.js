@@ -117,7 +117,7 @@ const OpenMenu = () => {
            <Subtitle> Awesome!</Subtitle> You do the good job!
           </Comment>
           <ButtonBigCont>
-          <Button  text="Read again" routeTo="/GeneralInfo/info1" />
+          <Button  text="Read again" />
           <Button text="Retake the Quiz" routeTo =  "/GQ1"/>
           </ButtonBigCont>
          

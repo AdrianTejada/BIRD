@@ -7,6 +7,8 @@ import ChatBubble from '../comps/ChatBubble'
 import QuizOption from '../comps/QuizOptions'
 import Avatar from '../comps/Spaeker'
 import Button from '../comps/Button'
+import SurveyComponent3 from '../comps/survey/Survey3.jsx'
+
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -39,6 +41,22 @@ const SideBar = styled.div `
   flex-direction: row;
   justify-content: flex-end;
 `
+const PageCont =styled.div`
+display: flex;
+flex-direction:column;
+align-items:center
+
+`
+const Question = styled.div`
+    display:inline-flex;
+    align-items:center;
+`
+const SurveyCont= styled.div`
+  position:absolute;
+  z-index:1;
+  justify-content:center;
+  margin-top:150px;
+`
 
 export default function Home() {
 
@@ -48,87 +66,28 @@ export default function Home() {
   {
     right=178;
   }
-  const SurveyCont= styled.div`
-  position:absolute;
-  z-index:1;
-  justify-content:center;
-  margin-top:150px;
-`
-const Resoult= styled.div`
-  font-size:65px;
-  font-weight:400;
-  color:orange;
-  justify-content:center;
-  text-align:center;
-  margin:50px;
-  
-`
-const Annousement= styled.div`
-  font-size:24px;
-  font-weight:400;
-  color:#c4c4c4;
-  justify-content:center;
-  text-align:center;
-  
-`
-const Comment= styled.div`
-  font-size:24px;
-  font-weight:400;
-  color:orange;
-  justify-content:center;
-`
-const Subtitle = styled.div`
-font-size:30px;
-  font-weight:400;
-  color:orange4;
-  justify-content:center;
-  text-align:center;
-  margin:10px;
-`
-const ButtonBigCont =styled.div`
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  
-  margin-top:50px;
-`
 
 
 const OpenMenu = () => {
   setMenuState(!menustate);
 }
 
+
   console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
-        <Banner text="General Information - Quiz" onClick={OpenMenu} />
-        
+        <PageCont>
+        <Banner text="Government Policies - Quiz" onClick={OpenMenu} />
         
         <ChatBubble/>
         <SurveyCont>
-          <Annousement>
-            Your resoult:
-          </Annousement>
-          <Resoult>
-          3/3
-          </Resoult>
-          <Comment>
-           <Subtitle> Awesome!</Subtitle> You do the good job!
-          </Comment>
-          <ButtonBigCont>
-          <Button  text="Read again" routeTo="/GeneralInfo/info1" />
-          <Button text="Retake the Quiz" routeTo =  "/GQ1"/>
-          </ButtonBigCont>
-         
-        
+        <SurveyComponent3/>
         </SurveyCont>
-        <Avatar   src="/R3.svg" width="350"/>
-
-        
+        <Avatar/>
         
 
-
+        </PageCont>
       </Page>
      
     </UpperLayer>

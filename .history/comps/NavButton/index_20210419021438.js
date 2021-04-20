@@ -32,7 +32,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index2};
 `;
 const ButtonIndex3 =styled.div`
@@ -40,7 +40,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index3};
 `;
 const ButtonIndex4 =styled.div`
@@ -48,7 +48,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index4};
 `;
 const ButtonIndex5 =styled.div`
@@ -56,7 +56,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index5};
 `;
 const ButtonIndex6 =styled.div`
@@ -64,7 +64,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index6};
 `;
 

@@ -29,11 +29,7 @@ const Triangle = styled.div`
 `
 
 const Content = styled.div`
-    width:100%;
-    height:100%;
-    margin-left:30px;
-    margin-right:30px;
-    margin-top:40px;
+    
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,7 +44,7 @@ const Answer = styled.div`
 `
 
 const Image = styled.div`
-    width: 260px;
+    width: 240px;
     height: 240px;
     overflow: hidden;
     align-self:center;

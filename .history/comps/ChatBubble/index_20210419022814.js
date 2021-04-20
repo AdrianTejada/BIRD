@@ -29,14 +29,11 @@ const Triangle = styled.div`
 `
 
 const Content = styled.div`
-    width:100%;
-    height:100%;
-    margin-left:30px;
-    margin-right:30px;
-    margin-top:40px;
+    width: 85%;
+    height 85%;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 `
 const Question = styled.div`
     font-size:16px;
@@ -44,21 +41,13 @@ const Question = styled.div`
 `
 
 const Answer = styled.div`
-    font-size:16px;
-`
-
-const Image = styled.div`
-    width: 260px;
-    height: 240px;
-    overflow: hidden;
-    align-self:center;
+    font-size:26px;
 `
 
 
 const ChatBubble = ({
     head="Heading",
     text="contents",
-    src="/wuhan.svg"
 }) => {
     return <ChatContainer>
         <Bubble>
@@ -66,10 +55,6 @@ const ChatBubble = ({
                 <Question>{head}</Question>
                 <Answer>{text}</Answer>
                 
-                <Image>
-                    <img src={src} />
-                </Image>
-
             </Content>
         </Bubble>
 

@@ -40,6 +40,7 @@ const PurpleBanner = styled.div`
     min-height:50px;
     background-color: #E09EFF;
     color: #545454;
+    font-family:'Roboto';
     font-weight: bold;
     font-size: 20px;
     padding:5px;

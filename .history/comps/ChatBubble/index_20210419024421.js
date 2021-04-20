@@ -33,7 +33,7 @@ const Content = styled.div`
     height:100%;
     margin-left:30px;
     margin-right:30px;
-    margin-top:40px;
+    margin-top:30px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,7 +48,7 @@ const Answer = styled.div`
 `
 
 const Image = styled.div`
-    width: 260px;
+    width: 240px;
     height: 240px;
     overflow: hidden;
     align-self:center;

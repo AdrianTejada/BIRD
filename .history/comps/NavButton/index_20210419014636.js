@@ -10,9 +10,10 @@ flex-direction:row;
 justify-content:center;
 
 `;
-const ButtonImput = styled.div`
+const ButtonImput = styled.button`
 border:none;
-margin:0 5px;
+opacity:0;
+margin:0 10px;
 `;
 const ButtonImg =styled.img`
 width:35px;
@@ -24,7 +25,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index1};
 `;
 const ButtonIndex2 =styled.div`
@@ -32,7 +33,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index2};
 `;
 const ButtonIndex3 =styled.div`
@@ -40,7 +41,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index3};
 `;
 const ButtonIndex4 =styled.div`
@@ -48,7 +49,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index4};
 `;
 const ButtonIndex5 =styled.div`
@@ -56,7 +57,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index5};
 `;
 const ButtonIndex6 =styled.div`
@@ -64,7 +65,7 @@ width:15px;
 height:15px;
 border-radius:50%;
 background-color:${props=>props.bgc};;
-margin:5px 5px 0 5px;
+margin:5px 10px 0 10px;
 display:${props=>props.index6};
 `;
 
@@ -86,8 +87,7 @@ const NavButton = ({
   width="180px",
   height="40px",
   radius="10px",
-  back="/",
-  next="/",
+  routeTo="/home",
   opacity="1",
   onClick=()=>{},
   onMouseOver=()=>{},
@@ -105,7 +105,7 @@ const router = useRouter();
     }}> Test Button</button> */}
     
     
-    <ButtonImput onClick={()=>router.push(back)}>
+    <ButtonImput >
     <ButtonImg  src ="/arrow-grey-left.svg"  onClick={onGoalClick} />
     </ButtonImput>
     <ButtonIndex1 index1={display1}  bgc={bgcolor1}></ButtonIndex1>
@@ -114,7 +114,7 @@ const router = useRouter();
     <ButtonIndex4 index4={display4} bgc={bgcolor4}></ButtonIndex4>
     <ButtonIndex5 index5={display5} bgc={bgcolor5}></ButtonIndex5>
     <ButtonIndex6 index6={display6} bgc={bgcolor6}></ButtonIndex6>
-    <ButtonImput onClick={()=>router.push(next)}>
+    <ButtonImput >
     <ButtonImg  src ="/arrow-grey-right.svg"    onClick={onDesignersClick}/>
     </ButtonImput>  
     </ButtonCont>

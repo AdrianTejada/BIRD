@@ -48,7 +48,7 @@ const Answer = styled.div`
 `
 
 const Image = styled.div`
-    width: 260px;
+    width: 240px;
     height: 240px;
     overflow: hidden;
     align-self:center;

@@ -37,7 +37,7 @@ const Avatar  = ({
     height= 160,
     text = "General info",
     routeTo = "/",
-    marginBottom = 25
+    marginBottom = 35
 }) =>{
     const router = useRouter();
     return <Avatarcont onClick ={()=>router.push(routeTo)} > 

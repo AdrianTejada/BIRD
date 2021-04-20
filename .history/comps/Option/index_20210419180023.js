@@ -28,7 +28,7 @@ const Avatartext = styled.span`
     text-align: center;
     font-weight: 800;
     overflow:hidden;
-    margin-bottom: ${props=>props.marginBottom}px;
+    margin-bottom: ${props=>props.marginBottom}
 `;
 
 const Avatar  = ({
@@ -37,7 +37,7 @@ const Avatar  = ({
     height= 160,
     text = "General info",
     routeTo = "/",
-    marginBottom = 25
+    marginBottom = 40px
 }) =>{
     const router = useRouter();
     return <Avatarcont onClick ={()=>router.push(routeTo)} > 

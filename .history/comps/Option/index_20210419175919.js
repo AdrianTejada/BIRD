@@ -28,7 +28,7 @@ const Avatartext = styled.span`
     text-align: center;
     font-weight: 800;
     overflow:hidden;
-    margin-bottom: ${props=>props.marginBottom}px;
+    margin-bottom: $
 `;
 
 const Avatar  = ({

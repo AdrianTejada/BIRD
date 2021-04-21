@@ -36,9 +36,9 @@ const ContentImput = styled.div`
 color:#949494;
 font-size:20px;
 font-family: 'Archivo', sans-serif;
-font-weight:400;
+font-weight:500;
 align-items:center;
-line-height:26px;
+line-height:25px;
 width:250px;
 height:250px;
 width:${props=>props.p2width};

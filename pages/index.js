@@ -14,7 +14,7 @@ const subtext={
   },
   team:{
     title:"Our Team",
-   content: "  Levi Chen,  ",
+   content: "  Levi Chen  ",
    content2: "Adrian Tejada",
    content3: "Aly Ali ",
   
@@ -60,10 +60,6 @@ export default function Home() {
       setContent3(subtext.aboutus.content3);
       setindex5(false);
       setindex6(false);
-      
-      
-     
-      
     }
     const teamClick =()=>{
       setTittle(subtext.team.title);
@@ -72,8 +68,6 @@ export default function Home() {
       setContent3(subtext.team.content3);
       setindex6(true);
       setindex5(true);
-      
-     
     }
   
   

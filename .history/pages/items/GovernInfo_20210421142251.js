@@ -55,7 +55,7 @@ const Speaker = styled.img`
 
 const NavContainer = styled.div`
   position:absolute;
-  bottom:240px;
+  bottom:245px;
 `
 
 

@@ -24,11 +24,11 @@ const Bubble = styled.div `
 
 const Triangle = styled.div`
     background: url("/chat-triangle.svg");
-    width:70px;
-    height:41px;
+    width:84px;
+    height:50px;
     position:relative;
     left: 0px;
-    bottom:12px;
+    bottom:10px;
     overflow:hidden;
 `
 

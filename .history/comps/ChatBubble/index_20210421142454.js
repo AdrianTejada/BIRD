@@ -28,7 +28,7 @@ const Triangle = styled.div`
     height:41px;
     position:relative;
     left: 0px;
-    bottom:12px;
+    bottom:11px;
     overflow:hidden;
 `
 

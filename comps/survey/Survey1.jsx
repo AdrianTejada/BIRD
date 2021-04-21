@@ -35,8 +35,8 @@ class SurveyComponent1 extends Component {
                {
                 type: "radiogroup",
                 name:"symptom",
-                title: "What is the symptom of COVID-19?",
-                correctAnswer: "Fever and Dry cough",
+                title: "What is not the symptom of COVID-19?",
+                correctAnswer: "Running nose",
                 isRequired: true,
                 choices: [
                  {
@@ -125,35 +125,35 @@ class SurveyComponent1 extends Component {
             // navigateToUrl: "../GQ2",
             navigateToUrlOnCondition: [
              {
-              expression: "{symptom} = 'Fever and Dry cough' and {How long} = 'In 2 weeks' and {defence methods} = 'Do exercise regularly'",
+              expression: "{symptom} = 'Running nose' and {How long} = 'In 2 weeks' and {defence methods} = 'Do exercise regularly'",
               url: "../GQ1R3"
              },
              {
-              "expression": "{defence methods} <> 'Do exercise regularly' and {How long} = 'In 2 weeks' and {symptom} = 'Fever and Dry cough'",
+              "expression": "{defence methods} <> 'Do exercise regularly' and {How long} = 'In 2 weeks' and {symptom} = 'Running nose'",
               "url": "../GQ1R2"
              },
              {
-              "expression": "{defence methods} = 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} = 'Fever and Dry cough'",
+              "expression": "{defence methods} = 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} = 'Running nose'",
               "url": "../GQ1R2"
              },
              {
-              "expression": "{defence methods} = 'Do exercise regularly' and {How long} = 'In 2 weeks' and {symptom} <> 'Fever and Dry cough'",
+              "expression": "{defence methods} = 'Do exercise regularly' and {How long} = 'In 2 weeks' and {symptom} <> 'Running nose'",
               "url": "../GQ1R2"
              },
              {
-              "expression": "{defence methods} <> 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} = 'Fever and Dry cough'",
+              "expression": "{defence methods} <> 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} = 'Running nose'",
               "url": "../GQ1R1"
              },
              {
-              "expression": "{defence methods} <> 'Do exercise regularly' and {How long} = 'In 2 weeks' and {symptom} <> 'Fever and Dry cough'",
+              "expression": "{defence methods} <> 'Do exercise regularly' and {How long} = 'In 2 weeks' and {symptom} <> 'Running nose'",
               "url": "../GQ1R1"
              },
              {
-              "expression": "{defence methods} = 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} <> 'Fever and Dry cough'",
+              "expression": "{defence methods} = 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} <> 'Running nose'",
               "url": "../GQ1R1"
              },
              {
-              "expression": "{defence methods} <> 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} <> 'Fever and Dry cough'",
+              "expression": "{defence methods} <> 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} <> 'Running nose'",
               "url": "../GQ1R0"
              },
             ],

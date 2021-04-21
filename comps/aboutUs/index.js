@@ -5,13 +5,13 @@ import {useRouter} from 'next/router';
 import NavButton from '../NavButton/index.js'
 
 
+
 const AboutusCont=styled.div`
 width:${props=>props.width};
 height:${props=>props.height};
 border-radius:${props=>props.radius};
 background-color:${props=>props.bgc};
 border:none;
-opacity:${(props) => props.show};
 display:${(props) => props.contdisplay};
 `;
 const ContentBox=styled.div`
@@ -25,11 +25,13 @@ const TitleImput = styled.p`
 color:#949494;
 font-size:24px;
 font-family: 'Archivo', sans-serif;
-font-weight:800;
+font-weight:700;
 align-items:center;
 justify-content:center;
 text-align:center;
+display:${props => props.t1display};
 `;
+
 const ContentImput = styled.p`
 color:#949494;
 font-size:20px;
@@ -38,50 +40,51 @@ font-weight:400;
 align-items:center;
 line-height:26px;
 width:250px;
-// padding-left:27.5px ;
+height:250px;
 width:${props=>props.p2width};
+display:${(props) => props.t1display};
 `;
-
 
 const ButtonCont=styled.div`
-position:absolute;
-margin-top:400px;
+
 
 `;
+
+
+
+
+
     
 //props
 const AboutUs = ({
-  subtitle="Our Goal",
+  title="Our Goal",
   text="BIRD is an app designed to educated its users about the COVID-19 Virus. For those who want to take action or test their knowlage, there are also Donation links and quizes.",
   bgcolor="#C4C4C4",
   width="300px",
   height="425px",
   radius="10px",
   routeTo="/home",
-  display="block",
   p2width="200px",
   contdisplay="block",
-  onClick=()=>{},
-  onaboutusClick=()=>{},
-  onteamClick=()=>{}
-  
+  aboutusClick=()=>{},
+  teamClick=()=>{}
 }) => {
   
 // const router = useRouter();
 // ()=>router.push( routeTo)
   return <AboutusCont   width={width} height={height} bgc={bgcolor} radius={ radius} contdisplay={contdisplay}>
-  < ContentBox     show={display} p2width={p2width}>
+  < ContentBox      p2width={p2width}>
     
-    <TitleImput  >
-      {subtitle}
+    <TitleImput   >
+      {title}
     </TitleImput >
     <ContentImput  >
       {text} 
-    </ContentImput >
+    </ContentImput  >
     <ButtonCont>
     <NavButton bgcolor5="#FF7A00" display1="none" display2="none" display3="none" display4="none" 
-    onaboutusClick={onaboutusClick}
-    onteamClick={ onteamClick}/>
+    aboutusClick={aboutusClick}
+    teamClick={ teamClick}/>
     </ButtonCont>
     </ ContentBox>
     </AboutusCont>

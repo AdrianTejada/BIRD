@@ -7,12 +7,21 @@ import React, { useState } from "react"
 import {useSpring, animated} from 'react-spring'
 import {config} from 'react-spring'
 
-
+const subtext={
+  aboutus:{
+    title:"Our Goal",
+    content:"BIRD is an app designed to educate its users about the COVID-19 Virus. For those who want to take action or test their knowledge, there are also Donation links and quizzes.",
+  },
+  team:{
+    title:"Our Team",
+   content: "  Levi Chen, Adrian Tejada ,  Aly Ali ",
+  
+  }
+  }
 
 export default function Home() {
 
   const mainLogo = useSpring( { config: { duration: 1000 },opacity: 1, from: {opacity: 0}, delay: 1000,})
-  // const mainLogo_text = useSpring( { config: { duration: 900 },opacity: 1, from: {opacity: 0}, delay: 100,})
   const logotext = useSpring({ config:config.wobbly,
    transform: 'translate3d(0,350px,0)',from: { transform: 'translate3d(0,0px,0)'}
   })
@@ -25,6 +34,21 @@ export default function Home() {
     setbgc(!bgc);
 
   }
+
+  const [title, setTittle] =useState("Our Goal " )
+    const [content, setContent] =useState("BIRD is an app designed to educated its users about the COVID-19 Virus. For those who want to take action or test their knowlage, there are also Donation links and quizes.")
+
+    const aboutusClick =()=>{
+      setTittle(subtext.aboutus.title)
+      setContent(subtext.aboutus.content)
+      
+    }
+    const teamClick =()=>{
+      setTittle(subtext.team.title)
+      setContent(subtext.team.content)
+    
+    }
+  
   
   return (
     <div className="wrapper">
@@ -36,7 +60,12 @@ export default function Home() {
       <animated.div className="logotext" style={logotext}><BirdLogo display="none"/></animated.div>
       <animated.div className="Subtext" style={text}><p>Big Issues Ready for Discovery  </p></animated.div>
       
-      <div className="aboutUs" > <AboutUs contdisplay ={display ? "block" :"none"} /></div>
+      <div className="aboutUs" > <AboutUs contdisplay ={display ? "block" :"none"} 
+      title={title} text={content}
+       aboutusClick={aboutusClick}
+    teamClick={ teamClick}
+     
+    /></div>
       <div className="button">
         
       <Button routeTo ="/infoCovidBase"/>

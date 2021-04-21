@@ -79,7 +79,7 @@ const ChatBubble = ({
     text3="Answer3",
     RadioCheck=()=>{},
     src="/",
-   display="block",
+    display="block",
     
 }) => {
     return <ChatContainer>

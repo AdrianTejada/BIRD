@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import React, {useState} from 'react';
 import Page from '../../comps/Page'
 import ChatBubble from '../../comps/ChatBubble'
-import NavButton from '../../comps/NavButton'
+import NavButton from '../../comps/NavButtonInfo'
 import {info} from '../../data/General';
 import {useRouter} from 'next/router';
 

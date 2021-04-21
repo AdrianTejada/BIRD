@@ -86,27 +86,30 @@ const NavButton = ({
   width="180px",
   height="40px",
   radius="10px",
-  back="/",
-  next="/",
   opacity="1",
-  teamClick=()=>{},
-  aboutusClick=()=>{}
+  nextFunction=()=>{},
+  backFunction=()=>{},
+  onaboutusClick=()=>{},
+  onteamClick=()=>{},
+  back="",
+  next="",
   
 }) => {
 const router = useRouter();
+// ()=>router.push(next)
   return <ButtonCont   >    
-   <div onClick={aboutusClick}><ButtonImput onClick={()=>router.push(back)}>
-    <ButtonImg  src ="/arrow-grey-left.svg"  />
-    </ButtonImput></div> 
-    <ButtonIndex1 index1={display1} bgc={bgcolor1}></ButtonIndex1>
-    <ButtonIndex2 index2={display2} bgc={bgcolor2}></ButtonIndex2>
+    <ButtonImput onClick={backFunction}>
+    <ButtonImg  src ="/arrow-grey-left.svg" />
+    </ButtonImput>
+    <ButtonIndex1 index1={display1}  bgc={bgcolor1}></ButtonIndex1>
+    <ButtonIndex2 index2={display2}  bgc={bgcolor2}></ButtonIndex2>
     <ButtonIndex3 index3={display3} bgc={bgcolor3}></ButtonIndex3>
     <ButtonIndex4 index4={display4} bgc={bgcolor4}></ButtonIndex4>
     <ButtonIndex5 index5={display5} bgc={bgcolor5}></ButtonIndex5>
     <ButtonIndex6 index6={display6} bgc={bgcolor6}></ButtonIndex6>
-    <div onClick={teamClick}><ButtonImput onClick={()=>router.push(next)}>
-    <ButtonImg  src ="/arrow-grey-right.svg"    />
-    </ButtonImput> </div> 
+    <ButtonImput onClick={nextFunction}>
+    <ButtonImg  src ="/arrow-grey-right.svg" />
+    </ButtonImput>  
     </ButtonCont>
 }
 

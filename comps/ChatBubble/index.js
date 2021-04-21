@@ -63,11 +63,7 @@ const Image = styled.div`
     align-self:center;
     display:${props=>props.display}
 
-    .image {
-        width:100%;
-        height:100%;0
-        object-fit:cover;
-    }
+    
 `
 
 

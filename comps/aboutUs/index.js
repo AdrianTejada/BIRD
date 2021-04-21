@@ -21,7 +21,7 @@ justify-content:center;
 align-items:center;
 
 `;
-const TitleImput = styled.p`
+const TitleImput = styled.div`
 color:#949494;
 font-size:24px;
 font-family: 'Archivo', sans-serif;
@@ -29,20 +29,25 @@ font-weight:700;
 align-items:center;
 justify-content:center;
 text-align:center;
-display:${props => props.t1display};
+margin:30px;
 `;
 
-const ContentImput = styled.p`
+const ContentImput = styled.div`
 color:#949494;
 font-size:20px;
 font-family: 'Archivo', sans-serif;
-font-weight:400;
+font-weight:500;
 align-items:center;
-line-height:26px;
+line-height:25px;
 width:250px;
 height:250px;
 width:${props=>props.p2width};
-display:${(props) => props.t1display};
+display:flex;
+flex-direction:column;
+
+margin-top:20px;
+
+
 `;
 
 const ButtonCont=styled.div`
@@ -59,13 +64,16 @@ const ButtonCont=styled.div`
 const AboutUs = ({
   title="Our Goal",
   text="BIRD is an app designed to educated its users about the COVID-19 Virus. For those who want to take action or test their knowlage, there are also Donation links and quizes.",
+  text2="",
+  text3="",
   bgcolor="#C4C4C4",
   width="300px",
   height="425px",
   radius="10px",
-  routeTo="/home",
   p2width="200px",
   contdisplay="block",
+  bgcolor5="#FF7A00",
+  bgcolor6="#9A9999",
   aboutusClick=()=>{},
   teamClick=()=>{}
 }) => {
@@ -79,10 +87,14 @@ const AboutUs = ({
       {title}
     </TitleImput >
     <ContentImput  >
-      {text} 
+     <div> {text} </div>
+     <br/>
+     <div>{text2}</div> 
+     <br/>
+     <div>{text3}</div> 
     </ContentImput  >
     <ButtonCont>
-    <NavButton bgcolor5="#FF7A00" display1="none" display2="none" display3="none" display4="none" 
+    <NavButton   bgcolor5={bgcolor5} bgcolor6={bgcolor6} display1="none" display2="none" display3="none" display4="none" 
     aboutusClick={aboutusClick}
     teamClick={ teamClick}/>
     </ButtonCont>

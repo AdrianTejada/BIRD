@@ -18,7 +18,7 @@ const MainCont = styled.div `
 
 const UpperLayer = styled.div `
   width: 414px;
-  height: 1000px;
+  height: 896px;
   overflow: hidden;
   z-index: 0;
   position: relative;
@@ -64,6 +64,9 @@ const Optioncont = styled.div`
     align-items: center;
     position: absolute;
     margin-top: 130px;
+    width: 414px;
+    height: 750px;
+    overflow: auto;
 
     
 `

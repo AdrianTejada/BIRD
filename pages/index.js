@@ -14,7 +14,9 @@ const subtext={
   },
   team:{
     title:"Our Team",
-   content: "  Levi Chen, Adrian Tejada ,  Aly Ali ",
+   content: "  Levi Chen  ",
+   content2: "Adrian Tejada",
+   content3: "Aly Ali ",
   
   }
   }
@@ -37,16 +39,35 @@ export default function Home() {
 
   const [title, setTittle] =useState("Our Goal " )
     const [content, setContent] =useState("BIRD is an app designed to educated its users about the COVID-19 Virus. For those who want to take action or test their knowlage, there are also Donation links and quizes.")
-
+    const [content2, setContent2] =useState("")
+    const [content3, setContent3] =useState("")
+    const [index5,setindex5] = useState(false);
+    const [index6,setindex6] = useState(false);
+    
+    let bgcolor5 ="#FF7A00";
+    if (index5 === true) {
+      bgcolor5 ="#9A9999"
+    };
+    let bgcolor6 ="#9A9999";
+    if (index6 === true) {
+      bgcolor6 ="#FF7A00"
+    };
+    
     const aboutusClick =()=>{
-      setTittle(subtext.aboutus.title)
-      setContent(subtext.aboutus.content)
-      
+      setTittle(subtext.aboutus.title);
+      setContent(subtext.aboutus.content);
+      setContent2(subtext.aboutus.content2);
+      setContent3(subtext.aboutus.content3);
+      setindex5(false);
+      setindex6(false);
     }
     const teamClick =()=>{
-      setTittle(subtext.team.title)
-      setContent(subtext.team.content)
-    
+      setTittle(subtext.team.title);
+      setContent(subtext.team.content);
+      setContent2(subtext.team.content2);
+      setContent3(subtext.team.content3);
+      setindex6(true);
+      setindex5(true);
     }
   
   
@@ -60,12 +81,15 @@ export default function Home() {
       <animated.div className="logotext" style={logotext}><BirdLogo display="none"/></animated.div>
       <animated.div className="Subtext" style={text}><p>Big Issues Ready for Discovery  </p></animated.div>
       
-      <div className="aboutUs" > <AboutUs contdisplay ={display ? "block" :"none"} 
-      title={title} text={content}
-       aboutusClick={aboutusClick}
-    teamClick={ teamClick}
-     
-    /></div>
+      <div className="aboutUs" > 
+      <AboutUs contdisplay ={display ? "block" :"none"} 
+      title={title} text={content} text2={content2} text3={content3}
+      bgcolor5={bgcolor5 }  
+      bgcolor6={bgcolor6 }
+      
+      aboutusClick={aboutusClick}
+      teamClick={ teamClick} />
+     </div>
       <div className="button">
         
       <Button routeTo ="/infoCovidBase"/>

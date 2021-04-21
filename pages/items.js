@@ -12,7 +12,7 @@ const subtext={
   },
   team:{
     title:"Developers & Deaigners",
-    text: "Levi Chen, Adrian T",
+    text: "Levi Chen, Adrian Tejada",
   }
   }
   export default function items(){

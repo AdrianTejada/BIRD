@@ -23,7 +23,7 @@ const ButtonIndex1 =styled.div`
 width:15px;
 height:15px;
 border-radius:50%;
-background-color:${props=>props.bgc};;
+background-color:${props=>props.bgc1};;
 margin:5px 5px 0 5px;
 display:${props=>props.index1};
 `;
@@ -31,7 +31,7 @@ const ButtonIndex2 =styled.div`
 width:15px;
 height:15px;
 border-radius:50%;
-background-color:${props=>props.bgc};;
+background-color:${props=>props.bgc2};;
 margin:5px 5px 0 5px;
 display:${props=>props.index2};
 `;
@@ -39,7 +39,7 @@ const ButtonIndex3 =styled.div`
 width:15px;
 height:15px;
 border-radius:50%;
-background-color:${props=>props.bgc};;
+background-color:${props=>props.bgc3};;
 margin:5px 5px 0 5px;
 display:${props=>props.index3};
 `;
@@ -47,7 +47,7 @@ const ButtonIndex4 =styled.div`
 width:15px;
 height:15px;
 border-radius:50%;
-background-color:${props=>props.bgc};;
+background-color:${props=>props.bgc4};;
 margin:5px 5px 0 5px;
 display:${props=>props.index4};
 `;
@@ -55,7 +55,7 @@ const ButtonIndex5 =styled.div`
 width:15px;
 height:15px;
 border-radius:50%;
-background-color:${props=>props.bgc};;
+background-color:${props=>props.bgc5};;
 margin:5px 5px 0 5px;
 display:${props=>props.index5};
 `;
@@ -63,7 +63,7 @@ const ButtonIndex6 =styled.div`
 width:15px;
 height:15px;
 border-radius:50%;
-background-color:${props=>props.bgc};;
+background-color:${props=>props.bgc6};;
 margin:5px 5px 0 5px;
 display:${props=>props.index6};
 `;
@@ -98,12 +98,12 @@ const router = useRouter();
    <div onClick={aboutusClick}><ButtonImput onClick={()=>router.push(back)}>
     <ButtonImg  src ="/arrow-grey-left.svg"  />
     </ButtonImput></div> 
-    <ButtonIndex1 index1={display1} bgc={bgcolor1}></ButtonIndex1>
-    <ButtonIndex2 index2={display2} bgc={bgcolor2}></ButtonIndex2>
-    <ButtonIndex3 index3={display3} bgc={bgcolor3}></ButtonIndex3>
-    <ButtonIndex4 index4={display4} bgc={bgcolor4}></ButtonIndex4>
-    <ButtonIndex5 index5={display5} bgc={bgcolor5}></ButtonIndex5>
-    <ButtonIndex6 index6={display6} bgc={bgcolor6}></ButtonIndex6>
+    <ButtonIndex1 index1={display1} bgc1={bgcolor1}></ButtonIndex1>
+    <ButtonIndex2 index2={display2} bgc2={bgcolor2}></ButtonIndex2>
+    <ButtonIndex3 index3={display3} bgc3={bgcolor3}></ButtonIndex3>
+    <ButtonIndex4 index4={display4} bgc4={bgcolor4}></ButtonIndex4>
+    <ButtonIndex5 index5={display5} bgc5={bgcolor5}></ButtonIndex5>
+    <ButtonIndex6 index6={display6} bgc6={bgcolor6}></ButtonIndex6>
     <div onClick={teamClick}><ButtonImput onClick={()=>router.push(next)}>
     <ButtonImg  src ="/arrow-grey-right.svg"    />
     </ButtonImput> </div> 

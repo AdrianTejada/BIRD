@@ -10,7 +10,7 @@ import Option from '../comps/Option';
 //custom tags for base page
 const MainCont = styled.div `
   width: 100vw;
-  height: 130vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,8 +18,8 @@ const MainCont = styled.div `
 
 const UpperLayer = styled.div `
   width: 414px;
-  height: 1170px;
-  overflow: hidden;
+  height: 896px;
+  overflow:hidden;
   z-index: 0;
   position: relative;
   left: 212px;
@@ -64,6 +64,9 @@ const Optioncont = styled.div`
     align-items: center;
     position: absolute;
     margin-top: 130px;
+    width: 414px;
+    height: 750px;
+  overflow: auto;
 
     
 `

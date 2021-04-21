@@ -41,14 +41,27 @@ export default function Home() {
     const [content, setContent] =useState("BIRD is an app designed to educated its users about the COVID-19 Virus. For those who want to take action or test their knowlage, there are also Donation links and quizes.")
     const [content2, setContent2] =useState("")
     const [content3, setContent3] =useState("")
-    const [bgc5,setbgc5] = useState(false);
-    const [bgc6,setbgc6] = useState(false);
+    const [index5,setindex5] = useState(false);
+    const [index6,setindex6] = useState(false);
+    
+    let bgcolor5 ="#FF7A00";
+    if (index5 === true) {
+      bgcolor5 ="#9A9999"
+    };
+    let bgcolor6 ="#9A9999";
+    if (index6 === true) {
+      bgcolor6 ="#FF7A00"
+    };
+    
     const aboutusClick =()=>{
       setTittle(subtext.aboutus.title);
       setContent(subtext.aboutus.content);
       setContent2(subtext.aboutus.content2);
       setContent3(subtext.aboutus.content3);
-      setbgc5(!bgc5);
+      setindex5(false);
+      setindex6(false);
+      
+      
      
       
     }
@@ -57,7 +70,9 @@ export default function Home() {
       setContent(subtext.team.content);
       setContent2(subtext.team.content2);
       setContent3(subtext.team.content3);
-      setbgc6(!bgc6);
+      setindex6(true);
+      setindex5(true);
+      
      
     }
   
@@ -75,8 +90,8 @@ export default function Home() {
       <div className="aboutUs" > 
       <AboutUs contdisplay ={display ? "block" :"none"} 
       title={title} text={content} text2={content2} text3={content3}
-      bgcolor5={bgc5 ? "#9A9999": "#FF7A00"}  
-      bgcolor6={bgc6 ? "#FF7A00": "#9A9999"}
+      bgcolor5={bgcolor5 }  
+      bgcolor6={bgcolor6 }
       
       aboutusClick={aboutusClick}
       teamClick={ teamClick} />

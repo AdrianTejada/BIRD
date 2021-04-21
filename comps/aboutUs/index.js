@@ -94,7 +94,7 @@ const AboutUs = ({
      <div>{text3}</div> 
     </ContentImput  >
     <ButtonCont>
-    <NavButton bgc6={bgcolor6} bgc5={bgcolor5}  display1="none" display2="none" display3="none" display4="none" 
+    <NavButton   bgcolor5={bgcolor5} bgcolor6={bgcolor6} display1="none" display2="none" display3="none" display4="none" 
     aboutusClick={aboutusClick}
     teamClick={ teamClick}/>
     </ButtonCont>

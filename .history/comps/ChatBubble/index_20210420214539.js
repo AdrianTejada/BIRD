@@ -65,7 +65,7 @@ const Image = styled.div`
 
     .image {
         width:100%;
-        height:100%;0
+        height:100%;
         object-fit:cover;
     }
 `

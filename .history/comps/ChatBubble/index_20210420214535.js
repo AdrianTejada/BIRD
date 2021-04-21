@@ -64,8 +64,8 @@ const Image = styled.div`
     display:${props=>props.display}
 
     .image {
-        width:100%;
-        height:100%;0
+        width:100%
+        height:100%
         object-fit:cover;
     }
 `

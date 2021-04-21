@@ -90,16 +90,14 @@ const NavButton = ({
   nextFunction=()=>{},
   backFunction=()=>{},
   onaboutusClick=()=>{},
-  onteamClick=()=>{},
-  back="",
-  next="",
+  onteamClick=()=>{}
   
 }) => {
 const router = useRouter();
 // ()=>router.push(next)
   return <ButtonCont   >    
     <ButtonImput onClick={backFunction}>
-    <ButtonImg  src ="/arrow-grey-left.svg" onClick={()=>router.push(back)} />
+    <ButtonImg  src ="/arrow-grey-left.svg"  />
     </ButtonImput>
     <ButtonIndex1 index1={display1}  bgc={bgcolor1}></ButtonIndex1>
     <ButtonIndex2 index2={display2}  bgc={bgcolor2}></ButtonIndex2>
@@ -108,7 +106,7 @@ const router = useRouter();
     <ButtonIndex5 index5={display5} bgc={bgcolor5}></ButtonIndex5>
     <ButtonIndex6 index6={display6} bgc={bgcolor6}></ButtonIndex6>
     <ButtonImput onClick={nextFunction}>
-    <ButtonImg  src ="/arrow-grey-right.svg" onClick={()=>router.push(next)} />
+    <ButtonImg  src ="/arrow-grey-right.svg"    />
     </ButtonImput>  
     </ButtonCont>
 }

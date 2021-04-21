@@ -117,18 +117,6 @@ export default function Home() {
 
     }
 
-    else if (page == 4)
-    {
-        setHead(info.four.head);
-        setText(info.four.text);
-        setSrc(info.four.src);
-        setDisplay(info.four.display);
-        setC1(info.four.bgcolor1);
-        setC2(info.four.bgcolor2);
-        setC3(info.four.bgcolor3);
-        setC4(info.four.bgcolor4);
-
-    }
 
     else if (page == 5)
     {
@@ -181,23 +169,6 @@ export default function Home() {
 
     }
 
-    else if (page == 4)
-    {
-        setHead(info.four.head);
-        setText(info.four.text);
-        setSrc(info.four.src);
-        setDisplay(info.four.display);
-        setC1(info.four.bgcolor1);
-        setC2(info.four.bgcolor2);
-        setC3(info.four.bgcolor3);
-        setC4(info.four.bgcolor4);
-
-    }
-
-    else if (page == 5)
-    {
-        router.push("/infoCovidBase")
-    }
     else if (page == 0)
     {
         page =1
@@ -224,7 +195,7 @@ const OpenMenu = () => {
         />
 
         <SpeakerContainer>
-          <Speaker src="/vaccine-man.svg" />
+          <Speaker src="/doctor-hand.svg" />
         </SpeakerContainer>
 
         <NavContainer>

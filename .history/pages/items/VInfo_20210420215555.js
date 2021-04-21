@@ -6,7 +6,6 @@ import Page from '../../comps/Page'
 import ChatBubble from '../../comps/ChatBubble'
 import NavButton from '../../comps/NavButton'
 import {info} from '../../data/Vaccine';
-import {useRouter} from 'next/router';
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -62,10 +61,7 @@ const NavContainer = styled.div`
 
 
 var page=1;
-
-
 export default function Home() {
-    const router = useRouter();
   //for menu
   const [menustate, setMenuState] = useState(false);
   var right=0;
@@ -86,12 +82,18 @@ export default function Home() {
   const [bgcolor4, setC4] = useState(info.one.bgcolor4);
 
 
-
+  
+  
   // for fowraed button
   const nextInfo = () => 
   {
     page++;
-     if (page == 2)
+    if (page == 1)
+    {
+
+    }
+    
+    else if (page == 2)
     {
         setHead(info.two.head);
         setText(info.two.text);
@@ -132,7 +134,7 @@ export default function Home() {
 
     else if (page == 5)
     {
-        router.push("/infoCovidBase")
+        page = 4
     }
 
     console.log("page " + page)
@@ -196,7 +198,7 @@ export default function Home() {
 
     else if (page == 5)
     {
-        router.push("/infoCovidBase")
+        page = 4
     }
     else if (page == 0)
     {
@@ -224,7 +226,7 @@ const OpenMenu = () => {
         />
 
         <SpeakerContainer>
-          <Speaker src="/vaccine-man.svg" />
+          <Speaker src="/doctor-hand.svg" />
         </SpeakerContainer>
 
         <NavContainer>

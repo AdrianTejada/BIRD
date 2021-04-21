@@ -224,7 +224,7 @@ const OpenMenu = () => {
         />
 
         <SpeakerContainer>
-          <Speaker src="/vaccine-man.svg" />
+          <Speaker src="/doctor-hand.svg" />
         </SpeakerContainer>
 
         <NavContainer>

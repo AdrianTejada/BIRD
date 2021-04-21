@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import Page from '../../comps/Page'
 import ChatBubble from '../../comps/ChatBubble'
 import NavButton from '../../comps/NavButton'
-import {info} from '../../data/Vaccine';
+import {info} from '../../data/General';
 import {useRouter} from 'next/router';
 
 //custom tags for base page
@@ -50,6 +50,7 @@ const SpeakerContainer = styled.div`
 const Speaker = styled.img`
   width: 100%;
   height:100%;
+
   position:relative;
 `
 
@@ -62,10 +63,9 @@ const NavContainer = styled.div`
 
 
 var page=1;
-
+const router = useRouter();
 
 export default function Home() {
-    const router = useRouter();
   //for menu
   const [menustate, setMenuState] = useState(false);
   var right=0;
@@ -84,14 +84,21 @@ export default function Home() {
   const [bgcolor2, setC2] = useState(info.one.bgcolor2);
   const [bgcolor3, setC3] = useState(info.one.bgcolor3);
   const [bgcolor4, setC4] = useState(info.one.bgcolor4);
+  const [bgcolor5, setC5] = useState(info.one.bgcolor5);
+  const [bgcolor6, setC6] = useState(info.one.bgcolor6);
 
-
-
+  
+  
   // for fowraed button
   const nextInfo = () => 
   {
     page++;
-     if (page == 2)
+    if (page == 1)
+    {
+
+    }
+    
+    else if (page == 2)
     {
         setHead(info.two.head);
         setText(info.two.text);
@@ -101,7 +108,8 @@ export default function Home() {
         setC2(info.two.bgcolor2);
         setC3(info.two.bgcolor3);
         setC4(info.two.bgcolor4);
-
+        setC5(info.two.bgcolor5);
+        setC6(info.two.bgcolor6);
     }
 
     else if (page == 3)
@@ -114,7 +122,8 @@ export default function Home() {
         setC2(info.three.bgcolor2);
         setC3(info.three.bgcolor3);
         setC4(info.three.bgcolor4);
-
+        setC5(info.three.bgcolor5);
+        setC6(info.three.bgcolor6);
     }
 
     else if (page == 4)
@@ -127,14 +136,46 @@ export default function Home() {
         setC2(info.four.bgcolor2);
         setC3(info.four.bgcolor3);
         setC4(info.four.bgcolor4);
-
+        setC5(info.four.bgcolor5);
+        setC6(info.four.bgcolor6);
     }
 
     else if (page == 5)
     {
-        router.push("/infoCovidBase")
+        setHead(info.five.head);
+        setText(info.five.text);
+        setSrc(info.five.src);
+        setDisplay(info.five.display);
+        setC1(info.five.bgcolor1);
+        setC2(info.five.bgcolor2);
+        setC3(info.five.bgcolor3);
+        setC4(info.five.bgcolor4);
+        setC5(info.five.bgcolor5);
+        setC6(info.five.bgcolor6);
     }
 
+    else if (page == 6)
+    {
+        setHead(info.six.head);
+        setText(info.six.text);
+        setSrc(info.six.src);
+        setDisplay(info.six.display);
+        setC1(info.six.bgcolor1);
+        setC2(info.six.bgcolor2);
+        setC3(info.six.bgcolor3);
+        setC4(info.six.bgcolor4);
+        setC5(info.six.bgcolor5);
+        setC6(info.six.bgcolor6);
+    }
+
+    else if (page == 7)
+    {
+      router.push("/infoCovidBase")
+    }
+    else if (page == 0)
+    {
+        page = 1;
+    }
     console.log("page " + page)
   }
 
@@ -153,7 +194,8 @@ export default function Home() {
         setC2(info.one.bgcolor2);
         setC3(info.one.bgcolor3);
         setC4(info.one.bgcolor4);
-
+        setC5(info.one.bgcolor5);
+        setC6(info.one.bgcolor6);
     }
     if (page == 2)
     {
@@ -165,7 +207,8 @@ export default function Home() {
         setC2(info.two.bgcolor2);
         setC3(info.two.bgcolor3);
         setC4(info.two.bgcolor4);
-
+        setC5(info.two.bgcolor5);
+        setC6(info.two.bgcolor6);
     }
 
     else if (page == 3)
@@ -178,7 +221,8 @@ export default function Home() {
         setC2(info.three.bgcolor2);
         setC3(info.three.bgcolor3);
         setC4(info.three.bgcolor4);
-
+        setC5(info.three.bgcolor5);
+        setC6(info.three.bgcolor6);
     }
 
     else if (page == 4)
@@ -191,12 +235,41 @@ export default function Home() {
         setC2(info.four.bgcolor2);
         setC3(info.four.bgcolor3);
         setC4(info.four.bgcolor4);
-
+        setC5(info.four.bgcolor5);
+        setC6(info.four.bgcolor6);
     }
 
     else if (page == 5)
     {
-        router.push("/infoCovidBase")
+        setHead(info.five.head);
+        setText(info.five.text);
+        setSrc(info.five.src);
+        setDisplay(info.five.display);
+        setC1(info.five.bgcolor1);
+        setC2(info.five.bgcolor2);
+        setC3(info.five.bgcolor3);
+        setC4(info.five.bgcolor4);
+        setC5(info.five.bgcolor5);
+        setC6(info.five.bgcolor6);
+    }
+
+    else if (page == 6)
+    {
+        setHead(info.six.head);
+        setText(info.six.text);
+        setSrc(info.six.src);
+        setDisplay(info.six.display);
+        setC1(info.six.bgcolor1);
+        setC2(info.six.bgcolor2);
+        setC3(info.six.bgcolor3);
+        setC4(info.six.bgcolor4);
+        setC5(info.six.bgcolor5);
+        setC6(info.six.bgcolor6);
+    }
+
+    else if (page == 7)
+    {
+      router.push("/infoCovidBase")
     }
     else if (page == 0)
     {
@@ -204,6 +277,9 @@ export default function Home() {
     }
     console.log("page " + page)
   }
+
+
+
 
 
 
@@ -215,7 +291,7 @@ const OpenMenu = () => {
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Vaccine Info" onClick={OpenMenu} routeTo="/infoCovidBase"/>
+        <Banner text="General Info" onClick={OpenMenu} routeTo="/infoCovidBase"/>
 
         <ChatBubble 
           head={head}
@@ -224,7 +300,7 @@ const OpenMenu = () => {
         />
 
         <SpeakerContainer>
-          <Speaker src="/vaccine-man.svg" />
+          <Speaker src="/doctor-hand.svg" />
         </SpeakerContainer>
 
         <NavContainer>
@@ -233,8 +309,8 @@ const OpenMenu = () => {
             bgcolor2={bgcolor2}
             bgcolor3={bgcolor3}
             bgcolor4={bgcolor4}
-            display5="none"
-            display6="none"
+            bgcolor5={bgcolor5}
+            bgcolor6={bgcolor6}
             nextFunction={nextInfo}
             backFunction={backInfo}
           />

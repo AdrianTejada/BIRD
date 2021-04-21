@@ -62,10 +62,9 @@ const NavContainer = styled.div`
 
 
 var page=1;
-
+const router = useRouter();
 
 export default function Home() {
-    const router = useRouter();
   //for menu
   const [menustate, setMenuState] = useState(false);
   var right=0;
@@ -86,7 +85,8 @@ export default function Home() {
   const [bgcolor4, setC4] = useState(info.one.bgcolor4);
 
 
-
+  
+  
   // for fowraed button
   const nextInfo = () => 
   {
@@ -224,7 +224,7 @@ const OpenMenu = () => {
         />
 
         <SpeakerContainer>
-          <Speaker src="/vaccine-man.svg" />
+          <Speaker src="/doctor-hand.svg" />
         </SpeakerContainer>
 
         <NavContainer>

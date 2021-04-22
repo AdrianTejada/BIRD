@@ -79,9 +79,11 @@ export default function Home() {
 
   const [menustate, setMenuState] = useState(false);
   var right=0;
+  var z=-1;
   if (menustate === true)
   {
     right=178;
+    var z = 0;
   }
 
 

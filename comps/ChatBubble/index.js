@@ -43,12 +43,14 @@ const Content = styled.div`
     justify-content: space-between;
 `
 const Question = styled.div`
-    font-size:16px;
+    font-size:18px;
     font-weight:bold;
 `
 
 const Answer = styled.div`
     font-size:16px;
+    line-height:24px;
+    margin-top:-10px
 `
 const QuestionText = styled.div`
    margin-left:20px; 

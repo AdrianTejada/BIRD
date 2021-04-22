@@ -40,9 +40,13 @@ class SurveyComponent1 extends Component {
                 isRequired: true,
                 choices: [
                  {
-                  value: "Fever and Dry cough",
-                  text: "Fever and Dry cough"
+                  value: "Fever ",
+                  text: "Fever "
                  },
+                 {
+                    value: "Dry cough",
+                    text: "Dry cough"
+                   },
                  {
                   value: "Fatigue",
                   text: "Fatigue"
@@ -71,9 +75,13 @@ class SurveyComponent1 extends Component {
                   text: "Physical distancing"
                  },
                  {
-                  value: "Wearing a mask/ Washing hand",
-                  text: "Wearing a mask/ Washing hand"
+                  value: "Wearing a mask",
+                  text: "Wearing a mask"
                  },
+                 {
+                 value: " Washing hand",
+                 text: " Washing hand"
+                },
                  {
                   value: "Do exercise regularly",
                   text: "Do exercise regularly"

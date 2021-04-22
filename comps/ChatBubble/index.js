@@ -24,11 +24,11 @@ const Bubble = styled.div `
 
 const Triangle = styled.div`
     background: url("/chat-triangle.svg");
-    width:84px;
-    height:50px;
+    width:70px;
+    height:41px;
     position:relative;
     left: 0px;
-    bottom:10px;
+    bottom:12px;
     overflow:hidden;
 `
 
@@ -62,6 +62,8 @@ const Image = styled.div`
     overflow: hidden;
     align-self:center;
     display:${props=>props.display}
+
+    
 `
 
 
@@ -73,7 +75,7 @@ const ChatBubble = ({
     text3="Answer3",
     RadioCheck=()=>{},
     src="/",
-   display="block",
+    display="block",
     
 }) => {
     return <ChatContainer>
@@ -83,7 +85,7 @@ const ChatBubble = ({
                 <Answer>{text}</Answer>
                 
                 <Image display={display}>
-                    <img src={src} />
+                    <img className="image" src={src} />
                 </Image>
 
             </Content>

@@ -92,12 +92,12 @@ class SurveyComponent2 extends Component {
                 type: "radiogroup",
                 name: "we have",
                 title: "What should we do if we have covid-19 symptoms?",
-                correctAnswer: "Start at home",
+                correctAnswer: "Stay at home",
                 isRequired: true,
                 choices: [
                  {
-                  value: "Start at home",
-                  text: "Start at home"
+                  value: "Stay at home",
+                  text: "Stay at home"
                  },
                  {
                   value: "Say goodbye to the world",
@@ -131,31 +131,31 @@ class SurveyComponent2 extends Component {
             // navigateToUrl: "../GQ2",
             navigateToUrlOnCondition: [
              {
-              expression: "{best treatment} = 'No' and {best test} = 'PCR' and {we have} = 'Start at home'",
+              expression: "{best treatment} = 'No' and {best test} = 'PCR' and {we have} = 'Stay at home'",
               url: "../GQ2R3"
              },
              {
-              "expression": "{best treatment} <> 'No' and {best test} = 'PCR' and {we have} = 'Start at home'",
+              "expression": "{best treatment} <> 'No' and {best test} = 'PCR' and {we have} = 'Stay at home'",
               "url": "../GQ2R2"
              },
              {
-              "expression": "{best treatment} = 'No' and {best test} <> 'PCR' and {we have} = 'Start at home'",
+              "expression": "{best treatment} = 'No' and {best test} <> 'PCR' and {we have} = 'Stay at home'",
               "url": "../GQ2R2"
              },
              {
-              "expression": "{best treatment} = 'No' and {best test} = 'PCR' and {we have} <> 'Start at home'",
+              "expression": "{best treatment} = 'No' and {best test} = 'PCR' and {we have} <> 'Stay at home'",
               "url": "../GQ2R2"
              },
              {
-              "expression": "{best treatment} <> 'No' and {best test} <> 'PCR' and {we have} = 'Start at home'",
+              "expression": "{best treatment} <> 'No' and {best test} <> 'PCR' and {we have} = 'Stay at home'",
               "url": "../GQ2R1"
              },
              {
-              "expression": "{best treatment} <> 'No' and {best test} = 'PCR' and {we have} <> 'Start at home'",
+              "expression": "{best treatment} <> 'No' and {best test} = 'PCR' and {we have} <> 'Stay at home'",
               "url": "../GQ2R1"
              },
              {
-              "expression": "{best treatment} = 'No' and {best test} <> 'PCR' and {we have} <> 'Start at home'",
+              "expression": "{best treatment} = 'No' and {best test} <> 'PCR' and {we have} <> 'Stay at home'",
               "url": "../GQ2R1"
              },
              {

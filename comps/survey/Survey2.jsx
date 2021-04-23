@@ -148,7 +148,7 @@ class SurveyComponent2 extends Component {
              },
              {
               "expression": "{best treatment} <> 'No' and {best test} <> 'PCR' and {we have} = 'Start at home'",
-              "url": "../G21R1"
+              "url": "../GQ2R1"
              },
              {
               "expression": "{best treatment} <> 'No' and {best test} = 'PCR' and {we have} <> 'Start at home'",

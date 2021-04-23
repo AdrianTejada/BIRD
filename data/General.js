@@ -13,7 +13,7 @@ export const info = {
     },
     two: {
         head:"2. The most common symptoms of COVID-19 are?",
-        text:"Fever, Dry cough, and Fatigue.",
+        text:"Fever, Dry cough, and Fatigue. ",
         src:"/patient-fever1.svg",
         display:"none",
         bgcolor1:"#9A9999",

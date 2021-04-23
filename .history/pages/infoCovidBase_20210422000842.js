@@ -20,7 +20,7 @@ const UpperLayer = styled.div `
   width: 414px;
   height: 896px;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
   position: relative;
   left: 212px;
 `
@@ -29,7 +29,7 @@ const LowerLayer = styled.div`
   width: 414px;
   height: 896px;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
   position: relative;
   right: 202px;
 `

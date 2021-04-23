@@ -28,8 +28,8 @@ const BackContainer = styled.img `
 
 const HamburgerContainer = styled.img`
     position:relative;
-    width: 35px;
-    height: 28px;
+    width: 34px;
+    height: 20px;
     right:20px;
 
     .image={

@@ -26,17 +26,11 @@ const BackContainer = styled.img `
     left:20px;
 `
 
-const HamburgerContainer = styled.img`
+const HamburgerContainer = styled.div `
     position:relative;
-    width: 35px;
-    height: 28px;
+    width: 25px;
+    height: 20px;
     right:20px;
-
-    .image={
-        width:100%;
-        height:100%;
-        object-fit:cover;
-    }
 `
 
 const PurpleBanner = styled.div`
@@ -68,7 +62,9 @@ const Banner = ({
                 marginTop="0"
                 right="3"
             />
-            <HamburgerContainer src="/home.svg" onClick={()=>router.push("/infoCovidBase")} />
+            <HamburgerContainer onClick={()=>router.push("/infoCovidBase")}>
+                <AiOutlineHome></AiOutlineHome>
+            </HamburgerContainer>
         </NavContainer>
         <PurpleBanner>
             {text}

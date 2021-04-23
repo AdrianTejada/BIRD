@@ -11,7 +11,7 @@ const HamburgerContainer = styled.div `
     height: 896px;
     background-color: #C4C4C4;
     align-items:center;
-    z-index:0;
+    z-index:-1;
 `
 
 const LinkContainer = styled.div `

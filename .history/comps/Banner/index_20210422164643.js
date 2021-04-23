@@ -28,8 +28,8 @@ const BackContainer = styled.img `
 
 const HamburgerContainer = styled.img`
     position:relative;
-    width: 35px;
-    height: 28px;
+    width: 25px;
+    height: 20px;
     right:20px;
 
     .image={
@@ -68,7 +68,9 @@ const Banner = ({
                 marginTop="0"
                 right="3"
             />
-            <HamburgerContainer src="/home.svg" onClick={()=>router.push("/infoCovidBase")} />
+            <HamburgerContainer onClick={()=>router.push("/infoCovidBase")}>
+                <AiOutlineHome className="image"/>
+            </HamburgerContainer>
         </NavContainer>
         <PurpleBanner>
             {text}

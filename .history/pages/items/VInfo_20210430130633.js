@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import Page from '../../comps/Page'
 import ChatBubble from '../../comps/ChatBubble'
 import NavButton from '../../comps/NavButton'
-import {info} from '../../data/Govern';
+import {info} from '../../data/Vaccine';
 import {useRouter} from 'next/router';
 
 //custom tags for base page
@@ -18,14 +18,27 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-  width: 100vw;
-  height: 100vh;
+  width: 414px;
+  height: 896px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
   position: relative;
+  left: 212px;
 `
 
-
+const LowerLayer = styled.div`
+  width: 414px;
+  height: 896px;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  right: 202px;
+`
+const SideBar = styled.div `
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+`
 
 // for speaker only
 const SpeakerContainer = styled.div`
@@ -55,35 +68,11 @@ export default function Home() {
     const router = useRouter();
   //for menu
   const [menustate, setMenuState] = useState(false);
-  const [zindex, setZIndex] = useState(false)
   var right=0;
-  var z=-1
   if (menustate === true)
   {
     right=178;
   }
-
-  if (zindex === true)
-  {
-    z=2
-  }
-
-
-const OpenMenu = () => {
-    setMenuState(!menustate);
-    if (menustate === false)
-    {
-      setTimeout(HandleZ, 500)
-    }
-    else
-    {
-      setTimeout(HandleZ, 1)
-    }
-}
-
-const HandleZ = () => {
-  setZIndex(!zindex)
-}
   // for navigation
 
 
@@ -128,8 +117,20 @@ const HandleZ = () => {
 
     }
 
-
     else if (page == 4)
+    {
+        setHead(info.four.head);
+        setText(info.four.text);
+        setSrc(info.four.src);
+        setDisplay(info.four.display);
+        setC1(info.four.bgcolor1);
+        setC2(info.four.bgcolor2);
+        setC3(info.four.bgcolor3);
+        setC4(info.four.bgcolor4);
+
+    }
+
+    else if (page == 5)
     {
         router.push("/infoCovidBase")
     }
@@ -176,9 +177,27 @@ const HandleZ = () => {
         setC1(info.three.bgcolor1);
         setC2(info.three.bgcolor2);
         setC3(info.three.bgcolor3);
+        setC4(info.three.bgcolor4);
 
     }
 
+    else if (page == 4)
+    {
+        setHead(info.four.head);
+        setText(info.four.text);
+        setSrc(info.four.src);
+        setDisplay(info.four.display);
+        setC1(info.four.bgcolor1);
+        setC2(info.four.bgcolor2);
+        setC3(info.four.bgcolor3);
+        setC4(info.four.bgcolor4);
+
+    }
+
+    else if (page == 5)
+    {
+        router.push("/infoCovidBase")
+    }
     else if (page == 0)
     {
         page =1
@@ -188,13 +207,15 @@ const HandleZ = () => {
 
 
 
-
+const OpenMenu = () => {
+  setMenuState(!menustate);
+}
 
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Government Policies" onClick={OpenMenu} routeTo="/infoCovidBase"/>
+        <Banner text="Vaccine Info" onClick={OpenMenu} routeTo="/infoCovidBase"/>
 
         <ChatBubble 
           head={head}
@@ -203,7 +224,7 @@ const HandleZ = () => {
         />
 
         <SpeakerContainer>
-          <Speaker src="/politian.svg" />
+          <Speaker src="/vaccine-man.svg" />
         </SpeakerContainer>
 
         <NavContainer>
@@ -211,7 +232,7 @@ const HandleZ = () => {
             bgcolor1={bgcolor1}
             bgcolor2={bgcolor2}
             bgcolor3={bgcolor3}
-            display4="none"
+            bgcolor4={bgcolor4}
             display5="none"
             display6="none"
             nextFunction={nextInfo}
@@ -222,9 +243,11 @@ const HandleZ = () => {
 
     </UpperLayer>
 
-
-        <HamburgerMenu z={z}/>
-
+    <LowerLayer>
+      <SideBar>
+        <HamburgerMenu />
+      </SideBar>
+    </LowerLayer>
 
     
 

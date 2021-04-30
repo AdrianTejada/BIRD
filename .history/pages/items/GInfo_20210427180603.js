@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import React, {useState} from 'react';
 import Page from '../../comps/Page'
 import ChatBubble from '../../comps/ChatBubble'
-import NavButton from '../../comps/NavButton'
+import NavButton from '../../comps/NavButtonInfo'
 import {info} from '../../data/General';
 import {useRouter} from 'next/router';
 
@@ -18,13 +18,27 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-width: 100vw;
-height: 100vh;
-overflow: hidden;
-z-index: 1;
-position: relative;
+  width: 414px;
+  height: 896px;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  left: 212px;
 `
 
+const LowerLayer = styled.div`
+  width: 414px;
+  height: 896px;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  right: 202px;
+`
+const SideBar = styled.div `
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+`
 
 // for speaker only
 const SpeakerContainer = styled.div`
@@ -55,36 +69,11 @@ export default function Home() {
   const router = useRouter();
   //for menu
   const [menustate, setMenuState] = useState(false);
-  const [zindex, setZIndex] = useState(false)
   var right=0;
-  var z=-1
   if (menustate === true)
   {
     right=178;
   }
-
-  if (zindex === true)
-  {
-    z=2
-  }
-
-
-const OpenMenu = () => {
-    setMenuState(!menustate);
-    if (menustate === false)
-    {
-      setTimeout(HandleZ, 500)
-    }
-    else
-    {
-      setTimeout(HandleZ, 1)
-    }
-}
-
-const HandleZ = () => {
-  setZIndex(!zindex)
-}
-
   // for navigation
 
 
@@ -107,7 +96,7 @@ const HandleZ = () => {
     page++;
     if (page == 1)
     {
-      
+
     }
     
     else if (page == 2)
@@ -295,6 +284,10 @@ const HandleZ = () => {
 
 
 
+const OpenMenu = () => {
+  setMenuState(!menustate);
+}
+
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
@@ -306,6 +299,7 @@ const HandleZ = () => {
           text={text}
           src={src}
         />
+        
 
         <SpeakerContainer>
           <Speaker src="/doctor-hand.svg" />
@@ -327,7 +321,11 @@ const HandleZ = () => {
 
     </UpperLayer>
 
-    <HamburgerMenu  z={z}/>
+    <LowerLayer>
+      <SideBar>
+        <HamburgerMenu />
+      </SideBar>
+    </LowerLayer>
 
     
 

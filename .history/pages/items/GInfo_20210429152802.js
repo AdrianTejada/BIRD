@@ -18,13 +18,25 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-width: 100vw;
-height: 100vh;
-overflow: hidden;
-z-index: 1;
-position: relative;
+  width: 414px;
+  height: 896px;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  left: 212px;
 `
 
+const LowerLayer = styled.div`
+  height: 896px;
+  overflow: hidden;
+  position: relative;
+  right: 0;
+`
+const SideBar = styled.div `
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+`
 
 // for speaker only
 const SpeakerContainer = styled.div`
@@ -55,36 +67,13 @@ export default function Home() {
   const router = useRouter();
   //for menu
   const [menustate, setMenuState] = useState(false);
-  const [zindex, setZIndex] = useState(false)
   var right=0;
-  var z=-1
+  var z = -1;
   if (menustate === true)
   {
-    right=178;
+    z=999;
+    right=0;
   }
-
-  if (zindex === true)
-  {
-    z=2
-  }
-
-
-const OpenMenu = () => {
-    setMenuState(!menustate);
-    if (menustate === false)
-    {
-      setTimeout(HandleZ, 500)
-    }
-    else
-    {
-      setTimeout(HandleZ, 1)
-    }
-}
-
-const HandleZ = () => {
-  setZIndex(!zindex)
-}
-
   // for navigation
 
 
@@ -107,7 +96,7 @@ const HandleZ = () => {
     page++;
     if (page == 1)
     {
-      
+
     }
     
     else if (page == 2)
@@ -295,6 +284,10 @@ const HandleZ = () => {
 
 
 
+const OpenMenu = () => {
+  setMenuState(!menustate);
+}
+
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
@@ -327,7 +320,11 @@ const HandleZ = () => {
 
     </UpperLayer>
 
-    <HamburgerMenu  z={z}/>
+    <LowerLayer>
+      <SideBar>
+        <HamburgerMenu />
+      </SideBar>
+    </LowerLayer>
 
     
 

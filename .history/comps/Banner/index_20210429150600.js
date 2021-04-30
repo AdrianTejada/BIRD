@@ -6,7 +6,7 @@ import BirdLogo from '../BirdLogo';
 const BannerContainer = styled.div `
     display: flex;
     flex-direction: column;
-    width:100%;
+    width:414px;
     height: 100px;
 `
 

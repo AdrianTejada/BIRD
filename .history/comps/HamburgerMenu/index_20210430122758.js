@@ -45,17 +45,17 @@ const HamburgerMenu = ({
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/items/GInfo")}>
+        <LinkContainer onClick={()=>router.push("/GInfo")}>
             General Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/items/VInfo")}>
+        <LinkContainer onClick={()=>router.push("/VInfo")}>
             Vaccine Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/items/GovernInfo")}>
+        <LinkContainer onClick={()=>router.push("/GovernInfo")}>
             Govern. Policies
         </LinkContainer>
         <Divider />

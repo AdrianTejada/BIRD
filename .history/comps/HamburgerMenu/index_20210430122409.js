@@ -37,7 +37,6 @@ const HamburgerMenu = ({
     // props
     z
 }) => {
-    const router = useRouter();
     return <HamburgerContainer z={z}>
         <Divider />
         <LinkContainer onClick={()=>router.push("/infoCovidBase")}>
@@ -45,22 +44,22 @@ const HamburgerMenu = ({
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/items/GInfo")}>
+        <LinkContainer onClick={()=>router.push()}>
             General Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/items/VInfo")}>
+        <LinkContainer onClick={()=>router.push()}>
             Vaccine Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/items/GovernInfo")}>
+        <LinkContainer onClick={()=>router.push()}>
             Govern. Policies
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/infoOptionsBase")}>
+        <LinkContainer onClick={()=>router.push()}>
             Take Action
         </LinkContainer>
         <Divider />

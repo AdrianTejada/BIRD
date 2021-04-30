@@ -8,13 +8,10 @@ const HamburgerContainer = styled.div `
     flex-direction:column;
     justify-content: space-between;
     width:178px;
-    height: 100vh;
+    height: 896px;
     background-color: #C4C4C4;
     align-items:center;
     z-index:${props=>props.z};
-    position:absolute;
-    float:right;
-    right:0px;
 `
 
 const LinkContainer = styled.div `
@@ -35,9 +32,8 @@ const Divider = styled.div `
 
 const HamburgerMenu = ({
     // props
-    z
+    z=-1
 }) => {
-    const router = useRouter();
     return <HamburgerContainer z={z}>
         <Divider />
         <LinkContainer onClick={()=>router.push("/infoCovidBase")}>
@@ -45,22 +41,22 @@ const HamburgerMenu = ({
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/items/GInfo")}>
+        <LinkContainer onClick={()=>router.push()}>
             General Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/items/VInfo")}>
+        <LinkContainer onClick={()=>router.push()}>
             Vaccine Info
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/items/GovernInfo")}>
+        <LinkContainer onClick={()=>router.push()}>
             Govern. Policies
         </LinkContainer>
         <Divider />
 
-        <LinkContainer onClick={()=>router.push("/infoOptionsBase")}>
+        <LinkContainer onClick={()=>router.push()}>
             Take Action
         </LinkContainer>
         <Divider />

@@ -17,22 +17,20 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-  width: 414px;
-  height: 896px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
   position: relative;
-  left: 212px;
 `
 
 const LowerLayer = styled.div`
-  width: 414px;
-  height: 896px;
   overflow: hidden;
   z-index: -1;
   position: relative;
   right: 202px;
 `
+
 const SideBar = styled.div `
   display: flex;
   flex-direction: row;
@@ -49,6 +47,7 @@ const SpeakerContainer = styled.div`
 const Speaker = styled.img`
   width: 100%;
   height:100%;
+
   position:relative;
 `
 
@@ -62,9 +61,7 @@ const Optioncont = styled.div`
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    margin-top: 230px;
-
-    
+    margin-top: 130px;
 `
 
 
@@ -75,9 +72,11 @@ export default function Home() {
 
   const [menustate, setMenuState] = useState(false);
   var right=0;
+  var z=-1
   if (menustate === true)
   {
     right=178;
+    z=2;
   }
 
 
@@ -85,31 +84,31 @@ const OpenMenu = () => {
   setMenuState(!menustate);
 }
 
+const setZ = () => {
+  z=2;
+}
+
+
   console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Protection Purchase" onClick={OpenMenu} routeTo="/infoOptionsBase"/>
+        <Banner text="Covid-19" onClick={OpenMenu} routeTo="/" />
         
        <Optioncont>
-           <div><Option src = "/10.svg" text = "Purchase Masks" marginBottom = "100"/></div> 
-           <div><Option src = "/11.svg" text = "Purchase Sanitizers"/></div> 
-           
+           <div><Option src = "/1.svg" text = "General info" routeTo="/items/GInfo" /></div> 
+           <div><Option src = "/2.svg" text = "Vaccineinfo"  routeTo="/items/VInfo"/></div> 
+           <div><Option src = "/4.svg" text = "Government Policies" routeTo="/items/GovernInfo"/></div> 
+           <div><Option src = "/3.svg" text = "Take Action" routeTo="/infoOptionsBase"/></div> 
         </Optioncont> 
       </Page>
 
     </UpperLayer>
 
-    <LowerLayer>
-      <SideBar>
-        <HamburgerMenu />
-      </SideBar>
-    </LowerLayer>
-
-    
+    <HamburgerMenu  z={z}/>
 
   </MainCont>
 
   )
-} 
+}

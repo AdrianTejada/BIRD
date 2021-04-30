@@ -17,12 +17,11 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-  width: 414px;
-  height: 896px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   z-index: 0;
   position: relative;
-  left: 212px;
 `
 
 const LowerLayer = styled.div`
@@ -49,6 +48,7 @@ const SpeakerContainer = styled.div`
 const Speaker = styled.img`
   width: 100%;
   height:100%;
+
   position:relative;
 `
 
@@ -62,7 +62,7 @@ const Optioncont = styled.div`
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    margin-top: 230px;
+    margin-top: 130px;
 
     
 `
@@ -90,26 +90,27 @@ const OpenMenu = () => {
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Protection Purchase" onClick={OpenMenu} routeTo="/infoOptionsBase"/>
+        <Banner text="Covid-19" onClick={OpenMenu} routeTo="/" />
         
        <Optioncont>
-           <div><Option src = "/10.svg" text = "Purchase Masks" marginBottom = "100"/></div> 
-           <div><Option src = "/11.svg" text = "Purchase Sanitizers"/></div> 
-           
+           <div><Option src = "/1.svg" text = "General info" routeTo="/items/GInfo" /></div> 
+           <div><Option src = "/2.svg" text = "Vaccineinfo"  routeTo="/items/VInfo"/></div> 
+           <div><Option src = "/4.svg" text = "Government Policies" routeTo="/items/GovernInfo"/></div> 
+           <div><Option src = "/3.svg" text = "Take Action" routeTo="/infoOptionsBase"/></div> 
         </Optioncont> 
       </Page>
 
     </UpperLayer>
 
-    <LowerLayer>
+    {/* <LowerLayer>
       <SideBar>
         <HamburgerMenu />
       </SideBar>
-    </LowerLayer>
+    </LowerLayer> */}
 
     
 
   </MainCont>
 
   )
-} 
+}

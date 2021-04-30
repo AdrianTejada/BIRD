@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import Page from '../../comps/Page'
 import ChatBubble from '../../comps/ChatBubble'
 import NavButton from '../../comps/NavButton'
-import {info} from '../../data/Govern';
+import {info} from '../../data/General';
 import {useRouter} from 'next/router';
 
 //custom tags for base page
@@ -18,14 +18,26 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-  width: 100vw;
-  height: 100vh;
+  width: 414px;
+  height: 896px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
   position: relative;
+  left: 212px;
 `
 
-
+const LowerLayer = styled.div`
+  width: 414px;
+  height: 896px;
+  overflow: hidden;
+  position: relative;
+  right: 212px;
+`
+const SideBar = styled.div `
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+`
 
 // for speaker only
 const SpeakerContainer = styled.div`
@@ -37,6 +49,7 @@ const SpeakerContainer = styled.div`
 const Speaker = styled.img`
   width: 100%;
   height:100%;
+
   position:relative;
 `
 
@@ -52,38 +65,14 @@ var page=1;
 
 
 export default function Home() {
-    const router = useRouter();
+  const router = useRouter();
   //for menu
   const [menustate, setMenuState] = useState(false);
-  const [zindex, setZIndex] = useState(false)
   var right=0;
-  var z=-1
   if (menustate === true)
   {
     right=178;
   }
-
-  if (zindex === true)
-  {
-    z=2
-  }
-
-
-const OpenMenu = () => {
-    setMenuState(!menustate);
-    if (menustate === false)
-    {
-      setTimeout(HandleZ, 500)
-    }
-    else
-    {
-      setTimeout(HandleZ, 1)
-    }
-}
-
-const HandleZ = () => {
-  setZIndex(!zindex)
-}
   // for navigation
 
 
@@ -95,14 +84,21 @@ const HandleZ = () => {
   const [bgcolor2, setC2] = useState(info.one.bgcolor2);
   const [bgcolor3, setC3] = useState(info.one.bgcolor3);
   const [bgcolor4, setC4] = useState(info.one.bgcolor4);
+  const [bgcolor5, setC5] = useState(info.one.bgcolor5);
+  const [bgcolor6, setC6] = useState(info.one.bgcolor6);
 
-
-
+  
+  
   // for fowraed button
   const nextInfo = () => 
   {
     page++;
-     if (page == 2)
+    if (page == 1)
+    {
+
+    }
+    
+    else if (page == 2)
     {
         setHead(info.two.head);
         setText(info.two.text);
@@ -112,7 +108,8 @@ const HandleZ = () => {
         setC2(info.two.bgcolor2);
         setC3(info.two.bgcolor3);
         setC4(info.two.bgcolor4);
-
+        setC5(info.two.bgcolor5);
+        setC6(info.two.bgcolor6);
     }
 
     else if (page == 3)
@@ -125,15 +122,60 @@ const HandleZ = () => {
         setC2(info.three.bgcolor2);
         setC3(info.three.bgcolor3);
         setC4(info.three.bgcolor4);
-
+        setC5(info.three.bgcolor5);
+        setC6(info.three.bgcolor6);
     }
-
 
     else if (page == 4)
     {
-        router.push("/infoCovidBase")
+        setHead(info.four.head);
+        setText(info.four.text);
+        setSrc(info.four.src);
+        setDisplay(info.four.display);
+        setC1(info.four.bgcolor1);
+        setC2(info.four.bgcolor2);
+        setC3(info.four.bgcolor3);
+        setC4(info.four.bgcolor4);
+        setC5(info.four.bgcolor5);
+        setC6(info.four.bgcolor6);
     }
 
+    else if (page == 5)
+    {
+        setHead(info.five.head);
+        setText(info.five.text);
+        setSrc(info.five.src);
+        setDisplay(info.five.display);
+        setC1(info.five.bgcolor1);
+        setC2(info.five.bgcolor2);
+        setC3(info.five.bgcolor3);
+        setC4(info.five.bgcolor4);
+        setC5(info.five.bgcolor5);
+        setC6(info.five.bgcolor6);
+    }
+
+    else if (page == 6)
+    {
+        setHead(info.six.head);
+        setText(info.six.text);
+        setSrc(info.six.src);
+        setDisplay(info.six.display);
+        setC1(info.six.bgcolor1);
+        setC2(info.six.bgcolor2);
+        setC3(info.six.bgcolor3);
+        setC4(info.six.bgcolor4);
+        setC5(info.six.bgcolor5);
+        setC6(info.six.bgcolor6);
+    }
+
+    else if (page == 7)
+    {
+      router.push("/infoCovidBase")
+    }
+    else if (page == 0)
+    {
+        page = 1;
+    }
     console.log("page " + page)
   }
 
@@ -152,7 +194,8 @@ const HandleZ = () => {
         setC2(info.one.bgcolor2);
         setC3(info.one.bgcolor3);
         setC4(info.one.bgcolor4);
-
+        setC5(info.one.bgcolor5);
+        setC6(info.one.bgcolor6);
     }
     if (page == 2)
     {
@@ -164,7 +207,8 @@ const HandleZ = () => {
         setC2(info.two.bgcolor2);
         setC3(info.two.bgcolor3);
         setC4(info.two.bgcolor4);
-
+        setC5(info.two.bgcolor5);
+        setC6(info.two.bgcolor6);
     }
 
     else if (page == 3)
@@ -176,9 +220,57 @@ const HandleZ = () => {
         setC1(info.three.bgcolor1);
         setC2(info.three.bgcolor2);
         setC3(info.three.bgcolor3);
-
+        setC4(info.three.bgcolor4);
+        setC5(info.three.bgcolor5);
+        setC6(info.three.bgcolor6);
     }
 
+    else if (page == 4)
+    {
+        setHead(info.four.head);
+        setText(info.four.text);
+        setSrc(info.four.src);
+        setDisplay(info.four.display);
+        setC1(info.four.bgcolor1);
+        setC2(info.four.bgcolor2);
+        setC3(info.four.bgcolor3);
+        setC4(info.four.bgcolor4);
+        setC5(info.four.bgcolor5);
+        setC6(info.four.bgcolor6);
+    }
+
+    else if (page == 5)
+    {
+        setHead(info.five.head);
+        setText(info.five.text);
+        setSrc(info.five.src);
+        setDisplay(info.five.display);
+        setC1(info.five.bgcolor1);
+        setC2(info.five.bgcolor2);
+        setC3(info.five.bgcolor3);
+        setC4(info.five.bgcolor4);
+        setC5(info.five.bgcolor5);
+        setC6(info.five.bgcolor6);
+    }
+
+    else if (page == 6)
+    {
+        setHead(info.six.head);
+        setText(info.six.text);
+        setSrc(info.six.src);
+        setDisplay(info.six.display);
+        setC1(info.six.bgcolor1);
+        setC2(info.six.bgcolor2);
+        setC3(info.six.bgcolor3);
+        setC4(info.six.bgcolor4);
+        setC5(info.six.bgcolor5);
+        setC6(info.six.bgcolor6);
+    }
+
+    else if (page == 7)
+    {
+      router.push("/infoCovidBase")
+    }
     else if (page == 0)
     {
         page =1
@@ -190,11 +282,16 @@ const HandleZ = () => {
 
 
 
+
+const OpenMenu = () => {
+  setMenuState(!menustate);
+}
+
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Government Policies" onClick={OpenMenu} routeTo="/infoCovidBase"/>
+        <Banner text="General Info" onClick={OpenMenu} routeTo="/infoCovidBase"/>
 
         <ChatBubble 
           head={head}
@@ -203,7 +300,7 @@ const HandleZ = () => {
         />
 
         <SpeakerContainer>
-          <Speaker src="/politian.svg" />
+          <Speaker src="/doctor-hand.svg" />
         </SpeakerContainer>
 
         <NavContainer>
@@ -211,9 +308,9 @@ const HandleZ = () => {
             bgcolor1={bgcolor1}
             bgcolor2={bgcolor2}
             bgcolor3={bgcolor3}
-            display4="none"
-            display5="none"
-            display6="none"
+            bgcolor4={bgcolor4}
+            bgcolor5={bgcolor5}
+            bgcolor6={bgcolor6}
             nextFunction={nextInfo}
             backFunction={backInfo}
           />
@@ -222,9 +319,11 @@ const HandleZ = () => {
 
     </UpperLayer>
 
-
-        <HamburgerMenu z={z}/>
-
+    <LowerLayer>
+      <SideBar>
+        <HamburgerMenu />
+      </SideBar>
+    </LowerLayer>
 
     
 

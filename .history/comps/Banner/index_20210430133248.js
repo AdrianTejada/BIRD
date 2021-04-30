@@ -64,7 +64,7 @@ const Banner = ({
                 marginTop="0"
                 right="3"
             />
-            <HamburgerContainer src="/hamburger-menu.svg" onClick={onClick} />
+            <HamburgerContainer src="/hamburger-menu.svg" onClick={()=>router.push(onClick)} />
         </NavContainer>
         <PurpleBanner>
             {text}

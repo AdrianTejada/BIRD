@@ -32,7 +32,11 @@ const HamburgerContainer = styled.img`
     height: 28px;
     right:20px;
 
-
+    .image={
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
 `
 
 const PurpleBanner = styled.div`
@@ -64,7 +68,7 @@ const Banner = ({
                 marginTop="0"
                 right="3"
             />
-            <HamburgerContainer src="/hamburger-menu.svg" onClick={onClick} />
+            <HamburgerContainer src="/hamburger-menu.svg" onClick={()=>router.push(onClick)} />
         </NavContainer>
         <PurpleBanner>
             {text}

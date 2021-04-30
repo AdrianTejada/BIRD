@@ -22,7 +22,7 @@ align-items:center;
 
 `;
 const TitleImput = styled.div`
-color:#949494;
+color:#545454;
 font-size:24px;
 font-family: 'Archivo', sans-serif;
 font-weight:700;
@@ -33,7 +33,7 @@ margin:30px;
 `;
 
 const ContentImput = styled.div`
-color:#949494;
+color:#545454;
 font-size:20px;
 font-family: 'Archivo', sans-serif;
 font-weight:500;
@@ -66,7 +66,7 @@ const AboutUs = ({
   text="BIRD is an app designed to educated its users about the COVID-19 Virus. For those who want to take action or test their knowlage, there are also Donation links and quizes.",
   text2="",
   text3="",
-  bgcolor="#C4C4C4",
+  bgcolor="#CCCCCC",
   width="300px",
   height="425px",
   radius="10px",

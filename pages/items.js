@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {useRouter} from 'next/router';
 import NavButton from '../comps/NavButton'
 import AboutUs from '../comps/aboutUs'
+import FlyBird from '../comps/FlyBird'
 
 const subtext={
   aboutus:{
@@ -51,6 +52,9 @@ const subtext={
     onaboutusClick={onaboutusClick}
     onteamClick={ onteamClick}
     />
+
+  <FlyBird/>
+
     
 </div>
 

@@ -7,6 +7,7 @@ import ChatBubble from '../../comps/ChatBubble'
 import NavButton from '../../comps/NavButtonInfo'
 import {info} from '../../data/General';
 import {useRouter} from 'next/router';
+import ImageCompG1 from '../../comps/ImageCompG1';
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -74,12 +75,15 @@ export default function Home() {
   {
     right=178;
   }
+
+
+
   // for navigation
 
 
   const [head, setHead] = useState(info.one.head);
   const [text, setText] = useState(info.one.text);
-  const [src, setSrc] = useState(info.one.src);
+  const [component, setcomponent] = useState(info.one.component);
   const [display, setDisplay] = useState(info.one.display);
   const [bgcolor1, setC1] = useState(info.one.bgcolor1);
   const [bgcolor2, setC2] = useState(info.one.bgcolor2);
@@ -88,7 +92,7 @@ export default function Home() {
   const [bgcolor5, setC5] = useState(info.one.bgcolor5);
   const [bgcolor6, setC6] = useState(info.one.bgcolor6);
 
-  
+
   
   // for fowraed button
   const nextInfo = () => 
@@ -103,7 +107,7 @@ export default function Home() {
     {
         setHead(info.two.head);
         setText(info.two.text);
-        setSrc(info.two.src);
+        setcomponent(info.two.component);
         setDisplay(info.two.display);
         setC1(info.two.bgcolor1);
         setC2(info.two.bgcolor2);
@@ -117,7 +121,7 @@ export default function Home() {
     {
         setHead(info.three.head);
         setText(info.three.text);
-        setSrc(info.three.src);
+        setcomponent(info.three.component);
         setDisplay(info.three.display);
         setC1(info.three.bgcolor1);
         setC2(info.three.bgcolor2);
@@ -131,7 +135,7 @@ export default function Home() {
     {
         setHead(info.four.head);
         setText(info.four.text);
-        setSrc(info.four.src);
+        setcomponent(info.four.component);
         setDisplay(info.four.display);
         setC1(info.four.bgcolor1);
         setC2(info.four.bgcolor2);
@@ -145,7 +149,7 @@ export default function Home() {
     {
         setHead(info.five.head);
         setText(info.five.text);
-        setSrc(info.five.src);
+        setcomponent(info.five.component);
         setDisplay(info.five.display);
         setC1(info.five.bgcolor1);
         setC2(info.five.bgcolor2);
@@ -159,7 +163,7 @@ export default function Home() {
     {
         setHead(info.six.head);
         setText(info.six.text);
-        setSrc(info.six.src);
+        setcomponent(info.six.component);
         setDisplay(info.six.display);
         setC1(info.six.bgcolor1);
         setC2(info.six.bgcolor2);
@@ -179,6 +183,7 @@ export default function Home() {
     }
     console.log("page " + page)
   }
+  
 
   //for back button
   const backInfo = () => 
@@ -189,7 +194,7 @@ export default function Home() {
     {
         setHead(info.one.head);
         setText(info.one.text);
-        setSrc(info.one.src);
+        setcomponent(info.one.component);
         setDisplay(info.one.display);
         setC1(info.one.bgcolor1);
         setC2(info.one.bgcolor2);
@@ -202,7 +207,7 @@ export default function Home() {
     {
         setHead(info.two.head);
         setText(info.two.text);
-        setSrc(info.two.src);
+        setcomponent(info.two.component);
         setDisplay(info.two.display);
         setC1(info.two.bgcolor1);
         setC2(info.two.bgcolor2);
@@ -216,7 +221,7 @@ export default function Home() {
     {
         setHead(info.three.head);
         setText(info.three.text);
-        setSrc(info.three.src);
+        setcomponent(info.three.component);
         setDisplay(info.three.display);
         setC1(info.three.bgcolor1);
         setC2(info.three.bgcolor2);
@@ -230,7 +235,7 @@ export default function Home() {
     {
         setHead(info.four.head);
         setText(info.four.text);
-        setSrc(info.four.src);
+        setcomponent(info.four.component);
         setDisplay(info.four.display);
         setC1(info.four.bgcolor1);
         setC2(info.four.bgcolor2);
@@ -244,7 +249,7 @@ export default function Home() {
     {
         setHead(info.five.head);
         setText(info.five.text);
-        setSrc(info.five.src);
+        setcomponent(info.five.component);
         setDisplay(info.five.display);
         setC1(info.five.bgcolor1);
         setC2(info.five.bgcolor2);
@@ -258,7 +263,7 @@ export default function Home() {
     {
         setHead(info.six.head);
         setText(info.six.text);
-        setSrc(info.six.src);
+        setcomponent(info.six.component);
         setDisplay(info.six.display);
         setC1(info.six.bgcolor1);
         setC2(info.six.bgcolor2);
@@ -280,27 +285,22 @@ export default function Home() {
   }
 
 
-
-
-
-
 const OpenMenu = () => {
   setMenuState(!menustate);
 }
+
 
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
 
         <Banner text="General Info" onClick={OpenMenu} routeTo="/infoCovidBase"/>
-
         <ChatBubble 
           head={head}
           text={text}
-          src={src}
+          // component={component}
         />
-        
-
+          {component}
         <SpeakerContainer>
           <Speaker src="/doctor-hand.svg" />
         </SpeakerContainer>

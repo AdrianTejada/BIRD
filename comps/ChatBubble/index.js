@@ -45,6 +45,7 @@ const Content = styled.div`
 const Question = styled.div`
     font-size:18px;
     font-weight:bold;
+    margin:0;
 `
 
 const Answer = styled.div`
@@ -53,8 +54,9 @@ const Answer = styled.div`
     margin-top:-10px
 `
 const QuestionText = styled.div`
-   margin-left:20px; 
-   font-size:20px;
+   font-size:16px;
+   line-height:24px;
+   margin-top:-20px;
 `
 
 
@@ -63,7 +65,7 @@ const Image = styled.div`
     height: 240px;
     overflow: hidden;
     align-self:center;
-    display:${props=>props.display}
+    display:${props=>props.visibility}
 
     
 `
@@ -77,17 +79,17 @@ const ChatBubble = ({
     text3="Answer3",
     RadioCheck=()=>{},
     src="/",
-    display="block",
+    visibility="hidden",
     
 }) => {
     return <ChatContainer>
         <Bubble>
             <Content>
                 <Question>{head}</Question>
-                <Answer>{text}</Answer>
+                <QuestionText>{text}</QuestionText>
                 
-                <Image display={display}>
-                    <img className="image" src={src} />
+                <Image visibility={visibility}>
+                   
                 </Image>
 
             </Content>

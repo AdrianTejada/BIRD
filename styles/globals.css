@@ -12,34 +12,47 @@ body {
 .page{
   display: flex;
   justify-content: center;
-  width:414px;
-  height:896px;
-  /* background: url("/bgc.jfif");
-  background-position:-150px 60px;
-  background-size: 175% 100%;
-  opacity:.7; */
+  width:100vw;
+  height:100vh;
+  background-color: #ece3d8;
 }
 .bgc{
-  width:414px;
-  height:896px;
-  background: url("/bgc.jfif");
-  background-position:-200px 60px;
-  background-size: 200% 125%;
+  width:800px;
+  height:auto;
+  margin:0 auto;
+  background-image: url("/bgc.jfif") ;
+  background-repeat: no-repeat;
+  /* background-position:-200px 60px; */
+  /* align-items: center; */
+  /* object-fit: center; */
   opacity:.25;
+  /* overflow: hidden; */
   
 }
+.bgc2{
+  width:414px;
+  height:896px;
+  background: url("/bgc-02.svg");
+  background-position:-200px 60px;
+  background-size: 200% 125%;
+  opacity:1;
+  overflow: hidden;
+  z-index: 1;
+}
+
 .wrapper{
   width:100%;
-  height:100vh;
+  height:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .logo{
- margin-top:175px;
- z-index: 1;
+margin-top:200px;
  position: absolute;
+ z-index: 1;
+ 
  
 }
 .logotext{

@@ -7,6 +7,7 @@ import ChatBubble from '../comps/ChatBubble';
 import NavButton from '../comps/NavButton';
 import Option from '../comps/Option';
 
+
 //custom tags for base page
 const MainCont = styled.div `
   width: 100vw;
@@ -104,8 +105,9 @@ const OpenMenu = () => {
            <div><Option src = "/4.svg" text = "Government Policies" routeTo="/items/GovernInfo"/></div> 
            <div><Option src = "/3.svg" text = "Take Action" routeTo="/infoOptionsBase"/></div> 
         </Optioncont> 
+        
       </Page>
-
+    
     </UpperLayer>
 
     <LowerLayer>

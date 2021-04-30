@@ -1,8 +1,12 @@
+import ImageCompG1 from '../comps/ImageCompG1'
+import ImageCompG6 from '../comps/ImageCompG6'
+import ImageCompV1 from '../comps/ImageCompV1'
 export const info = {
     one: {
         head:"1. What is COVID-19?",
         text:"COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
-        src:"/wuhan.svg",
+        // src:"/wuhan.svg",
+        component:<ImageCompG1/>,
         display:"none",
         bgcolor1:"#FF7A00",
         bgcolor2:"#9A9999",
@@ -14,7 +18,8 @@ export const info = {
     two: {
         head:"2. The most common symptoms of COVID-19 are?",
         text:"Fever, Dry cough, and Fatigue. ",
-        src:"/patient-fever1.svg",
+        // src:"/patient-fever1.svg",
+        component:<ImageCompG6/>,
         display:"none",
         bgcolor1:"#9A9999",
         bgcolor2:"#FF7A00",
@@ -26,7 +31,8 @@ export const info = {
     three: {
         head:"3. Symptoms of severe COVID‐19 disease include:",
         text:"Shortness of breath, Loss of appetite, Confusion, Persistent pain or pressure in the chest, High temperature (above 38 °C).",
-        src:"/patient-heat1.svg",
+        // src:"/patient-heat1.svg",
+        component:<ImageCompV1/>,
         display:"none",
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",

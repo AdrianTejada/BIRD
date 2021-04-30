@@ -14,15 +14,23 @@ const PageComponent = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
+    
+   
 `
+
 
 const Page = ({
     right=0,
     children
 }) => {
-    return <PageComponent right={right} >
+    return <PageComponent right={right} className=" bgc2">
+        
         {children}
+        
+        
+     
     </PageComponent>
+    
 }
 
 export default Page;

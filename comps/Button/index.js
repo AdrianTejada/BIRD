@@ -42,7 +42,7 @@ const Button = ({
   const router = useRouter();
   return <ButtonCont   onClick={() => router.push(routeTo)} >    
 
-    <ButtonImput bgc={bgcolor} width={width} height={height}radius={radius} hover={opacity}  onClick={onClick}>
+    <ButtonImput bgc={bgcolor} width={width} height={height}radius={radius} hover={opacity}  onClick={onClick} >
       {text}
     </ButtonImput>
 

@@ -13,22 +13,23 @@ const Avatarcont = styled.div`
 `;
 const Avatarimage  = styled.img`
     src:${props=>props.src};
-    margin-bottom: -27px;
+    margin-bottom: -40px;
     border-radius: 10px 10px 10px 10px;
     
     
 `;
 const Avatartext = styled.span`
-    background-color: rgba(196,196,196,0.8);
+    background-color: rgba(196,196,196,0.9);
     color: #FFF;
-    padding:5px;
+    padding:10px;
     justify-content:center;
     align-items:center;
     border-radius:0px 0px 10px 10px;
     text-align: center;
-    font-weight: 800;
+    font-weight: 600;
     overflow:hidden;
     margin-bottom: ${props=>props.marginBottom}px;
+    font-size:20px;
 `;
 
 const Avatar  = ({

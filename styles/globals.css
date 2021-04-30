@@ -26,9 +26,13 @@ body {
   background-position:-200px 60px;
   background-size: 200% 125%;
   opacity:.25;
+  
 }
 .wrapper{
+  width:100%;
+  height:100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -90,6 +94,9 @@ body {
   font-size: 18px;
   margin-top:50px;
 
+}
+.sv_conatiner{
+  margin-top:-20px;
 }
 .sv_q_title{
   font-size: 18px;

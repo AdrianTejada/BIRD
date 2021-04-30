@@ -81,7 +81,7 @@ const OpenMenu = () => {
         <PageCont>
         <Banner text="General Information - Quiz" onClick={OpenMenu} routeTo="/infoQuizOptionsBase"/>
         
-        <ChatBubble display="none"/>
+        <ChatBubble display="none" />
         <SurveyCont>
         <SurveyComponent1/>
         </SurveyCont>

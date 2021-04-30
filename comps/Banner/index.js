@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
 import BirdLogo from '../BirdLogo';
+import {AiOutlineHome} from 'react-icons/ai'
 
 const BannerContainer = styled.div `
     display: flex;
@@ -25,11 +26,17 @@ const BackContainer = styled.img `
     left:20px;
 `
 
-const HamburgerContainer = styled.img `
+const HamburgerContainer = styled.img`
     position:relative;
-    width: 25px;
-    height: 20px;
+    width: 35px;
+    height: 28px;
     right:20px;
+
+    .image={
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
 `
 
 const PurpleBanner = styled.div`
@@ -61,7 +68,7 @@ const Banner = ({
                 marginTop="0"
                 right="3"
             />
-            <HamburgerContainer src="/hamburger-menu.svg" onClick={onClick} />
+            <HamburgerContainer src="/home.svg" onClick={()=>router.push("/infoCovidBase")} />
         </NavContainer>
         <PurpleBanner>
             {text}

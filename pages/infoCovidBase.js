@@ -63,6 +63,7 @@ export default function Home() {
   if (menustate === true)
   {
     right=178;
+    var z = 0;
   }
 
   if (zindex === true)

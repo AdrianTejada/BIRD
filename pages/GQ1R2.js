@@ -119,7 +119,7 @@ const OpenMenu = () => {
             <Subtitle>Good job!</Subtitle> Keep studying!
           </Comment>
           <ButtonBigCont>
-          <Button  text="Read again" routeTo="/GeneralInfo/info1" />
+          <Button  text="Read again" routeTo="/items/GInfo" />
           <Button text="Retake the Quiz" routeTo =  "/GQ1"/>
           </ButtonBigCont>
          

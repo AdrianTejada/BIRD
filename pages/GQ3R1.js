@@ -110,7 +110,7 @@ const OpenMenu = () => {
              You need more studying!
           </Comment>
           <ButtonBigCont>
-          <Button  text="Read again" />
+          <Button  text="Read again" routeTo="/items/GovernInfo" />
           <Button text="Retake the Quiz" routeTo =  "/GQ3"/>
           </ButtonBigCont>
          

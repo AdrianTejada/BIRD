@@ -55,10 +55,6 @@ const OpenMenu = () => {
     console.log(right)
 }
 
-const HandleZ = () => {
-  setZIndex(!zindex)
-}
-
   const SurveyCont= styled.div`
   position:absolute;
   z-index:1;
@@ -114,7 +110,7 @@ const ButtonBigCont =styled.div`
         <ChatBubble display="none"/>
         <SurveyCont>
           <Annousement>
-            Your result:
+            Your resoult:
           </Annousement>
           <Resoult>
           3/3
@@ -123,8 +119,8 @@ const ButtonBigCont =styled.div`
            <Subtitle> Awesome!</Subtitle> You do the good job!
           </Comment>
           <ButtonBigCont>
-          <Button  text="Read again" routeTo="/items/GovernInfo" />
-          <Button text="Retake the Quiz" routeTo =  "/GQ3"/>
+          <Button  text="Read again" routeTo="/items/GInfo" />
+          <Button text="Retake the Quiz" routeTo =  "/GQ1"/>
           </ButtonBigCont>
          
         
@@ -140,7 +136,7 @@ const ButtonBigCont =styled.div`
     </UpperLayer>
 
     <HamburgerMenu z={z}/>
-
+    
   </MainCont>
 
   )

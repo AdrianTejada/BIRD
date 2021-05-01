@@ -7,7 +7,7 @@ import ChatBubble from '../comps/ChatBubble'
 import QuizOption from '../comps/QuizOptions'
 import Avatar from '../comps/Spaeker'
 import Button from '../comps/Button'
-import SurveyComponent2 from '../comps/survey/Survey2.jsx'
+import SurveyComponent3 from '../comps/survey/Survey3.jsx'
 
 
 //custom tags for base page
@@ -26,14 +26,13 @@ const UpperLayer = styled.div `
   z-index: 1;
   position: relative;
 `
+
 const PageCont =styled.div`
 display: flex;
 flex-direction:column;
 align-items:center;
 width:100%;
 `
-
-
 const Question = styled.div`
     display:inline-flex;
     align-items:center;
@@ -46,37 +45,17 @@ const SurveyCont= styled.div`
 `
 
 export default function Home() {
+
   const [menustate, setMenuState] = useState(false);
-  const [zindex, setZIndex] = useState(false)
   var right=0;
-  var z=-1
   if (menustate === true)
   {
     right=178;
-    var z = 0;
-  }
-
-  if (zindex === true)
-  {
-    z=2
   }
 
 
 const OpenMenu = () => {
-    setMenuState(!menustate);
-    if (menustate === false)
-    {
-      setTimeout(HandleZ, 500)
-    }
-    else
-    {
-      setTimeout(HandleZ, 1)
-    }
-    console.log(right)
-}
-
-const HandleZ = () => {
-  setZIndex(!zindex)
+  setMenuState(!menustate);
 }
 
 
@@ -85,11 +64,11 @@ const HandleZ = () => {
     <UpperLayer>
       <Page right={right}>
         <PageCont>
-        <Banner text="Vaccine Info - Quiz" onClick={OpenMenu} routeTo="/infoQuizOptionsBase"/>
+        <Banner text="Government Policies - Quiz" onClick={OpenMenu} routeTo="/infoQuizOptionsBase" />
         
         <ChatBubble display="none"/>
         <SurveyCont>
-        <SurveyComponent2/>
+        <SurveyComponent3/>
         </SurveyCont>
         <Avatar/>
         
@@ -99,9 +78,11 @@ const HandleZ = () => {
      
     </UpperLayer>
 
-
-        <HamburgerMenu z={z}/>
-
+    <LowerLayer>
+      <SideBar>
+        <HamburgerMenu />
+      </SideBar>
+    </LowerLayer>
  
     
 

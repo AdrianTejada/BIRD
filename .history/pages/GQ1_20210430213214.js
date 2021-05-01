@@ -2,10 +2,14 @@ import Banner from '../comps/Banner';
 import HamburgerMenu from '../comps/HamburgerMenu';
 import styled from 'styled-components';
 import React, {useState} from 'react';
-import Page from '../comps/Page';
-import ChatBubble from '../comps/ChatBubble';
-import NavButton from '../comps/NavButton';
-import Option from '../comps/Option';
+import Page from '../comps/Page'
+import ChatBubble from '../comps/ChatBubble'
+import QuizOption from '../comps/QuizOptions'
+import Avatar from '../comps/Spaeker'
+import SurveyComponent1 from '../comps/survey/Survey1.jsx'
+import Button from '../comps/Button'
+
+
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -24,38 +28,22 @@ const UpperLayer = styled.div `
   position: relative;
 `
 
-// for speaker only
-const SpeakerContainer = styled.div`
-  width: 276px;
-  height:221px;
-  overflow:hidden;
+const PageCont =styled.div`
+display: flex;
+flex-direction:column;
+align-items:center;
+width:100%;
 `
-
-const Speaker = styled.img`
-  width: 100%;
-  height:100%;
-
-  position:relative;
+const Question = styled.div`
+    display:inline-flex;
+    align-items:center;
 `
-
-const NavContainer = styled.div`
+const SurveyCont= styled.div`
   position:absolute;
-  bottom:255px;
+  z-index:1;
+  justify-content:center;
+  margin-top:150px;
 `
-const Optioncont = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    margin: 200px;
-    
-
-`
-
-
-
-
 
 export default function Home() {
   const [menustate, setMenuState] = useState(false);
@@ -91,24 +79,26 @@ const HandleZ = () => {
   setZIndex(!zindex)
 }
 
-
   console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
-
-        <Banner text="Make A Quiz" onClick={OpenMenu} routeTo="infoOptionsBase" />
+        <PageCont>
+        <Banner text="General Information - Quiz" onClick={OpenMenu} routeTo="/infoQuizOptionsBase"/>
         
-       <Optioncont>
-           <div><Option src = "/1.svg" text = "General Info Quiz" routeTo="/GQ1"/></div> 
-           <div><Option src = "/2.svg" text = "Vaccine Info Quiz" routeTo="/GQ2"/></div> 
-           <div><Option src = "/4.svg" text = "Government Policies Quiz" routeTo="/GQ3"/></div> 
-        </Optioncont> 
-      </Page>
+        <ChatBubble display="none" />
+        <SurveyCont>
+        <SurveyComponent1/>
+        </SurveyCont>
+        <Avatar/>
+        
 
+        </PageCont>
+      </Page>
+     
     </UpperLayer>
-      
-      <HamburgerMenu z={z}/>
+
+    <HamburgerMenu z={z}/>
 
   </MainCont>
 

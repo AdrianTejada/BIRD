@@ -48,9 +48,9 @@ const Optioncont = styled.div`
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    margin: 200px;
-    
+    margin-top: 230px;
 
+    
 `
 
 
@@ -58,57 +58,42 @@ const Optioncont = styled.div`
 
 
 export default function Home() {
+
   const [menustate, setMenuState] = useState(false);
-  const [zindex, setZIndex] = useState(false)
   var right=0;
-  var z=-1
   if (menustate === true)
   {
     right=178;
-    var z = 0;
-  }
-
-  if (zindex === true)
-  {
-    z=2
   }
 
 
 const OpenMenu = () => {
-    setMenuState(!menustate);
-    if (menustate === false)
-    {
-      setTimeout(HandleZ, 500)
-    }
-    else
-    {
-      setTimeout(HandleZ, 1)
-    }
-    console.log(right)
+  setMenuState(!menustate);
 }
-
-const HandleZ = () => {
-  setZIndex(!zindex)
-}
-
 
   console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Make A Quiz" onClick={OpenMenu} routeTo="infoOptionsBase" />
+        <Banner text="Make An Appointment" onClick={OpenMenu} routeTo="/infoOptionsBase"/>
         
        <Optioncont>
-           <div><Option src = "/1.svg" text = "General Info Quiz" routeTo="/GQ1"/></div> 
-           <div><Option src = "/2.svg" text = "Vaccine Info Quiz" routeTo="/GQ2"/></div> 
-           <div><Option src = "/4.svg" text = "Government Policies Quiz" routeTo="/GQ3"/></div> 
+           <div><Option src = "/12.svg" text = "Make an Appointment (PCR)" marginBottom = "100"/></div> 
+           <div><Option src = "/13.svg" text = "Make an Appointment (Vaccine)"/></div> 
+           
         </Optioncont> 
       </Page>
 
     </UpperLayer>
-      
-      <HamburgerMenu z={z}/>
+
+    <LowerLayer>
+      <SideBar>
+        <HamburgerMenu />
+      </SideBar>
+    </LowerLayer>
+
+    
 
   </MainCont>
 

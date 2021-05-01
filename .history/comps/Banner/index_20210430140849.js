@@ -28,9 +28,11 @@ const BackContainer = styled.img `
 
 const HamburgerContainer = styled.img`
     position:relative;
-    width: 25px;
-    height: 20px;
+    width: 35px;
+    height: 25px;
     right:20px;
+
+
 `
 
 const PurpleBanner = styled.div`

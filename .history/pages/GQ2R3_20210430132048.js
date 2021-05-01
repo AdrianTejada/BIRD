@@ -18,47 +18,36 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-  width: 100vw;
-  height: 100vh;
+  width: 414px;
+  height: 896px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
   position: relative;
+  left: 212px;
+`
+
+const LowerLayer = styled.div`
+  width: 414px;
+  height: 896px;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  right: 202px;
+`
+const SideBar = styled.div `
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 `
 
 export default function Home() {
+
   const [menustate, setMenuState] = useState(false);
-  const [zindex, setZIndex] = useState(false)
   var right=0;
-  var z=-1
   if (menustate === true)
   {
     right=178;
-    var z = 0;
   }
-
-  if (zindex === true)
-  {
-    z=2
-  }
-
-
-const OpenMenu = () => {
-    setMenuState(!menustate);
-    if (menustate === false)
-    {
-      setTimeout(HandleZ, 500)
-    }
-    else
-    {
-      setTimeout(HandleZ, 1)
-    }
-    console.log(right)
-}
-
-const HandleZ = () => {
-  setZIndex(!zindex)
-}
-
   const SurveyCont= styled.div`
   position:absolute;
   z-index:1;
@@ -104,6 +93,11 @@ const ButtonBigCont =styled.div`
   margin-top:50px;
 `
 
+
+const OpenMenu = () => {
+  setMenuState(!menustate);
+}
+
   console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
@@ -114,7 +108,7 @@ const ButtonBigCont =styled.div`
         <ChatBubble display="none"/>
         <SurveyCont>
           <Annousement>
-            Your result:
+            Your resoult:
           </Annousement>
           <Resoult>
           3/3
@@ -123,8 +117,8 @@ const ButtonBigCont =styled.div`
            <Subtitle> Awesome!</Subtitle> You do the good job!
           </Comment>
           <ButtonBigCont>
-          <Button  text="Read again" routeTo="/items/GovernInfo" />
-          <Button text="Retake the Quiz" routeTo =  "/GQ3"/>
+          <Button  text="Read again" routeTo="/items/VInfo"/>
+          <Button text="Retake the Quiz" routeTo =  "/GQ2"/>
           </ButtonBigCont>
          
         
@@ -139,7 +133,13 @@ const ButtonBigCont =styled.div`
      
     </UpperLayer>
 
-    <HamburgerMenu z={z}/>
+    <LowerLayer>
+      <SideBar>
+        <HamburgerMenu />
+      </SideBar>
+    </LowerLayer>
+ 
+    
 
   </MainCont>
 

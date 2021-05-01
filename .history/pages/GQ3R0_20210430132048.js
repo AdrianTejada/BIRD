@@ -18,47 +18,36 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-  width: 100vw;
-  height: 100vh;
+  width: 414px;
+  height: 896px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
   position: relative;
+  left: 212px;
+`
+
+const LowerLayer = styled.div`
+  width: 414px;
+  height: 896px;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  right: 202px;
+`
+const SideBar = styled.div `
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 `
 
 export default function Home() {
+
   const [menustate, setMenuState] = useState(false);
-  const [zindex, setZIndex] = useState(false)
   var right=0;
-  var z=-1
   if (menustate === true)
   {
     right=178;
-    var z = 0;
   }
-
-  if (zindex === true)
-  {
-    z=2
-  }
-
-
-const OpenMenu = () => {
-    setMenuState(!menustate);
-    if (menustate === false)
-    {
-      setTimeout(HandleZ, 500)
-    }
-    else
-    {
-      setTimeout(HandleZ, 1)
-    }
-    console.log(right)
-}
-
-const HandleZ = () => {
-  setZIndex(!zindex)
-}
-
   const SurveyCont= styled.div`
   position:absolute;
   z-index:1;
@@ -66,12 +55,12 @@ const HandleZ = () => {
   margin-top:150px;
 `
 const Resoult= styled.div`
-  font-size:65px;
-  font-weight:400;
-  color:orange;
-  justify-content:center;
-  text-align:center;
-  margin:50px;
+font-size:65px;
+font-weight:400;
+color:orange;
+justify-content:center;
+text-align:center;
+margin:50px;
   
 `
 const Annousement= styled.div`
@@ -87,22 +76,20 @@ const Comment= styled.div`
   font-weight:400;
   color:orange;
   justify-content:center;
-`
-const Subtitle = styled.div`
-font-size:30px;
-  font-weight:400;
-  color:orange4;
-  justify-content:center;
-  text-align:center;
-  margin:10px;
+  
 `
 const ButtonBigCont =styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
   
-  margin-top:50px;
+  margin-top:75px;
 `
+
+
+const OpenMenu = () => {
+  setMenuState(!menustate);
+}
 
   console.log(menustate, right)
   return (<MainCont>
@@ -114,13 +101,13 @@ const ButtonBigCont =styled.div`
         <ChatBubble display="none"/>
         <SurveyCont>
           <Annousement>
-            Your result:
+            Your resoult:
           </Annousement>
           <Resoult>
-          3/3
+          0/3
           </Resoult>
           <Comment>
-           <Subtitle> Awesome!</Subtitle> You do the good job!
+             You need more studying!
           </Comment>
           <ButtonBigCont>
           <Button  text="Read again" routeTo="/items/GovernInfo" />
@@ -129,7 +116,7 @@ const ButtonBigCont =styled.div`
          
         
         </SurveyCont>
-        <Avatar   src="/R3.svg" width="350"/>
+        <Avatar   src="/R0.svg" width="350"/>
 
         
         
@@ -139,7 +126,13 @@ const ButtonBigCont =styled.div`
      
     </UpperLayer>
 
-    <HamburgerMenu z={z}/>
+    <LowerLayer>
+      <SideBar>
+        <HamburgerMenu />
+      </SideBar>
+    </LowerLayer>
+ 
+    
 
   </MainCont>
 

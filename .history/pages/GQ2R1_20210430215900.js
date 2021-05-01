@@ -66,12 +66,12 @@ const HandleZ = () => {
   margin-top:150px;
 `
 const Resoult= styled.div`
-  font-size:65px;
-  font-weight:400;
-  color:orange;
-  justify-content:center;
-  text-align:center;
-  margin:50px;
+font-size:65px;
+font-weight:400;
+color:orange;
+justify-content:center;
+text-align:center;
+margin:50px;
   
 `
 const Annousement= styled.div`
@@ -87,21 +87,14 @@ const Comment= styled.div`
   font-weight:400;
   color:orange;
   justify-content:center;
-`
-const Subtitle = styled.div`
-font-size:30px;
-  font-weight:400;
-  color:orange4;
-  justify-content:center;
-  text-align:center;
-  margin:10px;
+  
 `
 const ButtonBigCont =styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
   
-  margin-top:50px;
+  margin-top:75px;
 `
 
   console.log(menustate, right)
@@ -114,22 +107,22 @@ const ButtonBigCont =styled.div`
         <ChatBubble display="none"/>
         <SurveyCont>
           <Annousement>
-            Your result:
+            Your resoult:
           </Annousement>
           <Resoult>
-          3/3
+           1/3
           </Resoult>
           <Comment>
-           <Subtitle> Awesome!</Subtitle> You do the good job!
+             You need more studying!
           </Comment>
           <ButtonBigCont>
-          <Button  text="Read again" routeTo="/items/GovernInfo" />
-          <Button text="Retake the Quiz" routeTo =  "/GQ3"/>
+          <Button  text="Read again" routeTo="/items/VInfo"/>
+          <Button text="Retake the Quiz" routeTo =  "/GQ2"/>
           </ButtonBigCont>
          
         
         </SurveyCont>
-        <Avatar   src="/R3.svg" width="350"/>
+        <Avatar   src="/R1.svg" width="350"/>
 
         
         

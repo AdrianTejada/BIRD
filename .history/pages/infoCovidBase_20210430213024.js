@@ -48,9 +48,7 @@ const Optioncont = styled.div`
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    margin: 200px;
-    
-
+    margin-top: 130px;
 `
 
 
@@ -91,24 +89,23 @@ const HandleZ = () => {
   setZIndex(!zindex)
 }
 
-
-  console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Make A Quiz" onClick={OpenMenu} routeTo="infoOptionsBase" />
+        <Banner text="Covid-19" onClick={OpenMenu} routeTo="/" />
         
        <Optioncont>
-           <div><Option src = "/1.svg" text = "General Info Quiz" routeTo="/GQ1"/></div> 
-           <div><Option src = "/2.svg" text = "Vaccine Info Quiz" routeTo="/GQ2"/></div> 
-           <div><Option src = "/4.svg" text = "Government Policies Quiz" routeTo="/GQ3"/></div> 
+           <div><Option src = "/1.svg" text = "General info" routeTo="/items/GInfo" /></div> 
+           <div><Option src = "/2.svg" text = "Vaccineinfo"  routeTo="/items/VInfo"/></div> 
+           <div><Option src = "/4.svg" text = "Government Policies" routeTo="/items/GovernInfo"/></div> 
+           <div><Option src = "/3.svg" text = "Take Action" routeTo="/infoOptionsBase"/></div> 
         </Optioncont> 
       </Page>
 
     </UpperLayer>
-      
-      <HamburgerMenu z={z}/>
+
+    <HamburgerMenu  z={z}/>
 
   </MainCont>
 

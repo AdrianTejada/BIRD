@@ -90,7 +90,7 @@ const HandleZ = () => {
 
   const [head, setHead] = useState(info.one.head);
   const [text, setText] = useState(info.one.text);
-  const [src, setSrc] = useState(info.one.src);
+  const [component, setcomponent] = useState(info.one.component);
   const [display, setDisplay] = useState(info.one.display);
   const [bgcolor1, setC1] = useState(info.one.bgcolor1);
   const [bgcolor2, setC2] = useState(info.one.bgcolor2);
@@ -114,7 +114,7 @@ const HandleZ = () => {
     {
         setHead(info.two.head);
         setText(info.two.text);
-        setSrc(info.two.src);
+        setSrc(info.two.component);
         setDisplay(info.two.display);
         setC1(info.two.bgcolor1);
         setC2(info.two.bgcolor2);
@@ -128,7 +128,7 @@ const HandleZ = () => {
     {
         setHead(info.three.head);
         setText(info.three.text);
-        setSrc(info.three.src);
+        setcomponent(info.three.component);
         setDisplay(info.three.display);
         setC1(info.three.bgcolor1);
         setC2(info.three.bgcolor2);
@@ -142,7 +142,7 @@ const HandleZ = () => {
     {
         setHead(info.four.head);
         setText(info.four.text);
-        setSrc(info.four.src);
+        setcomponent(info.four.component);
         setDisplay(info.four.display);
         setC1(info.four.bgcolor1);
         setC2(info.four.bgcolor2);
@@ -156,7 +156,7 @@ const HandleZ = () => {
     {
         setHead(info.five.head);
         setText(info.five.text);
-        setSrc(info.five.src);
+        setcomponent(info.five.component);
         setDisplay(info.five.display);
         setC1(info.five.bgcolor1);
         setC2(info.five.bgcolor2);
@@ -170,7 +170,7 @@ const HandleZ = () => {
     {
         setHead(info.six.head);
         setText(info.six.text);
-        setSrc(info.six.src);
+        setcomponent(info.six.component);
         setDisplay(info.six.display);
         setC1(info.six.bgcolor1);
         setC2(info.six.bgcolor2);
@@ -200,7 +200,7 @@ const HandleZ = () => {
     {
         setHead(info.one.head);
         setText(info.one.text);
-        setSrc(info.one.src);
+        setcomponent(info.one.component);
         setDisplay(info.one.display);
         setC1(info.one.bgcolor1);
         setC2(info.one.bgcolor2);
@@ -213,7 +213,7 @@ const HandleZ = () => {
     {
         setHead(info.two.head);
         setText(info.two.text);
-        setSrc(info.two.src);
+        setcomponent(info.two.component);
         setDisplay(info.two.display);
         setC1(info.two.bgcolor1);
         setC2(info.two.bgcolor2);
@@ -227,7 +227,7 @@ const HandleZ = () => {
     {
         setHead(info.three.head);
         setText(info.three.text);
-        setSrc(info.three.src);
+        setcomponent(info.three.component);
         setDisplay(info.three.display);
         setC1(info.three.bgcolor1);
         setC2(info.three.bgcolor2);
@@ -241,7 +241,7 @@ const HandleZ = () => {
     {
         setHead(info.four.head);
         setText(info.four.text);
-        setSrc(info.four.src);
+        setcomponent(info.four.component);
         setDisplay(info.four.display);
         setC1(info.four.bgcolor1);
         setC2(info.four.bgcolor2);
@@ -255,7 +255,7 @@ const HandleZ = () => {
     {
         setHead(info.five.head);
         setText(info.five.text);
-        setSrc(info.five.src);
+        setcomponent(info.five.component);
         setDisplay(info.five.display);
         setC1(info.five.bgcolor1);
         setC2(info.five.bgcolor2);
@@ -269,7 +269,7 @@ const HandleZ = () => {
     {
         setHead(info.six.head);
         setText(info.six.text);
-        setSrc(info.six.src);
+        setcomponent(info.six.component);
         setDisplay(info.six.display);
         setC1(info.six.bgcolor1);
         setC2(info.six.bgcolor2);
@@ -304,9 +304,9 @@ const HandleZ = () => {
         <ChatBubble 
           head={head}
           text={text}
-          src={src}
+          // component={component}
         />
-        
+        {component}
 
         <SpeakerContainer>
           <Speaker src="/doctor-hand.svg" />

@@ -5,7 +5,7 @@ import {useRouter} from 'next/router';
 const Avatarcont = styled.div`
     display:flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 20px;
     width:${props=>props.width}px;
     height:${props=>props.height}px;
     

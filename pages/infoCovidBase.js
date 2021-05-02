@@ -44,11 +44,13 @@ const NavContainer = styled.div`
 `
 const Optioncont = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    max-width:660px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     position: absolute;
-    margin-top: 130px;
+    margin-top: 150px;
 `
 
 
@@ -90,17 +92,18 @@ const HandleZ = () => {
 }
 
   return (<MainCont>
-    <UpperLayer>
-      <Page right={right}>
+    <UpperLayer >
+      <Page right={right} >
 
         <Banner text="Covid-19" onClick={OpenMenu} routeTo="/" />
         
-       <Optioncont>
+       <Optioncont >
            <div><Option src = "/1.svg" text = "General info" routeTo="/items/GInfo" /></div> 
            <div><Option src = "/2.svg" text = "Vaccineinfo"  routeTo="/items/VInfo"/></div> 
            <div><Option src = "/4.svg" text = "Government Policies" routeTo="/items/GovernInfo"/></div> 
            <div><Option src = "/3.svg" text = "Take Action" routeTo="/infoOptionsBase"/></div> 
         </Optioncont> 
+        <div className="bgc2"></div>
       </Page>
 
     </UpperLayer>

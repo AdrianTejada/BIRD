@@ -88,7 +88,7 @@ const ChatBubble = ({
                 <Question>{head}</Question>
                 <QuestionText>{text}</QuestionText>
                 
-                <Image visibility={visibility}>
+                <Image display={display}>
                    
                 </Image>
 

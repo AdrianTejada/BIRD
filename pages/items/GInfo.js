@@ -19,27 +19,13 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-  width: 414px;
-  height: 896px;
-  overflow: hidden;
-  z-index: 0;
-  position: relative;
-  left: 212px;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+z-index: 1;
+position: relative;
 `
 
-const LowerLayer = styled.div`
-  width: 414px;
-  height: 896px;
-  overflow: hidden;
-  z-index: -1;
-  position: relative;
-  right: 202px;
-`
-const SideBar = styled.div `
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-`
 
 // for speaker only
 const SpeakerContainer = styled.div`
@@ -70,13 +56,35 @@ export default function Home() {
   const router = useRouter();
   //for menu
   const [menustate, setMenuState] = useState(false);
+  const [zindex, setZIndex] = useState(false)
   var right=0;
+  var z=-1
   if (menustate === true)
   {
     right=178;
   }
 
+  if (zindex === true)
+  {
+    z=2
+  }
 
+
+const OpenMenu = () => {
+    setMenuState(!menustate);
+    if (menustate === false)
+    {
+      setTimeout(HandleZ, 500)
+    }
+    else
+    {
+      setTimeout(HandleZ, 1)
+    }
+}
+
+const HandleZ = () => {
+  setZIndex(!zindex)
+}
 
   // for navigation
 
@@ -100,7 +108,7 @@ export default function Home() {
     page++;
     if (page == 1)
     {
-
+      
     }
     
     else if (page == 2)
@@ -285,14 +293,13 @@ export default function Home() {
   }
 
 
-const OpenMenu = () => {
-  setMenuState(!menustate);
-}
+
+
 
 
   return (<MainCont>
     <UpperLayer>
-      <Page right={right}>
+      <Page right={right} >
 
         <Banner text="General Info" onClick={OpenMenu} routeTo="/infoCovidBase"/>
         <ChatBubble 
@@ -300,7 +307,8 @@ const OpenMenu = () => {
           text={text}
           // component={component}
         />
-          {component}
+        {component}
+
         <SpeakerContainer>
           <Speaker src="/doctor-hand.svg" />
         </SpeakerContainer>
@@ -317,15 +325,12 @@ const OpenMenu = () => {
             backFunction={backInfo}
           />
         </NavContainer>
+        
       </Page>
-
+      
     </UpperLayer>
 
-    <LowerLayer>
-      <SideBar>
-        <HamburgerMenu />
-      </SideBar>
-    </LowerLayer>
+    <HamburgerMenu  z={z}/>
 
     
 

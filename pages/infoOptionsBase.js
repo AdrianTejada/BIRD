@@ -17,26 +17,11 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-  width: 414px;
-  height: 896px;
-  overflow:hidden;
-  z-index: 0;
-  position: relative;
-  left: 212px;
-`
-
-const LowerLayer = styled.div`
-  width: 414px;
-  height: 896px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  z-index: -1;
+  z-index: 1;
   position: relative;
-  right: 202px;
-`
-const SideBar = styled.div `
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
 `
 
 // for speaker only
@@ -59,16 +44,15 @@ const NavContainer = styled.div`
 `
 const Optioncont = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
     align-items: center;
     position: absolute;
     margin-top: 130px;
-    width: 414px;
-    height: 750px;
-  overflow: auto;
-
-    
+    height:950px;
+    max-width:660px;
+    overflow:auto;
 `
 
 
@@ -78,17 +62,35 @@ const Optioncont = styled.div`
 export default function Home() {
 
   const [menustate, setMenuState] = useState(false);
+  const [zindex, setZIndex] = useState(false)
   var right=0;
+  var z=-1
   if (menustate === true)
   {
     right=178;
   }
 
+  if (zindex === true)
+  {
+    z=2
+  }
+
 
 const OpenMenu = () => {
-  setMenuState(!menustate);
+    setMenuState(!menustate);
+    if (menustate === false)
+    {
+      setTimeout(HandleZ, 500)
+    }
+    else
+    {
+      setTimeout(HandleZ, 1)
+    }
 }
 
+const HandleZ = () => {
+  setZIndex(!zindex)
+}
   console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
@@ -103,15 +105,12 @@ const OpenMenu = () => {
            <div><Option src = "/8.svg" text = "Make An Appointment" routeTo="/infoMakeAppointBase"/></div> 
            <div><Option src = "/9.svg" text = "Help" routeTo="/infoHelpBase"/></div> 
         </Optioncont> 
+        {/* <div className="bgc2"></div> */}
       </Page>
-
+      
     </UpperLayer>
 
-    <LowerLayer>
-      <SideBar>
-        <HamburgerMenu />
-      </SideBar>
-    </LowerLayer>
+        <HamburgerMenu z={z} />
 
     
 

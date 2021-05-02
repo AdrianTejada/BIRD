@@ -14,29 +14,16 @@ const MainCont = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
+  
 `
 
 const UpperLayer = styled.div `
-  width: 414px;
-  height: 896px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
   position: relative;
-  left: 212px;
-`
-
-const LowerLayer = styled.div`
-  width: 414px;
-  height: 896px;
-  overflow: hidden;
-  z-index: -1;
-  position: relative;
-  right: 202px;
-`
-const SideBar = styled.div `
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  
 `
 
 // for speaker only
@@ -64,6 +51,8 @@ const Optioncont = styled.div`
     align-items: center;
     position: absolute;
     margin: 200px;
+   
+   
     
 
 `
@@ -73,18 +62,39 @@ const Optioncont = styled.div`
 
 
 export default function Home() {
-
   const [menustate, setMenuState] = useState(false);
+  const [zindex, setZIndex] = useState(false)
   var right=0;
+  var z=-1
   if (menustate === true)
   {
     right=178;
+    var z = 0;
+  }
+
+  if (zindex === true)
+  {
+    z=2
   }
 
 
 const OpenMenu = () => {
-  setMenuState(!menustate);
+    setMenuState(!menustate);
+    if (menustate === false)
+    {
+      setTimeout(HandleZ, 500)
+    }
+    else
+    {
+      setTimeout(HandleZ, 1)
+    }
+    console.log(right)
 }
+
+const HandleZ = () => {
+  setZIndex(!zindex)
+}
+
 
   console.log(menustate, right)
   return (<MainCont>
@@ -98,17 +108,12 @@ const OpenMenu = () => {
            <div><Option src = "/2.svg" text = "Vaccine Info Quiz" routeTo="/GQ2"/></div> 
            <div><Option src = "/4.svg" text = "Government Policies Quiz" routeTo="/GQ3"/></div> 
         </Optioncont> 
+        {/* <div className="bgc2"></div> */}
       </Page>
 
     </UpperLayer>
-
-    <LowerLayer>
-      <SideBar>
-        <HamburgerMenu />
-      </SideBar>
-    </LowerLayer>
-
-    
+      
+      <HamburgerMenu z={z}/>
 
   </MainCont>
 

@@ -8,6 +8,7 @@ import {useSpring, animated} from 'react-spring'
 import {config} from 'react-spring'
 import FlyBird from '../comps/FlyBird'
 
+
 const subtext={
   aboutus:{
     title:"Our Goal",
@@ -39,11 +40,18 @@ export default function Home() {
       { opacity: 1,rotateZ: 300},
       { opacity: 1,rotateZ: 330},
       { opacity: 1,rotateZ: 360},
+<<<<<<< HEAD
       
 
     ] ,
     from: {opacity: 0 }, delay: 1000,} ,
     )
+=======
+     
+
+    ] ,
+    from: {opacity: 0 }, delay: 1200,})
+>>>>>>> 4126ea4d583216c6f01b5b056932a9b85cee362b
   const logotext = useSpring({ config:config.wobbly, 
    transform: 'translate3d(0,400px,0)',from: { transform: 'translate3d(0,0px,0)'}
   })

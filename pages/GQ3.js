@@ -20,32 +20,18 @@ const MainCont = styled.div `
 `
 
 const UpperLayer = styled.div `
-  width: 414px;
-  height: 896px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
   position: relative;
-  left: 212px;
 `
 
-const LowerLayer = styled.div`
-  width: 414px;
-  height: 896px;
-  overflow: hidden;
-  z-index: -1;
-  position: relative;
-  right: 202px;
-`
-const SideBar = styled.div `
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-`
 const PageCont =styled.div`
 display: flex;
 flex-direction:column;
-align-items:center
-
+align-items:center;
+width:100%;
 `
 const Question = styled.div`
     display:inline-flex;
@@ -59,25 +45,39 @@ const SurveyCont= styled.div`
 `
 
 export default function Home() {
-
   const [menustate, setMenuState] = useState(false);
+  const [zindex, setZIndex] = useState(false)
   var right=0;
+  var z=-1
   if (menustate === true)
   {
     right=178;
+    var z = 0;
+  }
+
+  if (zindex === true)
+  {
+    z=2
   }
 
 
 const OpenMenu = () => {
-  setMenuState(!menustate);
+    setMenuState(!menustate);
+    if (menustate === false)
+    {
+      setTimeout(HandleZ, 500)
+    }
+    else
+    {
+      setTimeout(HandleZ, 1)
+    }
+    console.log(right)
 }
-
-
   console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
-        <PageCont>
+        <PageCont  className="bgc2">
         <Banner text="Government Policies - Quiz" onClick={OpenMenu} routeTo="/infoQuizOptionsBase" />
         
         <ChatBubble display="none"/>
@@ -92,13 +92,7 @@ const OpenMenu = () => {
      
     </UpperLayer>
 
-    <LowerLayer>
-      <SideBar>
-        <HamburgerMenu />
-      </SideBar>
-    </LowerLayer>
- 
-    
+    <HamburgerMenu z={z}/>
 
   </MainCont>
 

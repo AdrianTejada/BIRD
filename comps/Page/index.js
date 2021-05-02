@@ -8,14 +8,14 @@ const PageComponent = styled.div`
     height: 100%;
     position: relative;
     right: ${props=>props.right}px;
-    transition: right 1s;
+    transition: right .5s;
     background-color: #F2E4D4;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
+    overflow: scroll;
     
-   
 `
 
 
@@ -23,8 +23,7 @@ const Page = ({
     right=0,
     children
 }) => {
-    return <PageComponent right={right} className=" bgc2">
-        
+    return <PageComponent right={right} className="bgc2" >
         {children}
         
         

@@ -44,11 +44,15 @@ const NavContainer = styled.div`
 `
 const Optioncont = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
     align-items: center;
     position: absolute;
     margin-top: 130px;
+    height:950px;
+    max-width:660px;
+    overflow:auto;
 `
 
 
@@ -101,8 +105,9 @@ const HandleZ = () => {
            <div><Option src = "/8.svg" text = "Make An Appointment" routeTo="/infoMakeAppointBase"/></div> 
            <div><Option src = "/9.svg" text = "Help" routeTo="/infoHelpBase"/></div> 
         </Optioncont> 
+        {/* <div className="bgc2"></div> */}
       </Page>
-
+      
     </UpperLayer>
 
         <HamburgerMenu z={z} />

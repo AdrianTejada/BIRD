@@ -103,6 +103,7 @@ const HandleZ = () => {
            <div><Option src = "/13.svg" text = "Make an Appointment (Vaccine)"/></div> 
            
         </Optioncont> 
+        {/* <div className="bgc2"></div> */}
       </Page>
 
     </UpperLayer>

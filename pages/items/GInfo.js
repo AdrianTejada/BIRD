@@ -114,7 +114,7 @@ const HandleZ = () => {
     {
         setHead(info.two.head);
         setText(info.two.text);
-        setSrc(info.two.component);
+        setcomponent(info.two.component);
         setDisplay(info.two.display);
         setC1(info.two.bgcolor1);
         setC2(info.two.bgcolor2);
@@ -297,7 +297,7 @@ const HandleZ = () => {
 
   return (<MainCont>
     <UpperLayer>
-      <Page right={right}>
+      <Page right={right} >
 
         <Banner text="General Info" onClick={OpenMenu} routeTo="/infoCovidBase"/>
 
@@ -324,8 +324,9 @@ const HandleZ = () => {
             backFunction={backInfo}
           />
         </NavContainer>
+        
       </Page>
-
+      
     </UpperLayer>
 
     <HamburgerMenu  z={z}/>

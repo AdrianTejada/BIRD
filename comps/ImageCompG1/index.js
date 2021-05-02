@@ -60,7 +60,7 @@ const show2 = keyframes`
 
 const ImgesCont =styled(animated.div)`
 position:absolute;
-margin-top:450px;
+margin-top:375px;
 display:${props=>props.ImageG1display}
 `;
 const ImgCont1 =styled.img`

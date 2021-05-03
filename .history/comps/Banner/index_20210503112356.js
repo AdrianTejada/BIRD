@@ -31,6 +31,8 @@ const HamburgerContainer = styled.img`
     width: 25px;
     height: 20px;
     right:20px;
+
+   
 `
 
 const PurpleBanner = styled.div`

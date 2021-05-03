@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&display=swap');
 
 
+
 html,
 body {
   padding: 0;
@@ -12,22 +13,32 @@ body {
 .page{
   display: flex;
   justify-content: center;
-  width:414px;
-  height:896px;
-  /* background: url("/bgc.jfif");
-  background-position:-150px 60px;
-  background-size: 175% 100%;
-  opacity:.7; */
-}
-.bgc{
-  width:414px;
-  height:896px;
-  background: url("/bgc.jfif");
-  background-position:-200px 60px;
-  background-size: 200% 125%;
-  opacity:.25;
+  width:100vw;
+  height:100vh;
+  background-color: #ece4d9;
   
 }
+.bgc{
+ width: 1200px;
+ height:100vh;
+  background-image: url("/bgc.jfif") ;
+  background-repeat: no-repeat;
+  opacity:.25;
+  background-size: 100% 150%;
+  /* overflow: hidden; */
+  
+}
+.bgc2{
+  width: 1200px;
+  height:100vh;
+  background-image: url("/bgc-02.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 150%;
+  opacity:1;
+  
+  /* z-index: -1; */
+}
+
 .wrapper{
   width:100%;
   height:100vh;
@@ -37,10 +48,9 @@ body {
   align-items: center;
 }
 .logo{
- margin-top:175px;
- z-index: 1;
+margin-top:200px;
  position: absolute;
- 
+ z-index: 1;
 }
 .logotext{
   margin-top:0px;
@@ -129,3 +139,31 @@ body {
    
  }
  /* =======Survey end======= */
+
+ @media only screen and (max-width: 1240px) {
+  /* For desktop or laptop: */
+ .bgc {
+  background-size: 100% 150%;
+  }
+  .bgc2{
+    background-size: 100% 150%;
+  }
+}
+@media screen and (max-width: 780px) and (min-width: 475px) {
+    /* For desktop or laptop: */
+   .bgc {
+    background-size: 100% 125%;
+    }
+    .bgc2{
+      background-size: 100% 125%;
+    }
+  }
+  @media only screen and (max-width:474px) {
+    /* For mobile phones: */
+    .bgc {
+      background-size: 100% 115%;
+    }
+    .bgc2{
+      background-size: 100% 115%;
+    }
+    }

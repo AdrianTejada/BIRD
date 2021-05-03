@@ -1,8 +1,10 @@
+import ImageCompG1 from'../comps/ImageCompG1'
+import ImageCompG6 from'../comps/ImageCompG6'
 export const info = {
     one: {
         head:"1. What is COVID-19?",
         text:"COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
-        src:"/wuhan.svg",
+        component:<ImageCompG1/>,
         display:"none",
         bgcolor1:"#FF7A00",
         bgcolor2:"#9A9999",
@@ -62,7 +64,7 @@ export const info = {
     six: {
         head:"6.How can we protect others and ourselves if we don't know who is infected?",
         text:"The time from exposure to COVID-19 to the moment when symptoms begin is, on average, 5-6 days and can range from 1-14 days.",
-        src:"/patient-covermouth.svg",
+        component:<ImageCompG6/>,
         display:"none",
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",

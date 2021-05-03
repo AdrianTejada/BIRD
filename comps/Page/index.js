@@ -15,13 +15,14 @@ const PageComponent = styled.div`
     align-items:center;
     justify-content:space-between;
     overflow: scroll;
+    
 `
 
 const Page = ({
     right=0,
     children
 }) => {
-    return <PageComponent right={right} >
+    return <PageComponent right={right} className="bgc2" >
         {children}
     </PageComponent>
 }

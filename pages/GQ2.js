@@ -84,7 +84,7 @@ const HandleZ = () => {
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
-        <PageCont>
+        <PageCont  className="bgc2">
         <Banner text="Vaccine Info - Quiz" onClick={OpenMenu} routeTo="/infoQuizOptionsBase"/>
         
         <ChatBubble display="none"/>

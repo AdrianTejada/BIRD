@@ -83,8 +83,8 @@ const HandleZ = () => {
   console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
-      <Page right={right}>
-        <PageCont>
+      <Page right={right} >
+        <PageCont  className="bgc2">
         <Banner text="General Information - Quiz" onClick={OpenMenu} routeTo="/infoQuizOptionsBase"/>
         
         <ChatBubble display="none" />
@@ -93,8 +93,9 @@ const HandleZ = () => {
         </SurveyCont>
         <Avatar/>
         
-
+        
         </PageCont>
+        <div className="bgc2"></div>
       </Page>
      
     </UpperLayer>

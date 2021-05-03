@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import BirdLogo from '../comps/BirdLogo'
+import AppLogo from '../comps/AppLogo'
 import Button from '../comps/Button'
 import AboutUs from '../comps/aboutUs'
 import React, { useState } from "react"
 import {useSpring, animated} from 'react-spring'
 import {config} from 'react-spring'
+
 
 const subtext={
   aboutus:{
@@ -23,11 +24,29 @@ const subtext={
 
 export default function Home() {
 
-  const mainLogo = useSpring( { config: { duration: 1000 },opacity: 1, from: {opacity: 0}, delay: 1000,})
-  const logotext = useSpring({ config:config.wobbly,
-   transform: 'translate3d(0,350px,0)',from: { transform: 'translate3d(0,0px,0)'}
+  const mainLogo = useSpring( { config: { duration: 1000 }, 
+    to: [
+      { opacity: 1,rotateZ: 0 },
+      { opacity: 1,rotateZ: 30},
+      { opacity: 1,rotateZ: 60},
+      { opacity: 1,rotateZ: 90}, 
+      { opacity: 1,rotateZ: 120},
+      { opacity: 1,rotateZ: 150},
+      { opacity: 1,rotateZ: 180},
+      { opacity: 1,rotateZ: 210},
+      { opacity: 1,rotateZ: 240},
+      { opacity: 1,rotateZ: 270},
+      { opacity: 1,rotateZ: 300},
+      { opacity: 1,rotateZ: 330},
+      { opacity: 1,rotateZ: 360},
+     
+
+    ] ,
+    from: {opacity: 0 }, delay: 1200,})
+  const logotext = useSpring({ config:config.wobbly, 
+   transform: 'translate3d(0,400px,0)',from: { transform: 'translate3d(0,0px,0)'}
   })
-  const text = useSpring( { config: { duration: 300 },opacity: 1, from: {opacity: 0}, delay: 2000,})
+  const text = useSpring( { config: { duration: 300 },opacity: 1, from: {opacity: 0}, delay: 1500,})
   const [display,setdisplay] = useState(false);
   const [bgc,setbgc] = useState(false);
 
@@ -76,9 +95,10 @@ export default function Home() {
       <Head>
         <title>Home Page</title>:
       </Head>{" "}
-      <div className="page">
-      <animated.div className="logo"  style={mainLogo} ><BirdLogo Fontdisplay="none"/></animated.div>
-      <animated.div className="logotext" style={logotext}><BirdLogo display="none"/></animated.div>
+      <div className="page ">
+      <animated.div className="logo"  style={mainLogo} ><AppLogo Fontdisplay="none"/></animated.div>
+      {/* <animated.div className="logo"  style={Fly} ><FlyBird /></animated.div> */}
+      <animated.div className="logotext" style={logotext}><AppLogo display="none"/></animated.div>
       <animated.div className="Subtext" style={text}><p>Big Issues Ready for Discovery  </p></animated.div>
       
       <div className="aboutUs" > 

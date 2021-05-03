@@ -77,7 +77,7 @@ const OpenMenu = () => {
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
-        <PageCont>
+        <PageCont  className="bgc2">
         <Banner text="Government Policies - Quiz" onClick={OpenMenu} routeTo="/infoQuizOptionsBase" />
         
         <ChatBubble display="none"/>

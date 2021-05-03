@@ -1,11 +1,11 @@
 import React from 'react';
-import BirdLogo from '../comps/BirdLogo/index.js'
+import AppLogo from '../comps/AppLogo/index.js'
 export default {
- title:"Example/BirdLogo",
- component: <BirdLogo/>
+ title:"Example/AppLogo",
+ component: <AppLogo/>
 }
 
 
-export const MyLogocombine = () => <BirdLogo/>
-export const MyLogoTextOnly = () => <BirdLogo display="none"/>
-export const MyLogoOnly = () => <BirdLogo Fontdisplay="none"/>
+export const MyLogocombine = () => <AppLogo/>
+export const MyLogoTextOnly = () => <AppLogo display="none"/>
+export const MyLogoOnly = () => <AppLogo Fontdisplay="none"/>

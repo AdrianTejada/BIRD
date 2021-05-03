@@ -14,6 +14,7 @@ const MainCont = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
+  
 `
 
 const UpperLayer = styled.div `
@@ -22,6 +23,7 @@ const UpperLayer = styled.div `
   overflow: hidden;
   z-index: 1;
   position: relative;
+  
 `
 
 // for speaker only
@@ -49,6 +51,8 @@ const Optioncont = styled.div`
     align-items: center;
     position: absolute;
     margin: 200px;
+   
+   
     
 
 `
@@ -104,6 +108,7 @@ const HandleZ = () => {
            <div><Option src = "/2.svg" text = "Vaccine Info Quiz" routeTo="/GQ2"/></div> 
            <div><Option src = "/4.svg" text = "Government Policies Quiz" routeTo="/GQ3"/></div> 
         </Optioncont> 
+        {/* <div className="bgc2"></div> */}
       </Page>
 
     </UpperLayer>

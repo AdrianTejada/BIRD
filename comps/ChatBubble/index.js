@@ -40,7 +40,7 @@ const Content = styled.div`
     margin-top:40px;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
 `
 const Question = styled.div`
     font-size:18px;
@@ -50,7 +50,7 @@ const Question = styled.div`
 const Answer = styled.div`
     font-size:16px;
     line-height:24px;
-    margin-top:-10px
+    margin-top:25px
 `
 const QuestionText = styled.div`
    margin-left:20px; 
@@ -77,7 +77,7 @@ const ChatBubble = ({
     text3="Answer3",
     RadioCheck=()=>{},
     src="/",
-    display="block",
+    display="none",
     
 }) => {
     return <ChatContainer>

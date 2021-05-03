@@ -62,8 +62,7 @@ const show3 = keyframes`
 
 const ImgesCont =styled(animated.div)`
 position:absolute;
-margin-top:400px;
-margin-left:-250px;
+
 
 `;
 const ImgCont2 =styled.img`

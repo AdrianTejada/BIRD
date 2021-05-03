@@ -103,7 +103,7 @@ const HandleZ = () => {
            <div><Option src = "/4.svg" text = "Government Policies" routeTo="/items/GovernInfo"/></div> 
            <div><Option src = "/3.svg" text = "Take Action" routeTo="/infoOptionsBase"/></div> 
         </Optioncont> 
-        <div className="bgc2"></div>
+        {/* <div className="bgc2"></div> */}
       </Page>
 
     </UpperLayer>

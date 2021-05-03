@@ -78,6 +78,7 @@ const ChatBubble = ({
     RadioCheck=()=>{},
     src="/",
     display="none",
+    component="",
     
 }) => {
     return <ChatContainer>
@@ -86,8 +87,8 @@ const ChatBubble = ({
                 <Question>{head}</Question>
                 <Answer>{text}</Answer>
                 
-                <Image display={display}>
-                    <img className="image" src={src} />
+                <Image >
+                {component}
                 </Image>
 
             </Content>

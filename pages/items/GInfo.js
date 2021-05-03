@@ -304,10 +304,9 @@ const HandleZ = () => {
         <ChatBubble 
           head={head}
           text={text}
-          // component={component}
+          component={component}
         />
-        {component}
-
+        
         <SpeakerContainer>
           <Speaker src="/doctor-hand.svg" />
         </SpeakerContainer>

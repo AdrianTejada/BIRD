@@ -60,7 +60,7 @@ const show2 = keyframes`
 
 const Cont = styled.div `
 position:relative;
-right: 30px;
+right: 20px;
 `
 
 const ImgesCont =styled(animated.div)`

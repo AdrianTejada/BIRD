@@ -58,11 +58,11 @@ const QuestionText = styled.div`
 
 
 const Image = styled.div`
-    margin-top:40px;
-    width: 227px;
-    height: 259px;
-    //overflow: hidden;
-    align-self:center;
+    //margin-top:40px;
+    //width: 260px;
+    //height: 240px;
+    overflow: hidden;
+    //align-self:center;
     display:${props=>props.display}
 `
 

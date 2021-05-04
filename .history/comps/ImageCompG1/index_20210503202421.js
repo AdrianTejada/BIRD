@@ -58,11 +58,6 @@ const show2 = keyframes`
 }
 `;
 
-const Cont = styled.div `
-position:relative;
-right: 30px;
-`
-
 const ImgesCont =styled(animated.div)`
 position:absolute;
 display:${props=>props.ImageG1display}
@@ -71,7 +66,7 @@ const ImgCont1 =styled.img`
 width:${(props)=>props.width}px;
 height:auto;
 z-index:2;
-
+;
 `
 const ImgCont2 =styled.img`
 width:${(props)=>props.width2}px;
@@ -150,7 +145,7 @@ const ImageCompG1= ({
  
 }) => {
  
-  return (<Cont>
+  return (
     
   <ImgesCont ImageG1display={ImageG1display}   >
       <Text1> {text1}</Text1>
@@ -161,7 +156,7 @@ const ImageCompG1= ({
       <ImgCont3 src="/virus-03.png"   width3 ={width3 } />
       <ImgCont4 src="/virus-03.png"   width4 ={width4 } />
     </ImgesCont>  
-    </Cont>
+    
   )
 }
 

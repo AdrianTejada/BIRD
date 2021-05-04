@@ -8,8 +8,6 @@ const Cont = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
-    bottom: 50px;
-    position:relative;
 `
 
 const Last = ({

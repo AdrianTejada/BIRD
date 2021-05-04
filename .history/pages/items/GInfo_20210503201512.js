@@ -333,11 +333,9 @@ const HandleZ = () => {
 
         <ChatBubble 
           head={head}
-          text={text}
-          component={component}
-          >
+          text={text}>
         
-        
+        {component}
         </ChatBubble>
 
         <SpeakerContainer>

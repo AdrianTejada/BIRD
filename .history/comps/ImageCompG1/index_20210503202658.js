@@ -60,7 +60,7 @@ const show2 = keyframes`
 
 const Cont = styled.div `
 position:relative;
-right: 30px;
+right: 20px;
 `
 
 const ImgesCont =styled(animated.div)`
@@ -150,7 +150,7 @@ const ImageCompG1= ({
  
 }) => {
  
-  return (<Cont>
+  return (
     
   <ImgesCont ImageG1display={ImageG1display}   >
       <Text1> {text1}</Text1>
@@ -161,7 +161,7 @@ const ImageCompG1= ({
       <ImgCont3 src="/virus-03.png"   width3 ={width3 } />
       <ImgCont4 src="/virus-03.png"   width4 ={width4 } />
     </ImgesCont>  
-    </Cont>
+    
   )
 }
 

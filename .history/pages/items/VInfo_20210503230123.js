@@ -140,7 +140,7 @@ const HandleZ = () => {
 
     }
 
-    else if (page === 5)
+    else if (page == 5)
     {
       setHead(info.five.head)
       setText(info.five.text)
@@ -149,8 +149,10 @@ const HandleZ = () => {
 
     else if (page == 6)
     {
-      page = 5
+        router.push("/infoCovidBase")
     }
+
+    console.log("page " + page)
   }
 
   //for back button
@@ -209,6 +211,10 @@ const HandleZ = () => {
 
     }
 
+    else if (page == 5)
+    {
+        router.push("/infoCovidBase")
+    }
     else if (page == 0)
     {
         page =1

@@ -37,7 +37,7 @@ export const info = {
     },
     four: {
         head:"4.What test should I get to see if I have COVID-19?",
-        text: "A Polymerase chain reaction (PCR) is one of the most commonly used molecular test. Samples are collected from the nose and/or throat with a swab.",
+        text: "A Polymerase chain reaction (PCR) is the most commonly used molecular test. Samples are collected from the nose and/or throat with a swab.",
         component:<Lab/>,
         display:"none",
         bgcolor1:"#9A9999",

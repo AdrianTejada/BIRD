@@ -211,6 +211,10 @@ const HandleZ = () => {
 
     }
 
+    else if (page == 5)
+    {
+        router.push("/infoCovidBase")
+    }
     else if (page == 0)
     {
         page =1

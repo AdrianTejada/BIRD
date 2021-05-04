@@ -4,13 +4,83 @@ import styled, { keyframes } from 'styled-components';
 import { animated, useSpring } from "react-spring";
 import Button from '../Button'
 
+const show = keyframes`
+0%{
+  opacity: 0; 
+}
+25% {
+  opacity: 1; 
+}
+50% {
+  opacity: 0; 
+}
+75% {
+  opacity: 0; 
+}
+100% {
+  opacity: 0; 
+}
 
+
+`;
+const show2 = keyframes`
+0%{
+  opacity: 0; 
+}
+25% {
+  opacity: 0; 
+}
+50% {
+  opacity: 1; 
+}
+75% {
+  opacity: 0; 
+}
+100% {
+  opacity: 0; 
+}
+
+`;
+const show3 = keyframes`
+0%{
+  opacity: 0; 
+}
+25% {
+  opacity: 0; 
+}
+50% {
+  opacity: 0; 
+}
+75% {
+  opacity: 1; 
+}
+100% {
+  opacity: 0; 
+}
+`;
+const show4 = keyframes`
+0%{
+  opacity: 0; 
+}
+25% {
+  opacity: 0; 
+}
+50% {
+  opacity: 0; 
+}
+75% {
+  opacity: 0; 
+}
+100% {
+  opacity: 1; 
+}
+`;
 
 const ImgesCont =styled(animated.div)`
 display:flex;
 flex-direction:column;
 align-items:center;
-margin-top:40px;
+margin-top:-20px;
 
 `;
 const ImgCont2 =styled.img`
@@ -18,32 +88,32 @@ width:${(props)=>props.width2}px;
 height:auto; 
 margin-top:50px;
 position:absolute;
-z-index:5;
 opacity:${(props)=>props.opacity2};
+animation: 8s ${show}   step-start infinite;
 `
 const ImgCont3 =styled.img`
 width:${(props)=>props.width3}px;
 height:auto;
 margin-top:50px;
 position:absolute;
-z-index:4;
 opacity:${(props)=>props.opacity3};
+animation: 8s ${show2}   step-start infinite;
 `
 const ImgCont4 =styled.img`
 width:${(props)=>props.width4}px;
 height:auto;
 margin-top:50px;
 position:absolute;
-z-index:3;
 opacity:${(props)=>props.opacity4};
+animation: 8s ${show3}   step-start infinite;
 `
 const ImgCont5 =styled.img`
 width:${(props)=>props.width5}px;
 height:auto;
 margin-top:50px;
 position:absolute;
-z-index:2;
 opacity:${(props)=>props.opacity5};
+animation: 8s ${show4}   step-start infinite;
 `
 
 
@@ -53,22 +123,19 @@ const ImageCompV1= ({
  width3=200,
  width4=250,
  width5=250,
- opacity2="1",
- opacity3="0",
- opacity4="0",
- opacity5="0",
- HandleOpacity=()=>{}
+ 
+
  
 }) => {
  
   return (
    
   <ImgesCont    >
-      <Button text="Next" onClick={HandleOpacity}/>
-      <ImgCont2 src="/pfizer.svg"   width2 ={width2 }  opacity2={opacity2}/>
-      <ImgCont3 src="/moderna.svg"   width3 ={width3 }  opacity3={opacity3}/>
-      <ImgCont4 src="/astrazeneca.svg"   width4 ={width4 }  opacity4={opacity4}/>
-      <ImgCont5 src="/Janssen_Logo.jpg"   width5 ={width5 }  opacity5={opacity5}/>
+
+      <ImgCont2 src="/pfizer.svg"   width2 ={width2 } />
+      <ImgCont3 src="/moderna.svg"   width3 ={width3 }  />
+      <ImgCont4 src="/astrazeneca.svg"   width4 ={width4 }  />
+      <ImgCont5 src="/Janssen_Logo.jpg"   width5 ={width5 } />
     </ImgesCont>  
     
   )

@@ -55,7 +55,7 @@ const ImgesCont =styled(animated.div)`
 display:flex;
 flex-direction:column;
 align-items:center;
-margin-top:-30px;
+margin-top:-55px;
 
 `;
 const ImgCont2 =styled.img`
@@ -90,7 +90,7 @@ animation: 8s ${show3}   step-start infinite;
 //props
 const ImageCompV2= ({
  width2=310,
- width3=330,
+ width3=335,
  width4=310,
  
  

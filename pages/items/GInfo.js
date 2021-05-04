@@ -36,7 +36,6 @@ const SpeakerContainer = styled.div`
 const Speaker = styled.img`
   width: 100%;
   height:100%;
-
   position:relative;
 `
 

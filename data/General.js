@@ -1,5 +1,5 @@
 import ImageCompG1 from'../comps/ImageCompG1'
-import ImageCompG6 from'../comps/ImageCompG6'
+import ImageCompG5 from'../comps/ImageCompG5'
 export const info = {
     one: {
         head:"1. What is COVID-19?",
@@ -51,8 +51,8 @@ export const info = {
     },
     five: {
         head:"5. How long does it take to develop symptoms?",
-        text:"Stay safe by taking some simple precautions, such as physical distancing, wearing a mask, especially when distancing cannot be maintained, keeping rooms well ventilated, avoiding crowds and close contact, regularly cleaning your hands, and coughing into a bent elbow or tissue.",
-        src:"/virus-3.png",
+        text:"The time from exposure to COVID-19 to the moment when symptoms begin is, on average, 5-6 days and can range from 1-14 days.",
+        component:<ImageCompG5/>,
         display:"none",
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
@@ -63,8 +63,8 @@ export const info = {
     },
     six: {
         head:"6.How can we protect others and ourselves if we don't know who is infected?",
-        text:"The time from exposure to COVID-19 to the moment when symptoms begin is, on average, 5-6 days and can range from 1-14 days.",
-        component:<ImageCompG6/>,
+        text:"Stay safe by taking some simple precautions, such as physical distancing, wearing a mask, especially when distancing cannot be maintained, keeping rooms well ventilated, avoiding crowds and close contact, regularly cleaning your hands, and coughing into a bent elbow or tissue.",
+        component:"",
         display:"none",
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",

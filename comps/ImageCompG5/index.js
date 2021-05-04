@@ -123,7 +123,7 @@ animation: 4s ${show3}   step-start infinite;
 `
 
 //props
-const ImageCompG6= ({
+const ImageCompG5= ({
  width=250,
  width2=250,
  width3=250,
@@ -149,4 +149,4 @@ const ImageCompG6= ({
 }
 
 
-export default ImageCompG6;
+export default ImageCompG5;

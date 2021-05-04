@@ -19,6 +19,7 @@ const Bubble = styled.div `
     overflow:hidden;
     background-color:white;
     margin-top:20px;
+    
 `
 
 const Triangle = styled.div`
@@ -39,7 +40,7 @@ const Content = styled.div`
     margin-top:40px;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
 `
 const Question = styled.div`
     font-size:18px;

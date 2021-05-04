@@ -2,13 +2,8 @@ import ImageCompG1 from'../comps/ImageCompG1';
 import Common from '../comps/CommonSymp';
 import Sever from '../comps/SeverSymp';
 import AtRisk from '../comps/AtRisk';
-import ImageCompG6 from'../comps/ImageCompG6';
 import Mask from '../comps/Mask';
-import SD from '../comps/SocialDistancing';
-import Window from '../comps/Window';
-import Hands from '../comps/HandWashing';
-import Cough from '../comps/Coughing';
-import Last from '../comps/InfoEnd';
+import ImageCompG6 from'../comps/ImageCompG6';
 
 export const info = {
     one: {
@@ -82,25 +77,4 @@ export const info = {
         bgcolor5:"#9A9999",
         bgcolor6:"#FF7A00"
     },
-    seven: {
-        text:"Practicing social distancing in public places, with a minium of 2.0 meters between indiviauls.",
-        component:<SD />,
-    },
-    eight: {
-        text:"Keeping public spaces well ventilated.",
-        component:<Window />
-    },
-    nine: {
-        text:"Regularly washing our hands.",
-        component:<Hands />
-    },
-    ten: {
-        text:"And finally, couging into a tissue or elbow when we need to.",
-        component:<Cough />
-    },
-    eleven: {
-        head:"End of Section",
-        text:"",
-        component:<Last QuizRoute="../GQ1" />
-    }
 }

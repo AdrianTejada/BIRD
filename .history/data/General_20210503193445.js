@@ -2,13 +2,13 @@ import ImageCompG1 from'../comps/ImageCompG1';
 import Common from '../comps/CommonSymp';
 import Sever from '../comps/SeverSymp';
 import AtRisk from '../comps/AtRisk';
-import ImageCompG6 from'../comps/ImageCompG6';
 import Mask from '../comps/Mask';
 import SD from '../comps/SocialDistancing';
 import Window from '../comps/Window';
 import Hands from '../comps/HandWashing';
 import Cough from '../comps/Coughing';
-import Last from '../comps/InfoEnd';
+import ImageCompG6 from'../comps/ImageCompG6';
+import Button from '../comps/Button';
 
 export const info = {
     one: {
@@ -99,8 +99,8 @@ export const info = {
         component:<Cough />
     },
     eleven: {
-        head:"End of Section",
+        head:<Button text="Back to Home" routeTo="../infoCovidBase"/>,
         text:"",
-        component:<Last QuizRoute="../GQ1" />
+        
     }
 }

@@ -2,13 +2,8 @@ import ImageCompG1 from'../comps/ImageCompG1';
 import Common from '../comps/CommonSymp';
 import Sever from '../comps/SeverSymp';
 import AtRisk from '../comps/AtRisk';
-import ImageCompG6 from'../comps/ImageCompG6';
 import Mask from '../comps/Mask';
-import SD from '../comps/SocialDistancing';
-import Window from '../comps/Window';
-import Hands from '../comps/HandWashing';
-import Cough from '../comps/Coughing';
-import Last from '../comps/InfoEnd';
+import ImageCompG6 from'../comps/ImageCompG6';
 
 export const info = {
     one: {
@@ -71,10 +66,11 @@ export const info = {
         bgcolor5:"#FF7A00",
         bgcolor6:"#9A9999",
     },
-    six: {
+    ten: {
         head:"6.How can we protect others and ourselves if we don't know who is infected?",
-        text:"We can start off by wearing face masks.",
-        component:<Mask />,
+        text:"Stay safe by taking some simple precautions, such as physical distancing, wearing a mask, especially when distancing cannot be maintained, keeping rooms well ventilated, avoiding crowds and close contact, regularly cleaning your hands, and coughing into a bent elbow or tissue.",
+        ,
+   
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
         bgcolor3:"#9A9999",
@@ -82,25 +78,4 @@ export const info = {
         bgcolor5:"#9A9999",
         bgcolor6:"#FF7A00"
     },
-    seven: {
-        text:"Practicing social distancing in public places, with a minium of 2.0 meters between indiviauls.",
-        component:<SD />,
-    },
-    eight: {
-        text:"Keeping public spaces well ventilated.",
-        component:<Window />
-    },
-    nine: {
-        text:"Regularly washing our hands.",
-        component:<Hands />
-    },
-    ten: {
-        text:"And finally, couging into a tissue or elbow when we need to.",
-        component:<Cough />
-    },
-    eleven: {
-        head:"End of Section",
-        text:"",
-        component:<Last QuizRoute="../GQ1" />
-    }
 }

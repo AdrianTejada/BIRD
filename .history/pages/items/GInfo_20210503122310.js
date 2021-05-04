@@ -91,6 +91,7 @@ const HandleZ = () => {
   const [head, setHead] = useState(info.one.head);
   const [text, setText] = useState(info.one.text);
   const [component, setcomponent] = useState(info.one.component);
+  const [display, setDisplay] = useState(info.one.display);
   const [bgcolor1, setC1] = useState(info.one.bgcolor1);
   const [bgcolor2, setC2] = useState(info.one.bgcolor2);
   const [bgcolor3, setC3] = useState(info.one.bgcolor3);
@@ -109,6 +110,7 @@ const HandleZ = () => {
         setHead(info.two.head);
         setText(info.two.text);
         setcomponent(info.two.component);
+        setDisplay(info.two.display);
         setC1(info.two.bgcolor1);
         setC2(info.two.bgcolor2);
         setC3(info.two.bgcolor3);
@@ -122,6 +124,7 @@ const HandleZ = () => {
         setHead(info.three.head);
         setText(info.three.text);
         setcomponent(info.three.component);
+        setDisplay(info.three.display);
         setC1(info.three.bgcolor1);
         setC2(info.three.bgcolor2);
         setC3(info.three.bgcolor3);
@@ -135,6 +138,7 @@ const HandleZ = () => {
         setHead(info.four.head);
         setText(info.four.text);
         setcomponent(info.four.component);
+        setDisplay(info.four.display);
         setC1(info.four.bgcolor1);
         setC2(info.four.bgcolor2);
         setC3(info.four.bgcolor3);
@@ -148,6 +152,7 @@ const HandleZ = () => {
         setHead(info.five.head);
         setText(info.five.text);
         setcomponent(info.five.component);
+        setDisplay(info.five.display);
         setC1(info.five.bgcolor1);
         setC2(info.five.bgcolor2);
         setC3(info.five.bgcolor3);
@@ -158,53 +163,26 @@ const HandleZ = () => {
 
     else if (page == 6)
     {
-      setHead(info.six.head);
-      setText(info.six.text);
-      setcomponent(info.six.component);
-      setC1(info.six.bgcolor1);
-      setC2(info.six.bgcolor2);
-      setC3(info.six.bgcolor3);
-      setC4(info.six.bgcolor4);
-      setC5(info.six.bgcolor5);
-      setC6(info.six.bgcolor6);
+        setHead(info.six.head);
+        setText(info.six.text);
+        setcomponent(info.six.component);
+        setDisplay(info.six.display);
+        setC1(info.six.bgcolor1);
+        setC2(info.six.bgcolor2);
+        setC3(info.six.bgcolor3);
+        setC4(info.six.bgcolor4);
+        setC5(info.six.bgcolor5);
+        setC6(info.six.bgcolor6);
     }
 
-    else if (page === 7)
+    else if (page == 7)
     {
-      setText(info.seven.text)
-      setcomponent(info.seven.component)
+      router.push("/infoCovidBase")
     }
-
-    else if (page === 8)
+    else if (page == 0)
     {
-      setText(info.eight.text)
-      setcomponent(info.eight.component)
+        page = 1;
     }
-
-    else if (page === 9)
-    {
-      setText(info.nine.text)
-      setcomponent(info.nine.component)
-    }
-
-    else if (page === 10)
-    {
-      setText(info.ten.text)
-      setcomponent(info.ten.component)
-    }
-
-    else if (page === 11)
-    {
-      setHead(info.eleven.head)
-      setText(info.eleven.text)
-      setcomponent(info.eleven.component)
-    }
-
-    else if (page == 12)
-    {
-      page = 11
-    }
-
     console.log("page " + page)
   }
 
@@ -218,6 +196,7 @@ const HandleZ = () => {
         setHead(info.one.head);
         setText(info.one.text);
         setcomponent(info.one.component);
+        setDisplay(info.one.display);
         setC1(info.one.bgcolor1);
         setC2(info.one.bgcolor2);
         setC3(info.one.bgcolor3);
@@ -230,6 +209,7 @@ const HandleZ = () => {
         setHead(info.two.head);
         setText(info.two.text);
         setcomponent(info.two.component);
+        setDisplay(info.two.display);
         setC1(info.two.bgcolor1);
         setC2(info.two.bgcolor2);
         setC3(info.two.bgcolor3);
@@ -243,6 +223,7 @@ const HandleZ = () => {
         setHead(info.three.head);
         setText(info.three.text);
         setcomponent(info.three.component);
+        setDisplay(info.three.display);
         setC1(info.three.bgcolor1);
         setC2(info.three.bgcolor2);
         setC3(info.three.bgcolor3);
@@ -256,6 +237,7 @@ const HandleZ = () => {
         setHead(info.four.head);
         setText(info.four.text);
         setcomponent(info.four.component);
+        setDisplay(info.four.display);
         setC1(info.four.bgcolor1);
         setC2(info.four.bgcolor2);
         setC3(info.four.bgcolor3);
@@ -269,6 +251,7 @@ const HandleZ = () => {
         setHead(info.five.head);
         setText(info.five.text);
         setcomponent(info.five.component);
+        setDisplay(info.five.display);
         setC1(info.five.bgcolor1);
         setC2(info.five.bgcolor2);
         setC3(info.five.bgcolor3);
@@ -279,44 +262,25 @@ const HandleZ = () => {
 
     else if (page == 6)
     {
-      setHead(info.six.head);
-      setText(info.six.text);
-      setcomponent(info.six.component);
-      setC1(info.six.bgcolor1);
-      setC2(info.six.bgcolor2);
-      setC3(info.six.bgcolor3);
-      setC4(info.six.bgcolor4);
-      setC5(info.six.bgcolor5);
-      setC6(info.six.bgcolor6);
+        setHead(info.six.head);
+        setText(info.six.text);
+        setcomponent(info.six.component);
+        setDisplay(info.six.display);
+        setC1(info.six.bgcolor1);
+        setC2(info.six.bgcolor2);
+        setC3(info.six.bgcolor3);
+        setC4(info.six.bgcolor4);
+        setC5(info.six.bgcolor5);
+        setC6(info.six.bgcolor6);
     }
 
-    else if (page === 7)
+    else if (page == 7)
     {
-      setText(info.seven.text)
-      setcomponent(info.seven.component)
+      router.push("/infoCovidBase")
     }
-
-    else if (page === 8)
-    {
-      setText(info.eight.text)
-      setcomponent(info.eight.component)
-    }
-
-    else if (page === 9)
-    {
-      setText(info.nine.text)
-      setcomponent(info.nine.component)
-    }
-
-    else if (page === 10)
-    {
-      setText(info.ten.text)
-      setcomponent(info.ten.component)
-    }
-
     else if (page == 0)
     {
-        page = 1
+        page =1
     }
     console.log("page " + page)
   }
@@ -334,10 +298,10 @@ const HandleZ = () => {
 
         <ChatBubble 
           head={head}
-          text={text}>
-        
+          text={text}
+          // component={component}
+        />
         {component}
-        </ChatBubble>
 
         <SpeakerContainer>
           <Speaker src="/doctor-hand.svg" />

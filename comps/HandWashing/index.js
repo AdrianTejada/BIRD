@@ -9,23 +9,26 @@ const Cont = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    align-self:center;
+    align-self: center;
 `
 
-const Patient1 = styled.img`
+const Img1 = styled.img`
     width: 227px;
-    height:210px;
-`
-const Patient2 = styled.img`
-    width: 227px;
-    height:210px;
+    height:auto;
     position:relative;
-    bottom:209px;
+    top:50px;
+`
+const Img2 = styled.img`
+    width: 227px;
+    height:auto;
+    position:relative;
+    bottom:105px;
+    z-index:1;
     opacity: ${props=>props.opacity};
     transition: 1s opacity;
 `
 
-const Mask = () => {
+const Hands = () => {
     const [opacitystate, SetOp] = useState(false)
     var opacity=0;
 
@@ -47,12 +50,13 @@ const Mask = () => {
         />:
         <Button onClick={HandleEvent}
         text="Undo" 
-        routeTo=""/> }
-        <Patient1 src="/patient.svg"/>
-        <Patient2 src="/patient-mask1.svg" 
-            opacity={opacity}
+        routeTo=""
+        /> }
+        <Img1 src="/hands.svg"/>
+        <Img2 src="/hands-wash.svg" 
+        opacity={opacity}
         />
     </Cont>
 }
 
-export default Mask;
+export default Hands;

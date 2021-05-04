@@ -36,6 +36,7 @@ const SpeakerContainer = styled.div`
 const Speaker = styled.img`
   width: 100%;
   height:100%;
+
   position:relative;
 `
 
@@ -278,39 +279,15 @@ const HandleZ = () => {
 
     else if (page == 6)
     {
-      setHead(info.six.head);
-      setText(info.six.text);
-      setcomponent(info.six.component);
-      setC1(info.six.bgcolor1);
-      setC2(info.six.bgcolor2);
-      setC3(info.six.bgcolor3);
-      setC4(info.six.bgcolor4);
-      setC5(info.six.bgcolor5);
-      setC6(info.six.bgcolor6);
-    }
-
-    else if (page === 7)
-    {
-      setText(info.seven.text)
-      setcomponent(info.seven.component)
-    }
-
-    else if (page === 8)
-    {
-      setText(info.eight.text)
-      setcomponent(info.eight.component)
-    }
-
-    else if (page === 9)
-    {
-      setText(info.nine.text)
-      setcomponent(info.nine.component)
-    }
-
-    else if (page === 10)
-    {
-      setText(info.ten.text)
-      setcomponent(info.ten.component)
+        setHead(info.six.head);
+        setText(info.six.text);
+        setcomponent(info.six.component);
+        setC1(info.six.bgcolor1);
+        setC2(info.six.bgcolor2);
+        setC3(info.six.bgcolor3);
+        setC4(info.six.bgcolor4);
+        setC5(info.six.bgcolor5);
+        setC6(info.six.bgcolor6);
     }
 
     else if (page == 0)

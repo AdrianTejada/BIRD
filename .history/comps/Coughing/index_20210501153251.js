@@ -20,12 +20,12 @@ const Patient2 = styled.img`
     width: 227px;
     height:210px;
     position:relative;
-    bottom:209px;
+    bottom:210px;
     opacity: ${props=>props.opacity};
     transition: 1s opacity;
 `
 
-const Mask = () => {
+const Cough = () => {
     const [opacitystate, SetOp] = useState(false)
     var opacity=0;
 
@@ -43,16 +43,15 @@ const Mask = () => {
         {opacity == 0 ?
         <Button onClick={HandleEvent}
         text="Click for Safety"
-        routeTo=""
         />:
         <Button onClick={HandleEvent}
-        text="Undo" 
-        routeTo=""/> }
-        <Patient1 src="/patient.svg"/>
-        <Patient2 src="/patient-mask1.svg" 
+        text="Undo" /> }
+        
+        <Patient1 src="patient-cough.svg"/>
+        <Patient2 src="patient-covermouth.svg" 
             opacity={opacity}
         />
     </Cont>
 }
 
-export default Mask;
+export default Cough;

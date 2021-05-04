@@ -43,11 +43,9 @@ const Mask = () => {
         {opacity == 0 ?
         <Button onClick={HandleEvent}
         text="Click for Safety"
-        routeTo=""
         />:
         <Button onClick={HandleEvent}
-        text="Undo" 
-        routeTo=""/> }
+        text="Undo" /> }
         <Patient1 src="/patient.svg"/>
         <Patient2 src="/patient-mask1.svg" 
             opacity={opacity}

@@ -1,14 +1,8 @@
-import ImageCompG1 from'../comps/ImageCompG1'
-import ImageCompG5 from'../comps/ImageCompG5'
+import ImageCompG1 from'../comps/ImageCompG1';
 import Common from '../comps/CommonSymp';
 import Sever from '../comps/SeverSymp';
 import AtRisk from '../comps/AtRisk';
-import Mask from '../comps/Mask';
-import SD from '../comps/SocialDistancing';
-import Window from '../comps/Window';
-import Hands from '../comps/HandWashing';
-import Cough from '../comps/Coughing';
-import Last from '../comps/InfoEnd';
+import ImageCompG6 from'../comps/ImageCompG6';
 
 export const info = {
     one: {
@@ -62,8 +56,8 @@ export const info = {
     five: {
         head:"5. How long does it take to develop symptoms?",
         text:"The time from exposure to COVID-19 to the moment when symptoms begin is, on average, 5-6 days and can range from 1-14 days.",
-        component:<ImageCompG5/>,
-        display:"none",
+        component:<ImageCompG6 />,
+
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
         bgcolor3:"#9A9999",
@@ -71,10 +65,11 @@ export const info = {
         bgcolor5:"#FF7A00",
         bgcolor6:"#9A9999",
     },
-    six: {
+    ten: {
         head:"6.How can we protect others and ourselves if we don't know who is infected?",
-        text:"We can start off by wearing face masks.",
-        component:<Mask />,
+        text:,
+        ,
+   
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
         bgcolor3:"#9A9999",
@@ -82,25 +77,4 @@ export const info = {
         bgcolor5:"#9A9999",
         bgcolor6:"#FF7A00"
     },
-    seven: {
-        text:"Practicing social distancing in public places, with a minium of 2.0 meters between indiviauls.",
-        component:<SD />,
-    },
-    eight: {
-        text:"Keeping public spaces well ventilated.",
-        component:<Window />
-    },
-    nine: {
-        text:"Regularly washing our hands.",
-        component:<Hands />
-    },
-    ten: {
-        text:"And finally, couging into a tissue or elbow when we need to.",
-        component:<Cough />
-    },
-    eleven: {
-        head:"End of Section",
-        text:"",
-        component:<Last QuizRoute="../GQ1" />
-    }
 }

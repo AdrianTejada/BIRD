@@ -1,5 +1,4 @@
-import ImageCompG1 from'../comps/ImageCompG1'
-import ImageCompG5 from'../comps/ImageCompG5'
+import ImageCompG1 from'../comps/ImageCompG1';
 import Common from '../comps/CommonSymp';
 import Sever from '../comps/SeverSymp';
 import AtRisk from '../comps/AtRisk';
@@ -8,7 +7,8 @@ import SD from '../comps/SocialDistancing';
 import Window from '../comps/Window';
 import Hands from '../comps/HandWashing';
 import Cough from '../comps/Coughing';
-import Last from '../comps/InfoEnd';
+import ImageCompG6 from'../comps/ImageCompG6';
+import Button from '../comps/Button';
 
 export const info = {
     one: {
@@ -62,8 +62,8 @@ export const info = {
     five: {
         head:"5. How long does it take to develop symptoms?",
         text:"The time from exposure to COVID-19 to the moment when symptoms begin is, on average, 5-6 days and can range from 1-14 days.",
-        component:<ImageCompG5/>,
-        display:"none",
+        component:<ImageCompG6 />,
+
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
         bgcolor3:"#9A9999",
@@ -99,8 +99,8 @@ export const info = {
         component:<Cough />
     },
     eleven: {
-        head:"End of Section",
+        head:<Button text="Back to Home" routeTo="../infoCovidBase"/>,
         text:"",
-        component:<Last QuizRoute="../GQ1" />
+        component:""
     }
 }

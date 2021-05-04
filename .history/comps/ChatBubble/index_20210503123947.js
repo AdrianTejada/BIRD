@@ -19,6 +19,7 @@ const Bubble = styled.div `
     overflow:hidden;
     background-color:white;
     margin-top:20px;
+    
 `
 
 const Triangle = styled.div`
@@ -39,7 +40,7 @@ const Content = styled.div`
     margin-top:40px;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
 `
 const Question = styled.div`
     font-size:18px;
@@ -58,7 +59,6 @@ const QuestionText = styled.div`
 
 
 const Image = styled.div`
-    margin-top:40px;
     width: 260px;
     height: 240px;
     overflow: hidden;
@@ -78,18 +78,14 @@ const ChatBubble = ({
     RadioCheck=()=>{},
     src="/",
     display="none",
-    component="",
-    
+    children
 }) => {
     return <ChatContainer>
         <Bubble>
             <Content>
                 <Question>{head}</Question>
                 <Answer>{text}</Answer>
-                
-                <Image >
-                {component}
-                </Image>
+                {children}
 
             </Content>
         </Bubble>

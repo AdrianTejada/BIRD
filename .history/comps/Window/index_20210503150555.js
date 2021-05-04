@@ -12,20 +12,18 @@ const Cont = styled.div`
     align-self:center;
 `
 
-const Patient1 = styled.img`
-    width: 227px;
-    height:210px;
+const Img1 = styled.img`
+    width: 200px;
+    height:auto;
+    margin-bottom: 30px;
 `
-const Patient2 = styled.img`
-    width: 227px;
-    height:210px;
-    position:relative;
-    bottom:209px;
-    opacity: ${props=>props.opacity};
-    transition: 1s opacity;
+const Img2 = styled.img`
+    width: 200px;
+    height:auto;
+    margin-bottom: 30px;
 `
 
-const Mask = () => {
+const Window = () => {
     const [opacitystate, SetOp] = useState(false)
     var opacity=0;
 
@@ -43,16 +41,14 @@ const Mask = () => {
         {opacity == 0 ?
         <Button onClick={HandleEvent}
         text="Click for Safety"
-        routeTo=""
         />:
         <Button onClick={HandleEvent}
-        text="Undo" 
-        routeTo=""/> }
-        <Patient1 src="/patient.svg"/>
-        <Patient2 src="/patient-mask1.svg" 
-            opacity={opacity}
-        />
+        text="Undo" /> }
+
+        {opacity == 0 ?
+        <Img1 src="/window-closed.svg"/>:
+        <Img2 src="/window-open.svg"/>}
     </Cont>
 }
 
-export default Mask;
+export default Window;

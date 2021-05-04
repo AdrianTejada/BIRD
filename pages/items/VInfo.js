@@ -88,7 +88,7 @@ const HandleZ = () => {
 
   const [head, setHead] = useState(info.one.head);
   const [text, setText] = useState(info.one.text);
-  const [src, setSrc] = useState(info.one.src);
+  const [component, setcomponent] = useState(info.one.component);
   const [display, setDisplay] = useState(info.one.display);
   const [bgcolor1, setC1] = useState(info.one.bgcolor1);
   const [bgcolor2, setC2] = useState(info.one.bgcolor2);
@@ -105,7 +105,7 @@ const HandleZ = () => {
     {
         setHead(info.two.head);
         setText(info.two.text);
-        setSrc(info.two.src);
+        setcomponent(info.two.component);
         setDisplay(info.two.display);
         setC1(info.two.bgcolor1);
         setC2(info.two.bgcolor2);
@@ -118,7 +118,7 @@ const HandleZ = () => {
     {
         setHead(info.three.head);
         setText(info.three.text);
-        setSrc(info.three.src);
+        setcomponent(info.three.component);
         setDisplay(info.three.display);
         setC1(info.three.bgcolor1);
         setC2(info.three.bgcolor2);
@@ -131,7 +131,7 @@ const HandleZ = () => {
     {
         setHead(info.four.head);
         setText(info.four.text);
-        setSrc(info.four.src);
+        setcomponent(info.four.component);
         setDisplay(info.four.display);
         setC1(info.four.bgcolor1);
         setC2(info.four.bgcolor2);
@@ -140,12 +140,17 @@ const HandleZ = () => {
 
     }
 
-    else if (page == 5)
+    else if (page === 5)
     {
-        router.push("/infoCovidBase")
+      setHead(info.five.head)
+      setText(info.five.text)
+      setcomponent(info.five.component)
     }
 
-    console.log("page " + page)
+    else if (page == 6)
+    {
+      page = 5
+    }
   }
 
   //for back button
@@ -157,7 +162,7 @@ const HandleZ = () => {
     {
         setHead(info.one.head);
         setText(info.one.text);
-        setSrc(info.one.src);
+        setcomponent(info.one.component);
         setDisplay(info.one.display);
         setC1(info.one.bgcolor1);
         setC2(info.one.bgcolor2);
@@ -169,7 +174,7 @@ const HandleZ = () => {
     {
         setHead(info.two.head);
         setText(info.two.text);
-        setSrc(info.two.src);
+        setcomponent(info.two.component);
         setDisplay(info.two.display);
         setC1(info.two.bgcolor1);
         setC2(info.two.bgcolor2);
@@ -182,7 +187,7 @@ const HandleZ = () => {
     {
         setHead(info.three.head);
         setText(info.three.text);
-        setSrc(info.three.src);
+        setcomponent(info.three.component);
         setDisplay(info.three.display);
         setC1(info.three.bgcolor1);
         setC2(info.three.bgcolor2);
@@ -195,7 +200,7 @@ const HandleZ = () => {
     {
         setHead(info.four.head);
         setText(info.four.text);
-        setSrc(info.four.src);
+        setcomponent(info.four.component);
         setDisplay(info.four.display);
         setC1(info.four.bgcolor1);
         setC2(info.four.bgcolor2);
@@ -228,9 +233,9 @@ const HandleZ = () => {
         <ChatBubble 
           head={head}
           text={text}
-          src={src}
+          component={component}
         />
-
+        
         <SpeakerContainer>
           <Speaker src="/vaccine-man.svg" />
         </SpeakerContainer>

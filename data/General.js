@@ -1,12 +1,27 @@
+<<<<<<< HEAD
 import ImageCompG1 from '../comps/ImageCompG1'
 import ImageCompG6 from '../comps/ImageCompG6'
 import ImageCompV1 from '../comps/ImageCompV1'
+=======
+import ImageCompG1 from'../comps/ImageCompG1'
+import ImageCompG5 from'../comps/ImageCompG5'
+import Common from '../comps/CommonSymp';
+import Sever from '../comps/SeverSymp';
+import AtRisk from '../comps/AtRisk';
+import Mask from '../comps/Mask';
+import SD from '../comps/SocialDistancing';
+import Window from '../comps/Window';
+import Hands from '../comps/HandWashing';
+import Cough from '../comps/Coughing';
+import Last from '../comps/InfoEnd';
+
+>>>>>>> 6df44a245f303db7fdfdc7c7656280d6630cb04f
 export const info = {
     one: {
         head:"1. What is COVID-19?",
         text:"COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
         component:<ImageCompG1/>,
-        display:"none",
+  
         bgcolor1:"#FF7A00",
         bgcolor2:"#9A9999",
         bgcolor3:"#9A9999",
@@ -17,9 +32,14 @@ export const info = {
     two: {
         head:"2. The most common symptoms of COVID-19 are?",
         text:"Fever, Dry cough, and Fatigue. ",
+<<<<<<< HEAD
         // src:"/patient-fever1.svg",
         component:<ImageCompG6/>,
         display:"none",
+=======
+        component:<Common/>,
+
+>>>>>>> 6df44a245f303db7fdfdc7c7656280d6630cb04f
         bgcolor1:"#9A9999",
         bgcolor2:"#FF7A00",
         bgcolor3:"#9A9999",
@@ -30,9 +50,14 @@ export const info = {
     three: {
         head:"3. Symptoms of severe COVID‐19 disease include:",
         text:"Shortness of breath, Loss of appetite, Confusion, Persistent pain or pressure in the chest, High temperature (above 38 °C).",
+<<<<<<< HEAD
         // src:"/patient-heat1.svg",
         component:<ImageCompV1/>,
         display:"none",
+=======
+        component:<Sever />,
+
+>>>>>>> 6df44a245f303db7fdfdc7c7656280d6630cb04f
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
         bgcolor3:"#FF7A00",
@@ -43,8 +68,8 @@ export const info = {
     four: {
         head:"4.Who is most at risk of severe illness from COVID-19?",
         text:"People aged 60 years and over, and those with underlying medical problems like high blood pressure, heart and lung problems, diabetes, obesity or cancer, are at higher risk of developing serious illness. However, anyone can get sick with COVID-19.",
-        src:"/patient-elderly.svg",
-        display:"none",
+        component:<AtRisk />,
+
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
         bgcolor3:"#9A9999",
@@ -54,8 +79,8 @@ export const info = {
     },
     five: {
         head:"5. How long does it take to develop symptoms?",
-        text:"Stay safe by taking some simple precautions, such as physical distancing, wearing a mask, especially when distancing cannot be maintained, keeping rooms well ventilated, avoiding crowds and close contact, regularly cleaning your hands, and coughing into a bent elbow or tissue.",
-        src:"/virus-3.png",
+        text:"The time from exposure to COVID-19 to the moment when symptoms begin is, on average, 5-6 days and can range from 1-14 days.",
+        component:<ImageCompG5/>,
         display:"none",
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
@@ -66,9 +91,8 @@ export const info = {
     },
     six: {
         head:"6.How can we protect others and ourselves if we don't know who is infected?",
-        text:"The time from exposure to COVID-19 to the moment when symptoms begin is, on average, 5-6 days and can range from 1-14 days.",
-        component:<ImageCompG6/>,
-        display:"none",
+        text:"We can start off by wearing face masks.",
+        component:<Mask />,
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
         bgcolor3:"#9A9999",
@@ -76,4 +100,25 @@ export const info = {
         bgcolor5:"#9A9999",
         bgcolor6:"#FF7A00"
     },
+    seven: {
+        text:"Practicing social distancing in public places, with a minium of 2.0 meters between indiviauls.",
+        component:<SD />,
+    },
+    eight: {
+        text:"Keeping public spaces well ventilated.",
+        component:<Window />
+    },
+    nine: {
+        text:"Regularly washing our hands.",
+        component:<Hands />
+    },
+    ten: {
+        text:"And finally, couging into a tissue or elbow when we need to.",
+        component:<Cough />
+    },
+    eleven: {
+        head:"End of Section",
+        text:"",
+        component:<Last QuizRoute="../GQ1" />
+    }
 }

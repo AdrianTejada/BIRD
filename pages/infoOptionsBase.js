@@ -50,7 +50,7 @@ const Optioncont = styled.div`
     align-items: center;
     position: absolute;
     margin-top: 130px;
-    height:950px;
+    max-height:950px;
     max-width:660px;
     overflow:auto;
 `
@@ -103,8 +103,9 @@ const HandleZ = () => {
            <div><Option src = "/6.svg" text = "Purchase Protection" routeTo="/infoPurchaseBase"/></div> 
            <div><Option src = "/7.svg" text = "Donation"/></div> 
            <div><Option src = "/8.svg" text = "Make An Appointment" routeTo="/infoMakeAppointBase"/></div> 
-           <div><Option src = "/9.svg" text = "Help" routeTo="/infoHelpBase"/></div> 
+           <div ><Option src = "/9.svg" text = "Help" routeTo="/infoHelpBase"/></div> 
         </Optioncont> 
+        
         {/* <div className="bgc2"></div> */}
       </Page>
       

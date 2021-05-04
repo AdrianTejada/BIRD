@@ -66,7 +66,11 @@ const AboutUs = ({
   text="BIRD is an app designed to educated its users about the COVID-19 Virus. For those who want to take action or test their knowlage, there are also Donation links and quizes.",
   text2="",
   text3="",
+<<<<<<< HEAD
   bgcolor="#CCCCCC",
+=======
+  bgcolor="#e8e8e8",
+>>>>>>> 6df44a245f303db7fdfdc7c7656280d6630cb04f
   width="300px",
   height="425px",
   radius="10px",

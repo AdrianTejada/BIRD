@@ -123,7 +123,7 @@ const ButtonBigCont =styled.div`
            <Subtitle> Awesome!</Subtitle> You do the good job!
           </Comment>
           <ButtonBigCont>
-          <Button  text="Read again" routeTo="/items/GInfo" />
+          <Button  text="Read info" routeTo="/items/GInfo" />
           <Button text="Retake the Quiz" routeTo =  "/GQ1"/>
           </ButtonBigCont>
          

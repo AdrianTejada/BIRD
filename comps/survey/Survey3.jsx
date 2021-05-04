@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 
-
 import * as Survey from "survey-react";
 import {useRouter} from 'next/router';
 
-
-// import "survey-react/survey.css";
-// import "./index.css";
-
-// Survey.StylesManager.applyTheme("default");
 
 class SurveyComponent3 extends Component {
     constructor() {
@@ -40,22 +34,26 @@ class SurveyComponent3 extends Component {
               elements: [
                {
                 type: "radiogroup",
-                name:"areas",
-                title: "Which areas are not recommended to travel by governments in the latest announcement??",
-                correctAnswer: "Mexico and Caribbean countries",
+                name:"prople",
+                title: "How many people are allowed in outside gatherings?",
+                correctAnswer: "under 10 people",
                 isRequired: true,
                 choices: [
                  {
-                  value: "Mexico and Caribbean countries",
-                  text: "Mexico and Caribbean countries"
+                  value: "12 people",
+                  text: "12 people"
                  },
                  {
-                  value: "Asia and  Australia",
-                  text: "Asia and  Australia"
+                  value: "6 pepeple",
+                  text: "6 pepeple"
                  },
                  {
-                  value: "Europe",
-                  text: "Europe"
+                    value: "under 10 people",
+                    text: "under 10 people"
+                   },
+                 {
+                  value: "can't hold the outside gathering",
+                  text: "can't hold the outside gathering"
                  }
                 ],
                 choicesOrder: "random"
@@ -67,25 +65,29 @@ class SurveyComponent3 extends Component {
               elements: [
                {
                 type: "radiogroup",
-                name: "outside",
-                title: "If we come back from outside of Canada in near future, what cost we may experience?",
-                correctAnswer: "Take an extra PCR test",
+                name: "fine",
+                title: "What behaviour may receive a $230 fine in an indoor public setting?",
+                correctAnswer: "All of the above",
                 isRequired: true,
                 choices: [
                  {
-                  value: "Pay fine",
-                  text: "Pay fine "
+                  value: "Don't wear a mask .",
+                  text: "Don't wear a mask . "
                   
 
                  },
                  {
-                  value: "Take an extra PCR test",
-                  text: "Take an extra PCR test"
+                  value: "Don't comply with the direction of enforcement officers.",
+                  text: "Don't comply with the direction of enforcement officers."
                  },
                  {
-                  value: "Prohibit entry",
-                  text: "Prohibit entry"
-                 }
+                  value: "abusive  behaviour in relation to the face coverings order.",
+                  text: "abusive  behaviour in relation to the face coverings order."
+                 },
+                 {
+                    value: "All of the above",
+                    text: "All of the above"
+                   },
                 ],
                 choicesOrder: "random"
                }
@@ -96,23 +98,28 @@ class SurveyComponent3 extends Component {
               "elements": [
                {
                 type: "radiogroup",
-                name: "period",
-                title: "How period is your result  of the PCR test effective?",
-                correctAnswer: "72 Hours",
+                name: "areas",
+                title: " Which area is not included in dividing areas by the government?",
+                correctAnswer: "None of the above",
                 isRequired: true,
                 choices: [
                  {
-                  value: "72 Hours",
-                  text: "72 Hours"
+                  value: "Lower Mainland and Fraser Valley",
+                  text: "Lower Mainland and Fraser Valley"
                  },
                  {
-                  value: "48 Hours",
-                  text: "48 Hours"
+                  value: "Northern/Interior",
+                  text: "Northern/Interior"
                  },
                  {
-                  value: "36 Hours",
-                  text: "36 Hours"
-                 }
+                  value: "Vancouver Island ",
+                  text: "Vancouver Island "
+                 },
+                 {
+                    value: "None of the above",
+                    text: "None of the above"
+                   },
+                 
                 ],
                 choicesOrder: "random"
                }
@@ -133,35 +140,35 @@ class SurveyComponent3 extends Component {
             // navigateToUrl: "../GQ2",
             navigateToUrlOnCondition: [
              {
-              expression: "{outside} = 'Take an extra PCR test' and {period} = '72 Hours' and {areas} = 'Mexico and Caribbean countries'",
+              expression: "{prople} = 'under 10 people' and {Fine} = 'All of the above' and {areas} = 'None of the above'",
               url: "../GQ3R3"
              },
              {
-              "expression": "{areas} <> 'Mexico and Caribbean countries' and {period} = '72 Hours' and {outside} = 'Take an extra PCR test'",
+              "expression": "{areas} <> 'None of the above' and {Fine} = 'All of the above' and {prople} = 'under 10 people'",
               "url": "../GQ3R2"
              },
              {
-              "expression": "{areas} = 'Mexico and Caribbean countries' and {period} <> '72 Hours' and {outside} = 'Take an extra PCR test'",
+              "expression": "{areas} = 'None of the above' and {Fine} <> 'All of the above' and {prople} = 'under 10 people'",
               "url": "../GQ3R2"
              },
              {
-              "expression": "{areas} = 'Mexico and Caribbean countries' and {period} = '72 Hours' and {outside} <> 'Take an extra PCR test'",
+              "expression": "{areas} = 'None of the above' and {Fine} = 'All of the above' and {prople} <> 'under 10 people'",
               "url": "../GQ3R2"
              },
              {
-              "expression": "{areas} <> 'Mexico and Caribbean countries' and {period} <> '72 Hours' and {outside} = 'Take an extra PCR test'",
+              "expression": "{areas} <> 'None of the above' and {Fine} <> 'All of the above' and {prople} = 'under 10 people'",
               "url": "../GQ3R1"
              },
              {
-              "expression": "{areas} <> 'Mexico and Caribbean countries' and {period} = '72 Hours' and {outside} <> 'Take an extra PCR test'",
+              "expression": "{areas} <> 'None of the above' and {Fine} = 'All of the above' and {prople} <> 'under 10 people'",
               "url": "../GQ3R1"
              },
              {
-              "expression": "{areas} = 'Mexico and Caribbean countries' and {period} <> '72 Hours' and {outside} <> 'Take an extra PCR test'",
+              "expression": "{areas} = 'None of the above' and {Fine} <> 'All of the above' and {prople} <> 'under 10 people'",
               "url": "../GQ3R1"
              },
              {
-              "expression": "{areas} <> 'Mexico and Caribbean countries' and {period} <> '72 Hours' and {outside} <> 'Take an extra PCR test'",
+              "expression": "{areas} <> 'None of the above' and {Fine} <> 'All of the above' and {prople} <> 'under 10 people'",
               "url": "../GQ3R0"
              },
             ],

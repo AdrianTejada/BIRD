@@ -194,9 +194,16 @@ const HandleZ = () => {
     }
 
 
-    else if (page == 10)
+    else if (page === 10)
     {
-        router.push("/infoCovidBase")
+      setHead(info.ten.head)
+      setText(info.ten.text)
+      setcomponent(info.ten.component)
+    }
+
+    else if (page == 11)
+    {
+      page = 10
     }
 
     console.log("page " + page)
@@ -309,6 +316,12 @@ const HandleZ = () => {
         setC3(info.nine.bgcolor3);
 
     }
+    else if (page === 10)
+    {
+      setText(info.ten.text)
+      setcomponent(info.ten.component)
+    }
+
     else if (page == 0)
     {
         page =1
@@ -329,9 +342,9 @@ const HandleZ = () => {
         <ChatBubble 
           head={head}
           text={text}
-          // component={component}
+          component={component}
         />
-          {component}
+          
         <SpeakerContainer>
           <Speaker src="/politian.svg" />
         </SpeakerContainer>

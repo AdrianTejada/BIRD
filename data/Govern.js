@@ -1,3 +1,4 @@
+import Last from '../comps/InfoEnd';
 export const info = {
     one: {
         head:"1.Indoor & outdoor gatherings",
@@ -90,7 +91,11 @@ export const info = {
         bgcolor3:"#FF7A00",
 
     },
-
+    ten: {
+        head:"End of Section",
+        text:"",
+        component:<Last QuizRoute="../GQ3" />
+    }
 
 
 

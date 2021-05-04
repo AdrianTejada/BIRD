@@ -1,5 +1,6 @@
 import ImageCompV1 from '../comps/ImageCompV1'
 import ImageCompV2 from '../comps/ImageCompV2'
+import Last from '../comps/InfoEnd';
 
 export const info = {
     one: {
@@ -42,4 +43,9 @@ export const info = {
         bgcolor3:"#9A9999",
         bgcolor4:"#FF7A00"
     },
+    five: {
+        head:"End of Section",
+        text:"",
+        component:<Last QuizRoute="../GQ2" />
+    }
 }

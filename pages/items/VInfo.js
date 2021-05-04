@@ -140,12 +140,17 @@ const HandleZ = () => {
 
     }
 
-    else if (page == 5)
+    else if (page === 5)
     {
-        router.push("/infoCovidBase")
+      setHead(info.five.head)
+      setText(info.five.text)
+      setcomponent(info.five.component)
     }
 
-    console.log("page " + page)
+    else if (page == 6)
+    {
+      page = 5
+    }
   }
 
   //for back button

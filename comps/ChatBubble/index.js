@@ -65,13 +65,7 @@ const Image = styled.div`
     height: 259px;
     //overflow: hidden;
     align-self:center;
-<<<<<<< HEAD
-    display:${props=>props.visibility}
-
-    
-=======
     display:${props=>props.display}
->>>>>>> 6df44a245f303db7fdfdc7c7656280d6630cb04f
 `
 
 
@@ -93,13 +87,8 @@ const ChatBubble = ({
                 <Question>{head}</Question>
                 <QuestionText>{text}</QuestionText>
                 
-<<<<<<< HEAD
-                <Image display={display}>
-                   
-=======
                 <Image >
                 {component}
->>>>>>> 6df44a245f303db7fdfdc7c7656280d6630cb04f
                 </Image>
 
             </Content>

@@ -26,7 +26,7 @@ const subtext={
 export default function Home() {
 
   const mainLogo = useSpring( { config: { duration: 1000 }, 
-    to: [
+    to : [
       { opacity: 1,rotateZ: 0 },
       { opacity: 1,rotateZ: 30},
       { opacity: 1,rotateZ: 60},
@@ -39,7 +39,7 @@ export default function Home() {
       { opacity: 1,rotateZ: 270},
       { opacity: 1,rotateZ: 300},
       { opacity: 1,rotateZ: 330},
-      { opacity: 1,rotateZ: 360},
+      { opacity: 1,rotateZ: 360}, 
     ] ,
     from: {opacity: 0 }, delay: 1200,})
   const logotext = useSpring({ config:config.wobbly, 

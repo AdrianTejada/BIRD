@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import ImageCompG1 from '../comps/ImageCompG1'
-import ImageCompG6 from '../comps/ImageCompG6'
-import ImageCompV1 from '../comps/ImageCompV1'
-=======
 import ImageCompG1 from'../comps/ImageCompG1'
 import ImageCompG5 from'../comps/ImageCompG5'
 import Common from '../comps/CommonSymp';
@@ -15,7 +10,6 @@ import Hands from '../comps/HandWashing';
 import Cough from '../comps/Coughing';
 import Last from '../comps/InfoEnd';
 
->>>>>>> 6df44a245f303db7fdfdc7c7656280d6630cb04f
 export const info = {
     one: {
         head:"1. What is COVID-19?",
@@ -32,14 +26,8 @@ export const info = {
     two: {
         head:"2. The most common symptoms of COVID-19 are?",
         text:"Fever, Dry cough, and Fatigue. ",
-<<<<<<< HEAD
-        // src:"/patient-fever1.svg",
-        component:<ImageCompG6/>,
-        display:"none",
-=======
         component:<Common/>,
 
->>>>>>> 6df44a245f303db7fdfdc7c7656280d6630cb04f
         bgcolor1:"#9A9999",
         bgcolor2:"#FF7A00",
         bgcolor3:"#9A9999",
@@ -50,14 +38,8 @@ export const info = {
     three: {
         head:"3. Symptoms of severe COVID‐19 disease include:",
         text:"Shortness of breath, Loss of appetite, Confusion, Persistent pain or pressure in the chest, High temperature (above 38 °C).",
-<<<<<<< HEAD
-        // src:"/patient-heat1.svg",
-        component:<ImageCompV1/>,
-        display:"none",
-=======
         component:<Sever />,
 
->>>>>>> 6df44a245f303db7fdfdc7c7656280d6630cb04f
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
         bgcolor3:"#FF7A00",

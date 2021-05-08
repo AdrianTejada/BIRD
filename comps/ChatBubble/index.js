@@ -55,7 +55,7 @@ const Answer = styled.div`
 const QuestionText = styled.div`
    font-size:16px;
    line-height:24px;
-   margin-top:-20px;
+   margin-top:0px;
 `
 
 
@@ -85,7 +85,7 @@ const ChatBubble = ({
         <Bubble>
             <Content>
                 <Question>{head}</Question>
-                <QuestionText>{text}</QuestionText>
+                <Answer>{text}</Answer>
                 
                 <Image >
                 {component}

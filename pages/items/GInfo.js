@@ -8,6 +8,7 @@ import NavButton from '../../comps/NavButtonInfo'
 import {info} from '../../data/General';
 import {useRouter} from 'next/router';
 import ImageCompG1 from '../../comps/ImageCompG1';
+import Avatar from '../../comps/Spaeker'
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -32,6 +33,8 @@ const SpeakerContainer = styled.div`
   width: 276px;
   height:221px;
   overflow:hidden;
+  bottom:-25px;
+  position:relative;
 `
 
 const Speaker = styled.img`
@@ -41,8 +44,8 @@ const Speaker = styled.img`
 `
 
 const NavContainer = styled.div`
-  position:absolute;
-  bottom:240px;
+  position:relative;
+  bottom:20px;
 `
 
 
@@ -341,9 +344,9 @@ const HandleZ = () => {
         
         </ChatBubble>
 
-        <SpeakerContainer>
+        {/* <SpeakerContainer>
           <Speaker src="/doctor-hand.svg" />
-        </SpeakerContainer>
+        </SpeakerContainer> */}
 
         <NavContainer>
           <NavButton 
@@ -357,6 +360,7 @@ const HandleZ = () => {
             backFunction={backInfo}
           />
         </NavContainer>
+        <Avatar/>
         
       </Page>
       

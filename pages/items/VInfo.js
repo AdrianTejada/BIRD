@@ -7,6 +7,7 @@ import ChatBubble from '../../comps/ChatBubble'
 import NavButton from '../../comps/NavButtonInfo'
 import {info} from '../../data/Vaccine';
 import {useRouter} from 'next/router';
+import Avatar from '../../comps/Spaeker'
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -40,8 +41,8 @@ const Speaker = styled.img`
 `
 
 const NavContainer = styled.div`
-  position:absolute;
-  bottom:240px;
+position:relative;
+bottom:20px;
 `
 
 
@@ -236,9 +237,9 @@ const HandleZ = () => {
           component={component}
         />
         
-        <SpeakerContainer>
+        {/* <SpeakerContainer>
           <Speaker src="/vaccine-man.svg" />
-        </SpeakerContainer>
+        </SpeakerContainer> */}
 
         <NavContainer>
           <NavButton 
@@ -252,7 +253,7 @@ const HandleZ = () => {
             backFunction={backInfo}
           />
         </NavContainer>
-        
+        <Avatar src="/vaccine-man.svg"/>
       </Page>
 
     </UpperLayer>

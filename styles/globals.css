@@ -72,6 +72,8 @@ margin-top:200px;
   margin-top:860px;
   position: absolute;
   color: grey;
+  background-color: #ece4d9;
+  
  }
  .Subtext{
   margin-top:450px;
@@ -153,17 +155,21 @@ margin-top:200px;
     /* For desktop or laptop: */
    .bgc {
     background-size: 100% 125%;
+    background-position: center;
     }
     .bgc2{
       background-size: 100% 125%;
+      background-position: center;
     }
   }
   @media only screen and (max-width:474px) {
     /* For mobile phones: */
     .bgc {
-      background-size: 100% 115%;
+      background-size: 150% 110%;
+      background-position: center;
     }
     .bgc2{
-      background-size: 100% 115%;
+      background-size: 175% 175%;
+      background-position: center;
     }
     }

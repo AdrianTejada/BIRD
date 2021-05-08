@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {useRouter} from 'next/router';
 
 const ButtonCont=styled.div`
-// margin-top:20px;
+margin-top:20px;
 display:flex;
 flex-direction:row;
 justify-content:center;

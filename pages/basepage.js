@@ -56,9 +56,9 @@ const OpenMenu = () => {
       <Page right={right}>
         <Banner text="hello" onClick={OpenMenu} />
       </Page>
-
+      
     </UpperLayer>
-
+  
     <LowerLayer>
       <SideBar>
         <HamburgerMenu />

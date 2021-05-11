@@ -1,8 +1,6 @@
-import ImageCompV1 from '../comps/ImageCompV1';
-import ImageCompV2 from '../comps/ImageCompV2';
-import Antib from '../comps/Antibiotic';
-import Lab from '../comps/Lab';
-import Last from '../comps/InfoEnd';
+import ImageCompV1 from '../comps/ImageCompV1'
+import ImageCompV2 from '../comps/ImageCompV2'
+import Antib from '../comps/'
 
 export const info = {
     one: {
@@ -28,7 +26,7 @@ export const info = {
     three: {
         head:"3. Are antibiotics effective in preventing or treating COVID-19?",
         text: "Antibiotics do not work against viruses; they only work on bacterial infections. COVID-19 is caused by a virus, so antibiotics do not work.",
-        component:<Antib />,
+        component:"",
         display:"none",
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
@@ -37,17 +35,12 @@ export const info = {
     },
     four: {
         head:"4.What test should I get to see if I have COVID-19?",
-        text: "A Polymerase chain reaction (PCR) is one of the most commonly used molecular test. Samples are collected from the nose and/or throat with a swab.",
-        component:<Lab/>,
+        text: "In most situations, a molecular test is used to detect SARS-CoV-2 and confirm infection. Polymerase chain reaction (PCR) is the most commonly used molecular test. Samples are collected from the nose and/or throat with a swab.",
+        component:"",
         display:"none",
         bgcolor1:"#9A9999",
         bgcolor2:"#9A9999",
         bgcolor3:"#9A9999",
         bgcolor4:"#FF7A00"
     },
-    five: {
-        head: "End of Section",
-        text:"",
-        component:<Last QuizRoute="../GQ2"/>
-    }
 }

@@ -7,7 +7,6 @@ import ChatBubble from '../../comps/ChatBubble'
 import NavButton from '../../comps/NavButtonInfo'
 import {info} from '../../data/Vaccine';
 import {useRouter} from 'next/router';
-import Avatar from '../../comps/Spaeker'
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -41,8 +40,8 @@ const Speaker = styled.img`
 `
 
 const NavContainer = styled.div`
-position:relative;
-bottom:20px;
+  position:absolute;
+  bottom:240px;
 `
 
 
@@ -141,7 +140,7 @@ const HandleZ = () => {
 
     }
 
-    else if (page === 5)
+    else if (page == 5)
     {
       setHead(info.five.head)
       setText(info.five.text)
@@ -150,8 +149,10 @@ const HandleZ = () => {
 
     else if (page == 6)
     {
-      page = 5
+        router.push("/infoCovidBase")
     }
+
+    console.log("page " + page)
   }
 
   //for back button
@@ -210,6 +211,10 @@ const HandleZ = () => {
 
     }
 
+    else if (page == 5)
+    {
+        router.push("/infoCovidBase")
+    }
     else if (page == 0)
     {
         page =1
@@ -233,9 +238,9 @@ const HandleZ = () => {
           component={component}
         />
         
-        {/* <SpeakerContainer>
+        <SpeakerContainer>
           <Speaker src="/vaccine-man.svg" />
-        </SpeakerContainer> */}
+        </SpeakerContainer>
 
         <NavContainer>
           <NavButton 
@@ -249,7 +254,7 @@ const HandleZ = () => {
             backFunction={backInfo}
           />
         </NavContainer>
-        <Avatar src="/vaccine-man.svg"/>
+        
       </Page>
 
     </UpperLayer>

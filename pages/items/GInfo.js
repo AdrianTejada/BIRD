@@ -308,12 +308,14 @@ const HandleZ = () => {
 
     else if (page === 9)
     {
+      setHead(info.six.head);
       setText(info.nine.text)
       setcomponent(info.nine.component)
     }
 
     else if (page === 10)
     {
+      setHead(info.six.head);
       setText(info.ten.text)
       setcomponent(info.ten.component)
     }

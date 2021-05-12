@@ -46,6 +46,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 .logo{
 margin-top:200px;
@@ -59,7 +60,7 @@ margin-top:200px;
   
  }
 .button{
-  margin-top:700px;
+  margin-top:650px;
   z-index: 1;
   position: absolute;
   display: flex;
@@ -69,7 +70,7 @@ margin-top:200px;
   
  }
  .rooter{
-  margin-top:860px;
+  margin-top:800px;
   position: absolute;
   color: grey;
   background-color: #ece4d9;

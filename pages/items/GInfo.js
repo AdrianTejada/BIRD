@@ -369,10 +369,6 @@ const HandleZ = () => {
     </UpperLayer>
 
     <HamburgerMenu  z={z}/>
-
-    
-
   </MainCont>
-
   )
 }

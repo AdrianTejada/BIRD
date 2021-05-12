@@ -1,111 +1,99 @@
 //Full bird Icon for Levi
-import React from "react";
+import React, {useEffect, useState} from "react";
 import styled, { keyframes } from 'styled-components';
 import { animated, useSpring } from "react-spring";
-import Button from '../Button'
+import Button from "../Button";
 
-
-const show = keyframes`
-0%{
-  opacity: 0; 
-}
-33% {
-  opacity: 1; 
-}
-66% {
-  opacity: 0; 
-}
-100% {
-  opacity: 0; 
-}
-
-
-`;
-const show2 = keyframes`
-0%{
-  opacity: 0; 
-}
-33% {
-  opacity: 0; 
-}
-66% {
-  opacity: 1; 
-}
-100% {
-  opacity: 0; 
-}
-
-`;
-const show3 = keyframes`
-0%{
-  opacity: 0; 
-}
-33% {
-  opacity: 0; 
-}
-66% {
-  opacity: 0; 
-}
-100% {
-  opacity: 1; 
-}
-
-`;
-const ImgesCont =styled(animated.div)`
-display:flex;
-flex-direction:column;
-align-items:center;
-margin-top:-55px;
-
-`;
-const ImgCont2 =styled.img`
-width:${(props)=>props.width2}px;
-height:auto; 
-margin-top:50px;
-position:absolute;
-animation: 8s ${show}   step-start infinite;
-
-
+const Cont = styled.div`
+  width: auto;
+  height: 210px;
+  align-self:center;
+  position:relative;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
 `
-const ImgCont3 =styled.img`
-width:${(props)=>props.width3}px;
-height:auto;
-margin-top:50px;
-position:absolute;
-animation: 8s ${show2}   step-start infinite;
 
-
-`
-const ImgCont4 =styled.img`
-width:${(props)=>props.width4}px;
-height:auto;
-margin-top:50px;
-position:absolute;
-animation: 8s ${show3}   step-start infinite;
-
-
+const ButtonCont = styled.div`
+  align-self:center;
+  position:relative;
+  bottom: 20px;
+  opacity: ${props=>props.opacity};
 `
 
 
-//props
-const ImageCompV2= ({
- width2=310,
- width3=335,
- width4=310,
- 
- 
+const Image = styled.img`
+  width: 300px;
+  height:auto;
+  position:relative;
+  bottom:40px;
+`
+
+const CounterCont = styled.div`
+  position:relative;
+  bottom:210px;
+  left: 104px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+`
+
+const Counter = styled.div`
+  align-self:center;
+  font-size: 25px;
+`
+
+ var counter = 1
+ var quar
+const Quarantine = ({
+
+
 }) => {
- 
-  return (
-   
-  <ImgesCont    >
-      <ImgCont2 src="/Quarantine-1.svg"   width2 ={width2 } />
-      <ImgCont3 src="/Quarantine-2.svg"   width3 ={width3 } />
-      <ImgCont4 src="/Quarantine-3.svg"   width4 ={width4 } />
-    </ImgesCont>  
-    
-  )
+  const [background, SetBG] = useState("/Quarantine1.svg");
+  const [days, SetDays] = useState (counter)
+  var opacity=1;
+
+  const HandleDays = () => 
+  {
+    if (counter == 14)
+    {
+      SetDays(counter++)
+      clearInterval(quar)
+      SetBG("/Quarantine2.svg")
+    }
+    else
+    {
+      SetDays(counter++)
+    }
+    console.log(counter)
+  }
+
+  if (days > 1)
+  {
+    opacity=0;
+  }
+
+  const HandleClick = () => {
+    if (counter == 1 )
+    {
+      HandleDays();
+      HandleDays();
+      quar = setInterval(HandleDays, 400);
+    }
+  }
+
+  return <Cont>
+    <ButtonCont opacity={opacity}>
+      <Button onClick={HandleClick} routeTo="" text="Start Quarantine"/>
+    </ButtonCont>
+
+   <Image src={background}/>
+   <CounterCont>
+     <Counter>
+       {days}
+     </Counter>
+   </CounterCont>
+  </Cont>
 }
 
-
-export default ImageCompV2;
+export default Quarantine;

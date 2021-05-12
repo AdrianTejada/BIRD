@@ -65,14 +65,14 @@ const Antib = () => {
 
     const HandleClick = () => {
 
-        SetButton(!buttonstate)
-        SetVirus(!virusstate)
+        SetButton(true)
+        SetVirus(true)
         setTimeout(HandlePill, 1000)
         
     }
 
     const HandlePill = () => {
-        SetPill(!pillstate)
+        SetPill(true)
     }
 
     return <Cont>

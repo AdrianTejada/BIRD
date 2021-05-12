@@ -164,9 +164,10 @@ const HandleZ = () => {
 
     else if (page === 6)
     {
-      setHead(info.five.head)
-      setText(info.five.text)
-      setcomponent(info.five.component)
+      // setHead(info.Six.head)
+      // setText(info.Six.text)
+      // setcomponent(info.Six.component)
+      router.push("/dashboard")
     }
 
     else if (page == 7)
@@ -248,13 +249,13 @@ const HandleZ = () => {
 
     }
 
-    else if (page == 6)
-    {
-        router.push("/infoCovidBase")
-    }
+    // else if (page == 6)
+    // {
+    //     router.push("/dashboard")
+    // }
     else if (page == 0)
     {
-        page =1
+      router.push("/dashboard")
     }
     console.log("page " + page)
   }
@@ -267,7 +268,7 @@ const HandleZ = () => {
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Live-Status" onClick={OpenMenu} routeTo="/infoCovidBase"/>
+        <Banner text="Live-Status" onClick={OpenMenu} routeTo="/dashboard"/>
 
         <ChatBubble 
           head={head}

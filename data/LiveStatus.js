@@ -64,6 +64,6 @@ export const info = {
     six: {
         head:"End of Section",
         text:"",
-        component:<Last QuizRoute="../infocovidBase" />
+        component:<Last QuizRoute="../dashboard" />
     }
 }

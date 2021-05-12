@@ -7,6 +7,7 @@ import ChatBubble from '../comps/ChatBubble';
 import NavButton from '../comps/NavButton';
 import Option from '../comps/Option';
 
+
 //custom tags for base page
 const MainCont = styled.div `
   width: 100vw;
@@ -44,15 +45,13 @@ const NavContainer = styled.div`
 `
 const Optioncont = styled.div`
     display: flex;
+    max-width:660px;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    flex-wrap:wrap;
     align-items: center;
     position: absolute;
-    margin-top: 130px;
-    max-height:950px;
-    max-width:660px;
-    overflow:auto;
+    margin-top: 150px;
 `
 
 
@@ -60,7 +59,6 @@ const Optioncont = styled.div`
 
 
 export default function Home() {
-
   const [menustate, setMenuState] = useState(false);
   const [zindex, setZIndex] = useState(false)
   var right=0;
@@ -68,6 +66,7 @@ export default function Home() {
   if (menustate === true)
   {
     right=178;
+    var z = 0;
   }
 
   if (zindex === true)
@@ -86,34 +85,30 @@ const OpenMenu = () => {
     {
       setTimeout(HandleZ, 1)
     }
+    console.log(right)
 }
 
 const HandleZ = () => {
   setZIndex(!zindex)
 }
-  console.log(menustate, right)
-  return (<MainCont>
-    <UpperLayer>
-      <Page right={right}>
 
-        <Banner text="Take Action" onClick={OpenMenu} routeTo="/dashboard"/>
+  return (<MainCont>
+    <UpperLayer >
+      <Page right={right} >
+
+        <Banner text="Covid-19" onClick={OpenMenu} routeTo="/" />
         
-       <Optioncont>
-           <div><Option src = "/5.svg" text = "Quiz" routeTo="/infoQuizOptionsBase"/></div> 
-           <div><Option src = "/6.svg" text = "Purchase Protection" routeTo="/infoPurchaseBase"/></div> 
-           <div><Option src = "/7.svg" text = "Donation"/></div> 
-           <div><Option src = "/8.svg" text = "Make An Appointment" routeTo="/infoMakeAppointBase"/></div> 
-           <div ><Option src = "/9.svg" text = "Help" routeTo="/infoHelpBase"/></div> 
+       <Optioncont >
+          <div><Option  src = "/statusL.svg" text = " Live Status" routeTo="/LiveStatus"/></div> 
+           <div><Option src = "/1.svg" text = "Info Center" routeTo="/infoCenter" /></div> 
+           <div><Option src = "/3.svg" text = "Take Action" routeTo="/infoOptionsBase"/></div> 
         </Optioncont> 
-        
         {/* <div className="bgc2"></div> */}
       </Page>
-      
+    
     </UpperLayer>
 
-        <HamburgerMenu z={z} />
-
-    
+    <HamburgerMenu  z={z}/>
 
   </MainCont>
 

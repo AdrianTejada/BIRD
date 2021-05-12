@@ -8,6 +8,8 @@ const Avatarcont = styled.div`
     margin: 25px;
     width:${props=>props.width}px;
     height:${props=>props.height}px;
+    overflow:hidden;
+    border-radius: 10px 10px 10px 10px;
     
     
 `;
@@ -15,6 +17,8 @@ const Avatarimage  = styled.img`
     src:${props=>props.src};
     margin-bottom: -40px;
     border-radius: 10px 10px 10px 10px;
+    
+    
     
     
 `;
@@ -37,12 +41,14 @@ const Avatar  = ({
     height= 160,
     text = "General info",
     routeTo = "/",
-    marginBottom = 25
+    marginBottom = 25,
+   
+   
 }) =>{
     const router = useRouter();
-    return <Avatarcont onClick ={()=>router.push(routeTo)} > 
+    return <Avatarcont onClick ={()=>router.push(routeTo)} width = {width} height = {height}> 
     
-    <Avatarimage src = {src} width = {width} height = {height}></Avatarimage>
+    <Avatarimage src = {src}></Avatarimage>
     <Avatartext marginBottom = {marginBottom}>{text}</Avatartext>
     
     </Avatarcont>

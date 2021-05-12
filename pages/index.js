@@ -111,7 +111,7 @@ export default function Home() {
      </div>
       <div className="button">
         
-      <Button routeTo ="/infoCovidBase"/>
+      <Button routeTo ="/dashboard"/>
       <Button  text="About us" width="140px" bgcolor={bgc ? "#949494": "#C4C4C4"} onClick={HandleClick}/>
       </div>
       <div className="rooter">

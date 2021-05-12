@@ -225,7 +225,7 @@ const HandleZ = () => {
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Vaccine Info" onClick={OpenMenu} routeTo="/infoCovidBase"/>
+        <Banner text="Vaccine Info" onClick={OpenMenu} routeTo="/dashboard"/>
 
         <ChatBubble 
           head={head}

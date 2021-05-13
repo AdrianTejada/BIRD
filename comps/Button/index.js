@@ -40,7 +40,7 @@ const Button = ({
  routeTo =  "/",
 }) => {
   const router = useRouter();
-  return <ButtonCont   onClick={() => router.push(routeTo)} >    
+  return <ButtonCont   onClick={() => router.push(routeTo)} target="_blank" >    
 
     <ButtonImput bgc={bgcolor} width={width} height={height}radius={radius} hover={opacity}  onClick={onClick} >
       {text}

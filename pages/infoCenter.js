@@ -99,8 +99,8 @@ const HandleZ = () => {
         <Banner text="Covid-19" onClick={OpenMenu} routeTo="/dashboard" />
         
        <Optioncont >
-           <div><Option src = "/1.svg" text = "General info" routeTo="/items/GInfo" /></div> 
-           <div><Option src = "/2.svg" text = "Vaccineinfo"  routeTo="/items/VInfo"/></div> 
+           <div><Option src = "/1.svg" text = "General Info" routeTo="/items/GInfo" /></div> 
+           <div><Option src = "/2.svg" text = "Vaccine Info"  routeTo="/items/VInfo"/></div> 
            <div><Option src = "/4.svg" text = "Government Policies" routeTo="/items/GovernInfo"/></div> 
         </Optioncont> 
         {/* <div className="bgc2"></div> */}

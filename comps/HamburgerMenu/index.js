@@ -20,7 +20,7 @@ const HamburgerContainer = styled.div `
 const LinkContainer = styled.div `
     color: #545454;
     font-size: 20px;
-    font-family: 'Roboto';
+    font-family: Roboto;
     font-weight: bold;
     display:flex;
     flex-direction:column;
@@ -42,7 +42,7 @@ const HamburgerMenu = ({
     const router = useRouter();
     return <HamburgerContainer z={z}>
         <Divider />
-        <LinkContainer onClick={()=>router.push("/infoCovidBase")}>
+        <LinkContainer onClick={()=>router.push("/dashboard")}>
             Home
         </LinkContainer>
         <Divider />

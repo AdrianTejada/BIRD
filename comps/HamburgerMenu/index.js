@@ -46,6 +46,11 @@ const HamburgerMenu = ({
             Home
         </LinkContainer>
         <Divider />
+        
+        <LinkContainer onClick={()=>router.push("/LiveStatus")}>
+            Live Status
+        </LinkContainer>
+        <Divider />
 
         <LinkContainer onClick={()=>router.push("/items/GInfo")}>
             General Info

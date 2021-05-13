@@ -87,31 +87,31 @@ const ImgCont2 =styled.img`
 width:${(props)=>props.width2}px;
 height:auto; 
 margin-top:50px;
-position:absolute;
+position:relative;
 opacity:${(props)=>props.opacity2};
 animation: 8s ${show}   step-start infinite;
 `
 const ImgCont3 =styled.img`
 width:${(props)=>props.width3}px;
 height:auto;
-margin-top:50px;
-position:absolute;
+position:relative;
+bottom: 160px;
 opacity:${(props)=>props.opacity3};
 animation: 8s ${show2}   step-start infinite;
 `
 const ImgCont4 =styled.img`
 width:${(props)=>props.width4}px;
 height:auto;
-margin-top:50px;
-position:absolute;
+position:relative;
+bottom: 310px;
 opacity:${(props)=>props.opacity4};
 animation: 8s ${show3}   step-start infinite;
 `
 const ImgCont5 =styled.img`
 width:${(props)=>props.width5}px;
 height:auto;
-margin-top:50px;
-position:absolute;
+position:relative;
+bottom:425px;
 opacity:${(props)=>props.opacity5};
 animation: 8s ${show4}   step-start infinite;
 `
@@ -131,11 +131,10 @@ const ImageCompV1= ({
   return (
    
   <ImgesCont    >
-
-      <ImgCont2 src="/pfizer.svg"   width2 ={width2 } />
-      <ImgCont3 src="/moderna.svg"   width3 ={width3 }  />
-      <ImgCont4 src="/astrazeneca.svg"   width4 ={width4 }  />
-      <ImgCont5 src="/Janssen_Logo.jpg"   width5 ={width5 } />
+    <ImgCont2 src="/pfizer.svg"   width2 ={width2 } />
+    <ImgCont3 src="/moderna.svg"   width3 ={width3 }  />
+    <ImgCont4 src="/astrazeneca.svg"   width4 ={width4 }  />
+    <ImgCont5 src="/Janssen_Logo.jpg"   width5 ={width5 } />
     </ImgesCont>  
     
   )

@@ -73,14 +73,16 @@ const SD = () => {
     }
 
     const HandleClick = () => {
-        RunIt(!animation)
-        if (setOpacity === false)
+        
+        if (setOpacity === false && animation == false && opacity == 0)
         {
             setTimeout(HandleOpacity, 600)
+            RunIt(true)
         }
-        else
+        else if (setOpacity == true && animation == true && opacity == 1)
         {
             setTimeout(HandleOpacity, 1)
+            RunIt(false)
         }
         
     }

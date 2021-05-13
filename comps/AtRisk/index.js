@@ -49,6 +49,9 @@ const Risk = () => {
     useEffect(() => {
         var interval1
         interval1 = setInterval(ChangePatient,3000);
+        return () => {
+            clearInterval(interval1)
+        }
     }, []);
 
     return <Cont>

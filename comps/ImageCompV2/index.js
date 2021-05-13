@@ -79,6 +79,11 @@ const Quarantine = ({
       HandleDays();
       HandleDays();
       quar = setInterval(HandleDays, 400);
+      return () => {
+        counter = 1
+        SetDays(counter)
+        SetBG("/Quarantine1.svg")
+      }
     }
   }
 

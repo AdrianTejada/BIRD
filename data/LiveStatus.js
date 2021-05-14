@@ -4,11 +4,21 @@ import LiveStatusON from '../comps/LiveStatusON'
 import LiveStatusAB from '../comps/LiveStatusAB'
 import LiveStatusQC from '../comps/LiveStatusQC'
 import Last from '../comps/InfoEnd';
+import styled from 'styled-components';
+
+const Cite = styled.div`
+font-size:10px;
+// color:red;
+`
+const Bold = styled.span`
+font-weight:700;
+// color:red;
+`
 
 export const info = {
     one: {
-        head:"Covid-19 Daily Live-Status ",
-        text: "Canada",
+        head:"Covid-19 Live-Status : ",
+        text: <span><Bold>The whole territories of Canada</Bold> <Cite>Canada, P. (2021). Coronavirus disease (COVID-19): Outbreak update - Canada.ca.(18 of May).</Cite></span>,
         component:<LiveStatusCA/>,
         display:"none",
         bgcolor1:"#FF7A00",
@@ -18,8 +28,8 @@ export const info = {
         bgcolor5:"#9A9999",
     },
     two: {
-        head:"Covid-19 Daily Live-Status",
-        text: "British Columnbria",
+        head:"Covid-19 Live-Status",
+        text: <span><Bold>British Columnbria</Bold> <Cite>Canada, P. (2021). Coronavirus disease (COVID-19): Outbreak update - Canada.ca.(18 of May).</Cite></span>,
         component:<LiveStatusBC/>,
         display:"none",
         bgcolor1:"#9A9999",
@@ -29,8 +39,8 @@ export const info = {
         bgcolor5:"#9A9999",
     },
     three: {
-        head:"Covid-19 Daily Live-Status",
-        text: "Ontario",
+        head:"Covid-19 Live-Status",
+        text:<span><Bold>Ontario</Bold> <Cite>Canada, P. (2021). Coronavirus disease (COVID-19): Outbreak update - Canada.ca.(18 of May).</Cite></span>,
         component:<LiveStatusON/>,
         display:"none",
         bgcolor1:"#9A9999",
@@ -40,8 +50,8 @@ export const info = {
         bgcolor5:"#9A9999",
     },
     four: {
-        head:"Covid-19 Daily Live-Status",
-        text: "Quebec",
+        head:"Covid-19 Live-Status",
+        text:<span><Bold>Quebec</Bold> <Cite>Canada, P. (2021). Coronavirus disease (COVID-19): Outbreak update - Canada.ca.(18 of May).</Cite></span>,
         component:<LiveStatusQC/>,
         display:"none",
         bgcolor1:"#9A9999",
@@ -51,8 +61,8 @@ export const info = {
         bgcolor5:"#9A9999",
     },
     five: {
-        head:"Covid-19 Daily Live-Status",
-        text: "Alberta",
+        head:"Covid-19 Live-Status",
+        text:<span><Bold>Alberta</Bold> <Cite>Canada, P. (2021). Coronavirus disease (COVID-19): Outbreak update - Canada.ca.(18 of May).</Cite></span>,
         component:<LiveStatusAB/>,
         display:"none",
         bgcolor1:"#9A9999",

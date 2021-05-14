@@ -14,6 +14,10 @@ const Bold = styled.span`
 font-weight:700;
 // color:red;
 `
+const Br = styled.div`
+
+// color:red;
+`
 
 export const info = {
     one: {
@@ -39,7 +43,7 @@ export const info = {
     
     three: {
         head:"2. Mask requirements in public indoor settings",
-        text:<span>Subject to a $230 violation ticket if you: 1.<Bold>Do not wear a mask in an indoor public setting</Bold>, unless you are exempt.</span> ,
+        text:<span> Subject to a $230 violation ticket if you: <Br> 1.<Bold> Do not wear a mask in an indoor public setting</Bold>, unless you are exempt.</Br></span> ,
         component:<ImageCompGP2/>,
         display:"none",
         bgcolor1:"#9A9999",

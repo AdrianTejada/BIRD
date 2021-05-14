@@ -5,7 +5,11 @@ import React, {useState} from 'react';
 import Page from '../comps/Page';
 import ChatBubble from '../comps/ChatBubble';
 import NavButton from '../comps/NavButton';
-import Option from '../comps/Option';
+import Image from '../comps/OptionPages';
+import Button from '../comps/DonationButton';
+import Avatar2 from '../comps/Avatar2Don';
+
+
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -44,16 +48,21 @@ const NavContainer = styled.div`
 `
 const Optioncont = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap:wrap;
-    align-items: center;
-    position: absolute;
-    margin-top: 130px;
-    max-height:950px;
-    max-width:660px;
-    overflow:auto;
-`
+    background-color: #DEDEDE;
+    margin:70px 70px 70px 65px;
+    padding: 20px;
+    
+    border: 1px solid #DEDEDE;
+    border-radius:10px;
+    flex-direction: column;
+    position:absolute;
+    top: 40px;
+    bottom: -20px;
+    left:-40px;
+    right: -55px;
+`;
+
+
 
 
 
@@ -91,30 +100,30 @@ const OpenMenu = () => {
 const HandleZ = () => {
   setZIndex(!zindex)
 }
+
   console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Take Action" onClick={OpenMenu} routeTo="/dashboard"/>
+        <Banner text="Help" onClick={OpenMenu} routeTo="/infoDonBase"/>
         
        <Optioncont>
-           <div><Option src = "/5.svg" text = "Quiz" routeTo="/infoQuizOptionsBase"/></div> 
-           <div><Option src = "/6.svg" text = "Purchase Protection" routeTo="/infoPurchaseBase"/></div> 
-           <div><Option src = "/7.svg" text = "Donation" routeTo="/infoDonBase"/></div> 
-           <div><Option src = "/8.svg" text = "Make An Appointment" routeTo="/infoMakeAppointBase"/></div> 
-           <div ><Option src = "/9.svg" text = "Help" routeTo="/infoHelpBase"/></div> 
+            <div><Image src = "/20.svg" text = "Donate To The Canada Helps And The Needy" /></div>
+            <div><Avatar2 position = "absolute" top = "290" left = "-1"/></div>
+            <div><Avatar2 position = "absolute" top = "290" left = "123"/></div>
+            <div><Avatar2 position = "absolute" top = "290" left = "248"/></div>
+            <div><Button  position = "absolute" left = "200" top = "700" text = "Go to the Page" routeTo = "https://www.canadahelps.org/en/donate/"/></div>
+
+           
         </Optioncont> 
-        
-        {/* <div className="bgc2"></div> */}
       </Page>
-      
+
     </UpperLayer>
 
-        <HamburgerMenu z={z} />
+    <HamburgerMenu z={z} />
 
     
-
   </MainCont>
 
   )

@@ -5,7 +5,11 @@ import React, {useState} from 'react';
 import Page from '../comps/Page';
 import ChatBubble from '../comps/ChatBubble';
 import NavButton from '../comps/NavButton';
-import Option from '../comps/Option';
+import Image from '../comps/OptionPages';
+import Button from '../comps/DonationButton';
+import Text from '../comps/Text/index';
+import Text2 from '../comps/Text/index2';
+
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -44,16 +48,20 @@ const NavContainer = styled.div`
 `
 const Optioncont = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap:wrap;
-    align-items: center;
-    position: absolute;
-    margin-top: 130px;
-    max-height:950px;
-    max-width:660px;
-    overflow:auto;
-`
+    background-color: #DEDEDE;
+    margin:70px;
+    padding: 20px;
+    border: 1px solid #DEDEDE;
+    border-radius:10px;
+    flex-direction: column;
+    position:absolute;
+    top: 40px;
+    bottom: -20px;
+    left:-40px;
+    right: -55px;
+`;
+
+
 
 
 
@@ -96,22 +104,21 @@ const HandleZ = () => {
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Take Action" onClick={OpenMenu} routeTo="/dashboard"/>
+        <Banner text="Help" onClick={OpenMenu} routeTo="/infoDonBase"/>
         
        <Optioncont>
-           <div><Option src = "/5.svg" text = "Quiz" routeTo="/infoQuizOptionsBase"/></div> 
-           <div><Option src = "/6.svg" text = "Purchase Protection" routeTo="/infoPurchaseBase"/></div> 
-           <div><Option src = "/7.svg" text = "Donation" routeTo="/infoDonBase"/></div> 
-           <div><Option src = "/8.svg" text = "Make An Appointment" routeTo="/infoMakeAppointBase"/></div> 
-           <div ><Option src = "/9.svg" text = "Help" routeTo="/infoHelpBase"/></div> 
+            <div><Image src = "/17.svg" text = "Donate To The WHO And The Needy" /></div>
+            <div><Text2 opacity = "0.5"position = "absolute" top = "250" left ="-15"text ="Better health for everyone, everywhere"  text1 ="Working with 194 Member States, across six regions, and from more than 150 offices, WHO staff are united in a shared commitment to achieve better health for everyone, everywhere.
+Together we strive to combat diseases , help mothers and children survive and thrive so they can look forward to a healthy old age. We ensure the safety of the air people breathe, the food they eat, the water they drink – and the medicines and vaccines they need.  "/></div>
+            <div><Button  position = "absolute" left = "200" top = "700" text = "Go to the Page" routeTo = "http://gardp.org/donate-to-gardp/"/></div>
+    
+           
         </Optioncont> 
-        
-        {/* <div className="bgc2"></div> */}
       </Page>
-      
+
     </UpperLayer>
 
-        <HamburgerMenu z={z} />
+    <HamburgerMenu z={z} />
 
     
 

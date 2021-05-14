@@ -6,6 +6,7 @@ import Page from '../comps/Page';
 import ChatBubble from '../comps/ChatBubble';
 import NavButton from '../comps/NavButton';
 import Option from '../comps/Option';
+import {useRouter} from 'next/router';
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -44,15 +45,13 @@ const NavContainer = styled.div`
 `
 const Optioncont = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     position: absolute;
     margin-top: 130px;
-    max-height:950px;
-    max-width:660px;
-    overflow:auto;
+
+    
 `
 
 
@@ -60,7 +59,6 @@ const Optioncont = styled.div`
 
 
 export default function Home() {
-
   const [menustate, setMenuState] = useState(false);
   const [zindex, setZIndex] = useState(false)
   var right=0;
@@ -91,29 +89,26 @@ const OpenMenu = () => {
 const HandleZ = () => {
   setZIndex(!zindex)
 }
-  console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Take Action" onClick={OpenMenu} routeTo="/dashboard"/>
+        <Banner text="Make Donation" onClick={OpenMenu} routeTo="/infoOptionsBase" />
         
        <Optioncont>
-           <div><Option src = "/5.svg" text = "Quiz" routeTo="/infoQuizOptionsBase"/></div> 
-           <div><Option src = "/6.svg" text = "Purchase Protection" routeTo="/infoPurchaseBase"/></div> 
-           <div><Option src = "/7.svg" text = "Donation" routeTo="/infoDonBase"/></div> 
-           <div><Option src = "/8.svg" text = "Make An Appointment" routeTo="/infoMakeAppointBase"/></div> 
-           <div ><Option src = "/9.svg" text = "Help" routeTo="/infoHelpBase"/></div> 
+           <div><Option src = "/20.svg" text = "Canada Help's" routeTo="/infoDonLayBase"/></div> 
+           <div><Option src = "/19.svg" text = "Food Bank"  routeTo="/infoDon2LayBase"/></div> 
+           <div><Option src = "/18.svg" text = "Charity Nav" routeTo="/infoDon3LayBase"/></div> 
+           <div><Option src = "/17.svg" text = "WHO" routeTo="/infoDon4LayBase"/></div> 
+           <div><Option src = "/16.svg" text = "VCH UBC" routeTo="/infoDon5LayBase"/></div> 
+           <div><Option src = "/21.svg" text = "Red Cross" routeTo="/infoDon6LayBase"/></div> 
         </Optioncont> 
-        
-        {/* <div className="bgc2"></div> */}
       </Page>
-      
+
     </UpperLayer>
 
-        <HamburgerMenu z={z} />
+        <HamburgerMenu z={z}/>
 
-    
 
   </MainCont>
 

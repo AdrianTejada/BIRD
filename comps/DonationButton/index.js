@@ -9,6 +9,9 @@ const Buttoncont = styled.button`
     padding-left: 10px;
     padding-right:10px;
     display:inline-flex;
+    position: ${props=>props.position};
+    top: ${props=>props.top}px;
+    left: ${props=>props.left}px;
 `;
 const Buttoninput = styled.p`
     display:inline-flex;
@@ -26,11 +29,14 @@ const Buttonimage = styled.img`
 `;
 const Button = ({
     text = "Canada's Help",
-    routeTo = "/"
+    routeTo = "/",
+    position = "/",
+    top = "/",
+    left = "/",
 }) =>{
     const router = useRouter();
-    return <Buttoncont  onClick = {()=>router.push(routeTo)}>
-        <Buttoninput>{text}</Buttoninput>
+    return <Buttoncont position = {position} top = {top} left = {left}  onClick = {()=>router.push(routeTo)}>
+        <Buttoninput >{text}</Buttoninput>
         <Buttonimage src = "/arrow-white-right.svg"></Buttonimage>
     </Buttoncont>
 }

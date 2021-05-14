@@ -5,7 +5,11 @@ import React, {useState} from 'react';
 import Page from '../comps/Page';
 import ChatBubble from '../comps/ChatBubble';
 import NavButton from '../comps/NavButton';
-import Option from '../comps/Option';
+import Image from '../comps/OptionPages';
+import Button from '../comps/DonationButton';
+import Text from '../comps/Text/index';
+import Text2 from '../comps/Text/index2';
+
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -23,6 +27,7 @@ const UpperLayer = styled.div `
   z-index: 1;
   position: relative;
 `
+
 
 // for speaker only
 const SpeakerContainer = styled.div`
@@ -44,16 +49,20 @@ const NavContainer = styled.div`
 `
 const Optioncont = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap:wrap;
-    align-items: center;
-    position: absolute;
-    margin-top: 130px;
-    max-height:950px;
-    max-width:660px;
-    overflow:auto;
-`
+    background-color: #DEDEDE;
+    margin:70px;
+    padding: 20px;
+    border: 1px solid #DEDEDE;
+    border-radius:10px;
+    flex-direction: column;
+    position:absolute;
+    top: 40px;
+    bottom: -20px;
+    left:-40px;
+    right: -55px;
+`;
+
+
 
 
 
@@ -91,27 +100,26 @@ const OpenMenu = () => {
 const HandleZ = () => {
   setZIndex(!zindex)
 }
+
   console.log(menustate, right)
   return (<MainCont>
     <UpperLayer>
       <Page right={right}>
 
-        <Banner text="Take Action" onClick={OpenMenu} routeTo="/dashboard"/>
+        <Banner text="Help" onClick={OpenMenu} routeTo="/infoDonBase"/>
         
        <Optioncont>
-           <div><Option src = "/5.svg" text = "Quiz" routeTo="/infoQuizOptionsBase"/></div> 
-           <div><Option src = "/6.svg" text = "Purchase Protection" routeTo="/infoPurchaseBase"/></div> 
-           <div><Option src = "/7.svg" text = "Donation" routeTo="/infoDonBase"/></div> 
-           <div><Option src = "/8.svg" text = "Make An Appointment" routeTo="/infoMakeAppointBase"/></div> 
-           <div ><Option src = "/9.svg" text = "Help" routeTo="/infoHelpBase"/></div> 
+            <div><Image src = "/18.svg" text = "Donate To The Charity Nav And The Needy" /></div>
+            <div><Text2 opacity = "0.5"position = "absolute" top = "250" left ="-15"text ="Charity Navigator is the world’s largest and most-utilized independent charity evaluator. "  text1 ="The organization guides informed giving by evaluating the financial health, accountability, and transparency of charities and by providing data for more than 1.6 million nonprofits, accessed more than 12 million times annually. Charity Navigator does not charge the organizations it evaluates, ensuring unbiased evaluations, nor does it charge the public for this trusted data. "/></div>
+            <div><Button  position = "absolute" left = "200" top = "700" text = "Go to the Page" routeTo = "https://www.charitynavigator.org/index.cfm?bay=topten.detail&listid=18"/></div>
+    
+           
         </Optioncont> 
-        
-        {/* <div className="bgc2"></div> */}
       </Page>
-      
+
     </UpperLayer>
 
-        <HamburgerMenu z={z} />
+    <HamburgerMenu z={z} />
 
     
 

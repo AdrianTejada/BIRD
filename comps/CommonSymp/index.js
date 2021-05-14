@@ -1,15 +1,17 @@
 import Button from '../Button';
-import react ,{useState} from 'react';
+import react ,{useEffect, useState} from 'react';
 import styled from 'styled-components';
 
 const Cont = styled.div`
     width: 227px;
-    height: 259px;
+    height: 210px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     align-self:center;
+    position:relative;
+    top:43px;
 `
 
 const Symp1 = styled.img`
@@ -58,11 +60,14 @@ const CommonSymp = () =>{
     }
 
     const HandleEvent = () => {
-        setTimeout(HandleFirst, 1000)
-        setTimeout(HandleSecond, 2000)
-
         setTimeout(HandleFirst, 3000)
-        setTimeout(HandleSecond, 3000)
+        setTimeout(HandleSecond, 6000)
+        console.log()
+
+        setTimeout(()=>{
+            SetFirst(false);
+            SetSecond(false);
+        }, 9000)
     }
     
     const HandleFirst = () => {
@@ -73,13 +78,13 @@ const CommonSymp = () =>{
         SetSecond(!secondO)
     }
 
+    useEffect (() => {
+        var interval
+        HandleEvent();
+        interval = setInterval(HandleEvent, 9001);
+    }, []);
+
     return <Cont>
-        <Button
-        text="Symptoms"
-        onClick={HandleEvent}
-        routeTo=""
-        />
-        
         <Symp1 src="/patient-fever1.svg" opacity0={opacity0}/>
         <Symp2 src="/patient-cough.svg" opacity1={opacity1}/>
         <Symp3 src="/patient-heat1.svg" opacity2={opacity2}/>

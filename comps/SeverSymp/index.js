@@ -1,5 +1,5 @@
 import Button from '../Button';
-import react ,{useState} from 'react';
+import react ,{useEffect, useState} from 'react';
 import styled from 'styled-components';
 
 const Cont = styled.div`
@@ -10,6 +10,8 @@ const Cont = styled.div`
     justify-content: space-between;
     align-items: center;
     align-self:center;
+    position:relative;
+    top:43px;
 `
 
 const Symp1 = styled.img`
@@ -74,16 +76,15 @@ const SevereSymp = () => {
     }
 
     const HandleEvent = () => {
-        if (opacity1 == 1 && thirdO == false && secondO == false && firstO ==false)
-        {
-            setTimeout(HandleFirst, 1)
-            setTimeout(HandleSecond, 1500)
-            setTimeout(HandleThird, 3000)
+        setTimeout(HandleFirst, 3000)
+        setTimeout(HandleSecond, 6000)
+        setTimeout(HandleThird, 9000)
 
-            setTimeout(HandleFirst, 4500)
-            setTimeout(HandleSecond, 4500)
-            setTimeout(HandleThird, 4500)
-        }
+        setTimeout(()=>{
+            SetFirst(false);
+            SetSecond(false);
+            SetThird(false);
+        }, 12000)
     }
 
     const HandleFirst = () => {
@@ -96,14 +97,16 @@ const SevereSymp = () => {
         SetThird(!thirdO)
     }
 
+    
 
-    return <Cont>
-        <Button 
-        text="Symptoms"
-        onClick={HandleEvent}
-        routeTo=""
-        />
- 
+    useEffect(()=>{
+        var interval
+        HandleEvent();
+        interval = setInterval(HandleEvent, 12001);
+    },[]);
+
+
+    return <Cont> 
         <Symp1 src="/patient-heat2.svg" opacity1={opacity1}/>
         <Symp2 src="/patient-heat3.svg" opacity2={opacity2}/>
         <Symp3 src="/patient-sickly.svg" opacity3={opacity3}/>

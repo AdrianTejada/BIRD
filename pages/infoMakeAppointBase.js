@@ -99,8 +99,8 @@ const HandleZ = () => {
         <Banner text="Make An Appointment" onClick={OpenMenu} routeTo="/infoOptionsBase"/>
         
        <Optioncont>
-           <div><Option src = "/12.svg" text = "Make an Appointment (PCR)" marginBottom = "100"/></div> 
-           <div><Option src = "/13.svg" text = "Make an Appointment (Vaccine)"/></div> 
+           <div><Option src = "/12.svg" text = "Book a PCR Test" marginBottom = "100"/></div> 
+           <div><Option src = "/13.svg" text = "Register for Vaccine"/></div> 
            
         </Optioncont> 
         {/* <div className="bgc2"></div> */}

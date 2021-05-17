@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import Page from '../comps/Page';
 import ChatBubble from '../comps/ChatBubble';
 import NavButton from '../comps/NavButton';
-import Option from '../comps/Option';
+import Option from '../comps/OptionPages';
 import {useRouter} from 'next/router';
 
 //custom tags for base page
@@ -96,12 +96,11 @@ const HandleZ = () => {
         <Banner text="Make Donation" onClick={OpenMenu} routeTo="/infoOptionsBase" />
         
        <Optioncont>
-           <div><Option src = "/20.svg" text = "Canada Help's" routeTo="/infoDonLayBase"/></div> 
-           <div><Option src = "/19.svg" text = "Food Bank"  routeTo="/infoDon2LayBase"/></div> 
-           <div><Option src = "/18.svg" text = "Charity Nav" routeTo="/infoDon3LayBase"/></div> 
-           <div><Option src = "/17.svg" text = "WHO" routeTo="/infoDon4LayBase"/></div> 
-           <div><Option src = "/16.svg" text = "VCH UBC" routeTo="/infoDon5LayBase"/></div> 
-           <div><Option src = "/21.svg" text = "Red Cross" routeTo="/infoDon6LayBase"/></div> 
+           <div><Option src = "/20.svg" text = "Canada Help's" routeTo="https://www.canadahelps.org/en/donate/"/></div> 
+           <div><Option src = "/19.svg" text = "Food Bank"  routeTo="https://support.foodbankscanada.ca/site/Donation2;jsessionid=00000000.app20122b?df_id=1500&mfc_pref=T&1500.donation=form1&NONCE_TOKEN=E41165665A193A27E0D51B9ADE06E56D"/></div> 
+           <div><Option src = "/18.svg" text = "Charity Nav" routeTo="https://www.charitynavigator.org/index.cfm?bay=topten.detail&listid=18"/></div> 
+           <div><Option src = "/16.svg" text = "VCH UBC" routeTo="https://join.vghfoundation.ca/give/329164/#!/donation/checkout"/></div> 
+           <div><Option src = "/21.svg" text = "Red Cross" routeTo="https://donate.redcross.ca/page/22054/donate/1?ea.client.id=1951&ea.campaign.id=56787&gclid=Cj0KCQjwp86EBhD7ARIsAFkgakg-GAlfkkz1GCkuHdjKVNb0aBioBmJeSn2JUDdz4gPRY6tS48VPMuUaAvTPEALw_wcB"/></div> 
         </Optioncont> 
       </Page>
 

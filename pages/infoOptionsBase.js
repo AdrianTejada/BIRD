@@ -6,6 +6,7 @@ import Page from '../comps/Page';
 import ChatBubble from '../comps/ChatBubble';
 import NavButton from '../comps/NavButton';
 import Option from '../comps/Option';
+import Option2 from '../comps/OptionPages';
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -100,10 +101,10 @@ const HandleZ = () => {
         
        <Optioncont>
            <div><Option src = "/5.svg" text = "Quiz" routeTo="/infoQuizOptionsBase"/></div> 
-           <div><Option src = "/6.svg" text = "Purchase Protection" routeTo="/infoPurchaseBase"/></div> 
-           <div><Option src = "/7.svg" text = "Donation" routeTo="/infoDonBase"/></div> 
-           <div><Option src = "/8.svg" text = "Make An Appointment" routeTo="/infoMakeAppointBase"/></div> 
-           <div ><Option src = "/9.svg" text = "Help" routeTo="/infoHelpBase"/></div> 
+           {/* <div><Option src = "/6.svg" text = "Purchase Protection" routeTo="/infoPurchaseBase"/></div>  */}
+           <div><Option src = "/7.svg" text = "Donate" routeTo="/infoDonBase"/></div> 
+           <div><Option src = "/8.svg" text = "Make an Appointment" routeTo="/infoMakeAppointBase"/></div> 
+           <div ><Option2 src = "/9.svg" text = "Financial Aid" routeTo="https://www.canada.ca/en/department-finance/economic-response-plan.html"/></div> 
         </Optioncont> 
         
         {/* <div className="bgc2"></div> */}

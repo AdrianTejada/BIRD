@@ -16,7 +16,7 @@ const Last = ({
     QuizRoute
 }) => {
     return <Cont>
-        <Button text="Back to Home" routeTo="../infoCovidBase"/>
+        <Button text="Back to Home" routeTo="../infoCenter"/>
         <Button text="Take Quiz" routeTo={QuizRoute}/>
     </Cont>
 }

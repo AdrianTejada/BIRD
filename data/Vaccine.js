@@ -3,11 +3,17 @@ import ImageCompV2 from '../comps/ImageCompV2';
 import Antib from '../comps/Antibiotic';
 import Lab from '../comps/Lab';
 import Last from '../comps/InfoEnd';
+import styled from 'styled-components';
+
+const Bold = styled.span`
+font-weight:700;
+// color:red;
+`
 
 export const info = {
     one: {
         head:"1. Is there a vaccine for COVID-19?",
-        text: "Yes. There are three COVID-19 vaccines for which certain national regulatory authorities have authorized the use. None have yet received WHO EUL/PQ authorization but we expect an assessment on the Pfizer vaccine by the end of December and for some other candidates soon thereafter.",
+        text: <span>Yes. There are three COVID-19 vaccines for which certain national regulatory authorities have authorized the use. None have yet received WHO EUL/PQ authorization but we expect an assessment on the Pfizer vaccine by the end of December and for some other candidates soon thereafter.</span>,
         component:<ImageCompV1/>,
         display:"none",
         bgcolor1:"#FF7A00",
@@ -17,7 +23,7 @@ export const info = {
     },
     two: {
         head:"2. What should I do if I have COVID-19 symptoms?",
-        text: "If you have any symptoms suggestive of COVID-19, call your health care provider or COVID-19 hotline for instructions and find out when and where to get a test, stay at home for 14 days away from others and monitor your health.",
+        text:<span>If you have any symptoms suggestive of COVID-19, call your health care provider or COVID-19 hotline for instructions and find out when and where to<Bold> get a test, stay at home for 14 days away from others and monitor your health</Bold> .</span>,
         component:<ImageCompV2/>,
         display:"none",
         bgcolor1:"#9A9999",
@@ -27,7 +33,7 @@ export const info = {
     },
     three: {
         head:"3. Are antibiotics effective in preventing or treating COVID-19?",
-        text: "Antibiotics do not work against viruses; they only work on bacterial infections. COVID-19 is caused by a virus, so antibiotics do not work.",
+        text: <span>Antibiotics do not work against viruses; they only work on bacterial infections. <Bold>COVID-19</Bold> is caused by a<Bold> virus</Bold> so <Bold>antibiotics do not work</Bold>.</span>,
         component:<Antib />,
         display:"none",
         bgcolor1:"#9A9999",
@@ -37,7 +43,7 @@ export const info = {
     },
     four: {
         head:"4.What test should I get to see if I have COVID-19?",
-        text: "A Polymerase chain reaction (PCR) is one of the most commonly used molecular test. Samples are collected from the nose and/or throat with a swab.",
+        text: <span>A Polymerase chain reaction <Bold>(PCR) </Bold>is one of the most commonly used molecular test. Samples are <Bold> collected from the nose and/or throat </Bold> with a swab.</span>,
         component:<Lab/>,
         display:"none",
         bgcolor1:"#9A9999",

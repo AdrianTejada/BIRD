@@ -1,9 +1,9 @@
 import React from 'react';
-import LiveStatus from '../comps/LiveStatusBC'
+import LiveStatusBC from '../comps/LiveStatusBC'
 export default {
  title:"Example/LiveStatus",
- component: <LiveStatus/>
+ component: <LiveStatusBC/>
 }
 
 
-export const LiveStatus = () => <LiveStatus/>
+export const LiveStatusBC = () => <LiveStatusBC/>

@@ -109,10 +109,9 @@ const HandleZ = () => {
         <Banner text="Help" onClick={OpenMenu} routeTo="/infoDonBase"/>
         
        <Optioncont>
-            <div><Image src = "/20.svg" text = "Donate To The Canada Helps And The Needy" /></div>
+            <div><Image src = "/20.svg" text = "Donate To The Canada Helps" /></div>
             <div><Avatar2 position = "absolute" top = "290" left = "-1"/></div>
-            <div><Avatar2 position = "absolute" top = "290" left = "123"/></div>
-            <div><Avatar2 position = "absolute" top = "290" left = "248"/></div>
+
             <div><Button  position = "absolute" left = "200" top = "700" text = "Go to the Page" routeTo = "https://www.canadahelps.org/en/donate/"/></div>
 
            

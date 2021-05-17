@@ -33,13 +33,7 @@ const Avatar2Text = styled.p`
     
 
 `;
-const Avatar2Button = styled.button`
-    background-color: blue;
-    color: white;
-    border-radius: 10px;
-    padding: 5px;
-    margin-top: 25px
-`;
+
 
 const Avatar2  = ({
     src = "/24.svg",
@@ -59,7 +53,6 @@ const Avatar2  = ({
         <Avatar2Image src = {src}></Avatar2Image>
         <Avatar2Text>{text}</Avatar2Text>
         <Avatar2Text opacity = {opacity}>{text1}</Avatar2Text>
-        <Avatar2Button>Learn More</Avatar2Button>
     </Avatar2Cont>
 }
 export default Avatar2;

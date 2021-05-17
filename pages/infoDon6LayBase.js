@@ -48,17 +48,14 @@ const NavContainer = styled.div`
 `
 const Optioncont = styled.div`
     display: flex;
+    flex-direction: column;
     background-color: #DEDEDE;
     margin:70px;
     padding: 20px;
     border: 1px solid #DEDEDE;
     border-radius:10px;
-    flex-direction: column;
-    position:absolute;
-    top: 40px;
-    bottom: -20px;
-    left:-40px;
-    right: -55px;
+    width:361px;
+    height: 650px;
 `;
 
 
@@ -108,9 +105,9 @@ const HandleZ = () => {
         <Banner text="Help" onClick={OpenMenu} routeTo="/infoDonBase"/>
         
        <Optioncont>
-            <div><Image src = "/21.svg" text = "Donate To The Red Cross And The Needy" /></div>
-            <div><Text2 opacity = "0.5"position = "absolute" top = "250" left ="-15"text ="The Canadian Red Cross "  text1 ="Mission is to improve the lives of vulnerable people by mobilizing the power of humanity in Canada and around the world."/></div>
-            <div><Button  position = "absolute" left = "200" top = "700" text = "Go to the Page" routeTo = "https://donate.redcross.ca/page/22054/donate/1?ea.client.id=1951&ea.campaign.id=56787&gclid=Cj0KCQjwp86EBhD7ARIsAFkgakg-GAlfkkz1GCkuHdjKVNb0aBioBmJeSn2JUDdz4gPRY6tS48VPMuUaAvTPEALw_wcB"/></div>
+            <Image routeTo="" src = "/21.svg" text = "Donate To The Red Cross" />
+            <Text2 text ="The Canadian Red Cross "  text1 ="Mission is to improve the lives of vulnerable people by mobilizing the power of humanity in Canada and around the world."/>
+            <Button   routeTo = "https://donate.redcross.ca/page/22054/donate/1?ea.client.id=1951&ea.campaign.id=56787&gclid=Cj0KCQjwp86EBhD7ARIsAFkgakg-GAlfkkz1GCkuHdjKVNb0aBioBmJeSn2JUDdz4gPRY6tS48VPMuUaAvTPEALw_wcB"/>
         </Optioncont> 
       </Page>
 

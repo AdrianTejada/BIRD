@@ -35,7 +35,7 @@ const Button = ({
     left = "/",
 }) =>{
     const router = useRouter();
-    return <Buttoncont position = {position} top = {top} left = {left}  onClick = {()=>router.push(routeTo)}>
+    return <Buttoncont position = {position} top = {top} left = {left}  onClick = {()=>window.open(routeTo)}>
         <Buttoninput >{text}</Buttoninput>
         <Buttonimage src = "/arrow-white-right.svg"></Buttonimage>
     </Buttoncont>

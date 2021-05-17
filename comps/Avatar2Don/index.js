@@ -22,6 +22,7 @@ src:${props=>props.src};
 border-radius: 200px 200px 200px 200px;
 width: 70px;
 height: 70px;
+margin-top: 15px;
 `;
 const Avatar2Text = styled.p`
     display:inline-flex;
@@ -30,7 +31,7 @@ const Avatar2Text = styled.p`
     width:100px;
     height:150px;
     text-align: center;
-    
+    margin-bottom:15px;
 
 `;
 
@@ -50,7 +51,6 @@ const Avatar2  = ({
     const router = useRouter();
     
     return <Avatar2Cont position = {position} left = {left} top = {top} width = {width} height = {height} onClick = {()=>router.push(routeTo)}>
-        <Avatar2Image src = {src}></Avatar2Image>
         <Avatar2Text>{text}</Avatar2Text>
         <Avatar2Text opacity = {opacity}>{text1}</Avatar2Text>
     </Avatar2Cont>

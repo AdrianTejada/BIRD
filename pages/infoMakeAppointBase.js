@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import Page from '../comps/Page';
 import ChatBubble from '../comps/ChatBubble';
 import NavButton from '../comps/NavButton';
-import Option from '../comps/Option';
+import Option from '../comps/OptionPages';
 
 //custom tags for base page
 const MainCont = styled.div `
@@ -99,8 +99,8 @@ const HandleZ = () => {
         <Banner text="Make An Appointment" onClick={OpenMenu} routeTo="/infoOptionsBase"/>
         
        <Optioncont>
-           <div><Option src = "/12.svg" text = "Book a PCR Test" marginBottom = "100"/></div> 
-           <div><Option src = "/13.svg" text = "Register for Vaccine"/></div> 
+           <div><Option src = "/12.svg" text = "Book a PCR Test" marginBottom = "100" routeTo="https://www.mayoclinic.org/tests-procedures/covid-19-diagnostic-test/about/pac-20488900"/></div> 
+           <div><Option src = "/13.svg" text = "Register for Vaccine" routeTo="https://www2.gov.bc.ca/gov/content/covid-19/vaccine/register#register"/></div> 
            
         </Optioncont> 
         {/* <div className="bgc2"></div> */}

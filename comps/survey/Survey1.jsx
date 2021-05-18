@@ -134,35 +134,35 @@ class SurveyComponent1 extends Component {
             navigateToUrlOnCondition: [
              {
               expression: "{symptom} = 'Running nose' and {How long} = 'In 2 weeks' and {defence methods} = 'Do exercise regularly'",
-              url: "../GQ1R3"
+              url: "../Result1/four"
              },
              {
               "expression": "{defence methods} <> 'Do exercise regularly' and {How long} = 'In 2 weeks' and {symptom} = 'Running nose'",
-              "url": "../GQ1R2"
+              "url": "../Result1/three"
              },
              {
               "expression": "{defence methods} = 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} = 'Running nose'",
-              "url": "../GQ1R2"
+              "url": "../Result1/three"
              },
              {
               "expression": "{defence methods} = 'Do exercise regularly' and {How long} = 'In 2 weeks' and {symptom} <> 'Running nose'",
-              "url": "../GQ1R2"
+              "url": "../Result1/three"
              },
              {
               "expression": "{defence methods} <> 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} = 'Running nose'",
-              "url": "../GQ1R1"
+              "url": "../Result1/two"
              },
              {
               "expression": "{defence methods} <> 'Do exercise regularly' and {How long} = 'In 2 weeks' and {symptom} <> 'Running nose'",
-              "url": "../GQ1R1"
+              "url": "../Result1/two"
              },
              {
               "expression": "{defence methods} = 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} <> 'Running nose'",
-              "url": "../GQ1R1"
+              "url": "../Result1/two"
              },
              {
               "expression": "{defence methods} <> 'Do exercise regularly' and {How long} <> 'In 2 weeks' and {symptom} <> 'Running nose'",
-              "url": "../GQ1R0"
+              "url": "../Result1/two"
              },
             ],
             showProgressBar: "bottom",

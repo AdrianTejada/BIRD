@@ -141,23 +141,23 @@ class SurveyComponent3 extends Component {
             navigateToUrlOnCondition: [
              {
               expression: "{prople} = 'under 10 people' and {Fine} = 'All of the above' and {areas} = 'None of the above'",
-              url: "../GQ3R3"
+              url: "../Result1/four"
              },
              {
               "expression": "{areas} <> 'None of the above' and {Fine} = 'All of the above' and {prople} = 'under 10 people'",
-              "url": "../GQ3R2"
+              "url": "../Result1/three"
              },
              {
               "expression": "{areas} = 'None of the above' and {Fine} <> 'All of the above' and {prople} = 'under 10 people'",
-              "url": "../GQ3R2"
+              "url": "../Result1/three"
              },
              {
               "expression": "{areas} = 'None of the above' and {Fine} = 'All of the above' and {prople} <> 'under 10 people'",
-              "url": "../GQ3R2"
+              "url": "../Result1/three"
              },
              {
               "expression": "{areas} <> 'None of the above' and {Fine} <> 'All of the above' and {prople} = 'under 10 people'",
-              "url": "../GQ3R1"
+              "url": "../Result1/two"
              },
              {
               "expression": "{areas} <> 'None of the above' and {Fine} = 'All of the above' and {prople} <> 'under 10 people'",
@@ -165,11 +165,11 @@ class SurveyComponent3 extends Component {
              },
              {
               "expression": "{areas} = 'None of the above' and {Fine} <> 'All of the above' and {prople} <> 'under 10 people'",
-              "url": "../GQ3R1"
+              "url": "../Result1/two"
              },
              {
               "expression": "{areas} <> 'None of the above' and {Fine} <> 'All of the above' and {prople} <> 'under 10 people'",
-              "url": "../GQ3R0"
+              "url": "../Result1/one"
              },
             ],
             showProgressBar: "bottom",

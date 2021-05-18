@@ -59,7 +59,7 @@ const data = [
 ];
 
 export default class LiveStatusQC extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/simple-composed-chart-h9zif';
+ 
 
   render() {
     return (

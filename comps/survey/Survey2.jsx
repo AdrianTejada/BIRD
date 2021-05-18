@@ -132,35 +132,35 @@ class SurveyComponent2 extends Component {
             navigateToUrlOnCondition: [
              {
               expression: "{best treatment} = 'No' and {best test} = 'PCR' and {we have} = 'Stay at home'",
-              url: "../GQ2R3"
+              url: "../Result2/four"
              },
              {
               "expression": "{best treatment} <> 'No' and {best test} = 'PCR' and {we have} = 'Stay at home'",
-              "url": "../GQ2R2"
+              "url": "../Result2/three"
              },
              {
               "expression": "{best treatment} = 'No' and {best test} <> 'PCR' and {we have} = 'Stay at home'",
-              "url": "../GQ2R2"
+              "url": "../Result2/three"
              },
              {
               "expression": "{best treatment} = 'No' and {best test} = 'PCR' and {we have} <> 'Stay at home'",
-              "url": "../GQ2R2"
-             },
+              "url": "../Result2/three"
+            },
              {
               "expression": "{best treatment} <> 'No' and {best test} <> 'PCR' and {we have} = 'Stay at home'",
-              "url": "../GQ2R1"
+              "url": "../Result2/two"
              },
              {
               "expression": "{best treatment} <> 'No' and {best test} = 'PCR' and {we have} <> 'Stay at home'",
-              "url": "../GQ2R1"
+              "url": "../Result2/two"
              },
              {
               "expression": "{best treatment} = 'No' and {best test} <> 'PCR' and {we have} <> 'Stay at home'",
-              "url": "../GQ2R1"
+              "url": "../Result2/two"
              },
              {
               "expression": "{best treatment} <> 'No' and {best test} <> 'PCR' and {we have} <> 'Start at home'",
-              "url": "../GQ2R0"
+              "url": "../Result2/one"
              },
             ],
             showProgressBar: "bottom",

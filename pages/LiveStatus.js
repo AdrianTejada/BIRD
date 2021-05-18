@@ -48,7 +48,7 @@ bottom:20px;
 
 
 
-var page=1;
+var page=0;
 
 
 export default function Home() {
@@ -87,23 +87,36 @@ const HandleZ = () => {
   // for navigation
 
 
-  const [head, setHead] = useState(info.one.head);
-  const [text, setText] = useState(info.one.text);
-  const [component, setcomponent] = useState(info.one.component);
-  const [display, setDisplay] = useState(info.one.display);
-  const [bgcolor1, setC1] = useState(info.one.bgcolor1);
-  const [bgcolor2, setC2] = useState(info.one.bgcolor2);
-  const [bgcolor3, setC3] = useState(info.one.bgcolor3);
-  const [bgcolor4, setC4] = useState(info.one.bgcolor4);
-  const [bgcolor5, setC5] = useState(info.one.bgcolor5);
-
+  const [head, setHead] = useState(info.zero.head);
+  const [text, setText] = useState(info.zero.text);
+  const [component, setcomponent] = useState(info.zero.component);
+  const [display, setDisplay] = useState(info.zero.display);
+  const [bgcolor1, setC1] = useState(info.zero.bgcolor1);
+  const [bgcolor2, setC2] = useState(info.zero.bgcolor2);
+  const [bgcolor3, setC3] = useState(info.zero.bgcolor3);
+  const [bgcolor4, setC4] = useState(info.zero.bgcolor4);
+  const [bgcolor5, setC5] = useState(info.zero.bgcolor5);
+  const [bgcolor6, setC6] = useState(info.zero.bgcolor6);
 
 
   // for fowraed button
   const nextInfo = () => 
   {
     page++;
-     if (page == 2)
+     if (page == 1)
+    {
+        setHead(info.one.head);
+        setText(info.one.text);
+        setcomponent(info.one.component);
+        setDisplay(info.one.display);
+        setC1(info.one.bgcolor1);
+        setC2(info.one.bgcolor2);
+        setC3(info.one.bgcolor3);
+        setC4(info.one.bgcolor4);
+        setC5(info.one.bgcolor5);
+        setC6(info.one.bgcolor6);
+    }
+    else if (page == 2)
     {
         setHead(info.two.head);
         setText(info.two.text);
@@ -114,7 +127,7 @@ const HandleZ = () => {
         setC3(info.two.bgcolor3);
         setC4(info.two.bgcolor4);
         setC5(info.two.bgcolor5);
-
+        setC6(info.two.bgcolor6);
     }
 
     else if (page == 3)
@@ -128,7 +141,7 @@ const HandleZ = () => {
         setC3(info.three.bgcolor3);
         setC4(info.three.bgcolor4);
         setC5(info.three.bgcolor5);
-
+        setC6(info.three.bgcolor6);
     }
 
     else if (page == 4)
@@ -142,9 +155,7 @@ const HandleZ = () => {
         setC3(info.four.bgcolor3);
         setC4(info.four.bgcolor4);
         setC5(info.four.bgcolor5);
-
-        
-
+        setC6(info.four.bgcolor6);
     }
     else if (page == 5)
     {
@@ -152,14 +163,12 @@ const HandleZ = () => {
         setText(info.five.text);
         setcomponent(info.five.component);
         setDisplay(info.five.display);
-        setC1(info.five.bgcolor1);
+        setC1(info.two.bgcolor1);
         setC2(info.five.bgcolor2);
         setC3(info.five.bgcolor3);
         setC4(info.five.bgcolor4);
         setC5(info.five.bgcolor5);
-
-        
-
+        setC6(info.five.bgcolor6);
     }
 
     else if (page === 6)
@@ -180,8 +189,20 @@ const HandleZ = () => {
   const backInfo = () => 
   {
     page--;
+    if (page ==0)
+    {
+      setHead(info.zero.head);
+      setText(info.zero.text);
+      setcomponent(info.zero.component);
+      setC1(info.zero.bgcolor1)
+      setC2(info.zero.bgcolor2)
+      setC3(info.zero.bgcolor3)
+      setC4(info.zero.bgcolor4)
+      setC5(info.zero.bgcolor5)
+      setC6(info.zero.bgcolor6)
+    }
     
-    if (page == 1)
+    else if (page == 1)
     {
         setHead(info.one.head);
         setText(info.one.text);
@@ -192,9 +213,10 @@ const HandleZ = () => {
         setC3(info.one.bgcolor3);
         setC4(info.one.bgcolor4);
         setC5(info.one.bgcolor5);
+        setC6(info.one.bgcolor6);
 
     }
-    if (page == 2)
+    else if (page == 2)
     {
         setHead(info.two.head);
         setText(info.two.text);
@@ -205,6 +227,7 @@ const HandleZ = () => {
         setC3(info.two.bgcolor3);
         setC4(info.two.bgcolor4);
         setC5(info.two.bgcolor5);
+        setC6(info.two.bgcolor6);
 
     }
 
@@ -219,6 +242,7 @@ const HandleZ = () => {
         setC3(info.three.bgcolor3);
         setC4(info.three.bgcolor4);
         setC5(info.three.bgcolor5);
+        setC6(info.three.bgcolor6);
 
     }
 
@@ -233,6 +257,7 @@ const HandleZ = () => {
         setC3(info.four.bgcolor3);
         setC4(info.four.bgcolor4);
         setC5(info.four.bgcolor5);
+        setC6(info.four.bgcolor6);
 
     }
     else if (page == 5)
@@ -246,16 +271,16 @@ const HandleZ = () => {
         setC3(info.five.bgcolor3);
         setC4(info.five.bgcolor4);
         setC5(info.five.bgcolor5);
-
+        setC6(info.five.bgcolor6);
     }
 
     // else if (page == 6)
     // {
     //     router.push("/dashboard")
     // }
-    else if (page == 0)
+    else if (page == -1)
     {
-      router.push("/dashboard")
+      page = 0;
     }
     console.log("page " + page)
   }
@@ -287,7 +312,7 @@ const HandleZ = () => {
             bgcolor3={bgcolor3}
             bgcolor4={bgcolor4}
             bgcolor5={bgcolor5}
-            display6="none"
+            bgcolor6={bgcolor6}
             nextFunction={nextInfo}
             backFunction={backInfo}
           />
